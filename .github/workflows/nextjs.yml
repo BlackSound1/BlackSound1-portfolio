@@ -67,7 +67,10 @@ jobs:
       - name: Build with Next.js
         run: | 
           ${{ steps.detect-package-manager.outputs.runner }} next build
-          ${{ steps.detect-package-manager.outputs.runner }} next export
+          echo "Root files:"
+          ls -la
+          echo "out directory (if present):"
+          ls -la out || true
 
       # - name: Add .nojekyll file
       #   run: touch ./out/.nojekyll

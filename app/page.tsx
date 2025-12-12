@@ -1,4 +1,5 @@
 import ProjectCard from "@/components/ui/projectCard";
+import WorkCard from "@/components/ui/workCard";
 
 export default function Home() {
   return (
@@ -39,7 +40,29 @@ export default function Home() {
             <div className="mb-8">
               <h2 className="text-left gap-3 text-2xl font-semibold md:text-3xl">Work Experience</h2>
             </div>
-            <div className="grid grid-cols-1 gap-6">
+            <div className="grid grid-cols-1">
+              <WorkCard
+                company="Verbit"
+                title="Software Engineer"
+                time="Feb. 2025 - Sep. 2025"
+                description="Used C++, Python, Bash, Docker, AWS, CircleCI, and more to build the next generation of Verbit's realtime captioning solution.
+                            Achievements: Revamped and expanded our APIs unit tests, writing 117 new tests; developed 
+                            an AI tool for our support team; improved our long-awaited end-to-end test suite, scoring 100% on our KPIs; helped
+                            management budget server costs; updated the way we compute realtime metrics for Prometheus and Grafana; standardized logging to match
+                            company-wide use of AWS CloudWatch; deeply hardened an important process to withstand over 3000 SIGHUP signals
+                            per second from multiple processes: a >1000x improvement."
+              />
+              <WorkCard
+                company="Tecsys"
+                title="R&D Intern: Full-Stack Pythonista"
+                time="Sep. 2021 - Apr. 2023"
+                description="Six consecutive fulltime internships. Used Python, JavaScript, HTML, CSS, Docker, Bash, AWS, and more to develop two major projects:
+                            an AI tool for optimizing the efficiency of a client's warehouse workers, and an internal CLI tool and accompanying data pipeline to improve
+                            the process for onboarding new clients into our software ecosystem. 
+                            Responsibilities: front-end and back-end coding, sprint planning, code review, bug fixing, and quality assurance.
+                            Achievements: Designed the backbone of our CLI apps, ensured reproducible builds, containerized an application, 
+                            and wrote extensive documentation."
+              />
 
             </div>
           </section>

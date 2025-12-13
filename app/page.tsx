@@ -15,7 +15,7 @@ export default function Home() {
               Before getting into tech, I worked in the entertainment industry.
               I also made some of my own music.
             </p>
-            <div className="flex flex-wrap items-center gap-x-4 gap-y-2 pt-2">
+            <div className="flex flex-wrap items-center gap-x-4 pt-2">
               <a
                 className="text-subtext1 hover:text-accent inline-flex items-center gap-1.5 transition-colors duration-200 text-sm"
                 href="https://github.com/BlackSound1"
@@ -37,39 +37,45 @@ export default function Home() {
           </section>
 
           {/* Work */}
-          <section className="px-4 py-8 md:px-0">
+          <section className="px-4 md:px-0">
             <div className="mb-8">
               <h2 className="text-left gap-3 text-2xl font-semibold md:text-3xl">Work Experience</h2>
             </div>
             <div className="grid grid-cols-1">
               <WorkCard
                 company="Verbit"
+                url="https://verbit.ai/"
                 title="Software Engineer"
                 time="Feb. 2025 - Sep. 2025"
-                description="Used C++, Python, Bash, Docker, AWS, CircleCI, and more to build the next generation of Verbit's realtime captioning solution.
-                            Achievements: Revamped and expanded our APIs unit tests, writing 117 new tests; developed 
-                            an AI tool for our support team; improved our long-awaited end-to-end test suite, scoring 100% on our KPIs; helped
-                            management budget server costs; updated the way we compute realtime metrics for Prometheus and Grafana; standardized logging to match
-                            company-wide use of AWS CloudWatch; deeply hardened an important process to withstand over 3000 SIGHUP signals
-                            per second from multiple processes: a >1000x improvement."
+                description={<>
+                  Helped build the next generation of Verbit's realtime captioning solution.
+                  <br/><strong>Achievements</strong>: Revamped and expanded our APIs unit tests, writing 117 new tests; developed 
+                  an AI tool for our support team; improved our long-awaited end-to-end test suite, scoring 100% on our KPIs; helped
+                  management budget server costs; updated the way we compute realtime metrics for Prometheus and Grafana; standardized logging to match
+                  company-wide use of AWS CloudWatch; deeply hardened an important process to withstand over 3000 SIGHUP signals
+                  per second from multiple processes: a &gt;1000x improvement.
+                </>}
               />
               <WorkCard
                 company="Tecsys"
+                url="https://www.tecsys.com/"
                 title="R&D Intern: Full-Stack Pythonista"
                 time="Sep. 2021 - Apr. 2023"
-                description="Six consecutive fulltime internships. Used Python, JavaScript, HTML, CSS, Docker, Bash, AWS, and more to develop two major projects:
-                            an AI tool for optimizing the efficiency of a client's warehouse workers, and an internal CLI tool and accompanying data pipeline to improve
-                            the process for onboarding new clients into our software ecosystem. 
-                            Responsibilities: front-end and back-end coding, sprint planning, code review, bug fixing, and quality assurance.
-                            Achievements: Designed the backbone of our CLI apps, ensured reproducible builds, containerized an application, 
-                            and wrote extensive documentation."
+                description={<>
+                  <em>Six consecutive fulltime internships</em>. Developed two major projects:<br />
+                  an AI tool for optimizing the efficiency of a client's warehouse workers, and an internal CLI tool and accompanying data pipeline to improve
+                  the process for onboarding new clients into our software ecosystem. 
+                  <br/><strong>Responsibilities</strong>: front-end and back-end coding, sprint planning, code review, bug fixing, and quality assurance.
+                  <br/><strong>Achievements</strong>: Designed the backbone of our CLI apps, ensured reproducible builds, containerized an application, 
+                  and wrote extensive documentation.
+                </>}
               />
 
             </div>
           </section>
 
           {/* Projects */}
-          <section className="px-4 py-8 md:px-0">
+          <section className="px-4 md:px-0">
             <div className="mb-8">
               <h2 className="text-left gap-3 text-2xl font-semibold md:text-3xl">Some Projects</h2>
             </div>
@@ -79,7 +85,15 @@ export default function Home() {
                 link="https://github.com/BlackSound1/textual-system-monitor"
                 imagePath="/static/images/TSMScreenshot.png"
                 alt="TSM"
-                technologies={["Python", "Textual", "Makefile", "Terminal", "TUI"]}
+                technologies={
+                  [
+                    {name:"Python", color: "blue"},
+                    {name: "Textual", color: "red"},
+                    {name: "Makefile", color: "orange"},
+                    {name: "Terminal", color: "purple"},
+                    {name: "TUI", color: "pink"},
+                  ]
+                }
                 description="A beautiful system monitoring app created in Python, using Textual"
                 width={1906}
                 height={998}
@@ -89,7 +103,15 @@ export default function Home() {
                 link="https://github.com/BlackSound1/Go-B-and-B"
                 imagePath="/static/images/GoBandBHomePage.png"
                 alt="Go B&B"
-                technologies={["Web", "Go", "REST", "gRPC", "Docker", "RPC", "Kubernetes"]}
+                technologies={
+                  [
+                    {name: "Web", color: "red"},
+                    {name: "Go", color: "teal"},
+                    {name: "REST", color: "black"},
+                    {name: "Docker", color: "blue"},
+                    {name: "Kubernetes", color: "green"},
+                  ]
+                }
                 description="A beautiful system monitoring app created in Python, using Textual"
                 width={1111}
                 height={893}
@@ -98,7 +120,7 @@ export default function Home() {
           </section>
 
           {/* Music */}
-          <section className="px-4 py-8 md:px-0">
+          <section className="px-4 md:px-0">
             <div className="mb-8">
               <h2 className="text-left gap-3 text-2xl font-semibold md:text-3xl">Some of My Music</h2>
             </div>

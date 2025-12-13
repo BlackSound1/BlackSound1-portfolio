@@ -3,6 +3,10 @@
 
 @custom-variant dark (&:is(.dark *));
 
+section {
+  margin-bottom: 2.5rem;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);

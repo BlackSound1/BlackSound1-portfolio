@@ -1,13 +1,19 @@
 import { ReactElement } from "react";
 import Image from "next/image";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Tag from "./tag";
+import TagLogo from "@/public/tag-svgrepo-com.svg"
+
+interface Technology {
+    name: string;
+    color: string;
+}
 
 interface ProjectProps {
     name: string;
     alt: string;
     imagePath: string;
-    technologies: string[];
+    technologies: Technology[];
     description: string;
     link: string;
     width: number;
@@ -33,31 +39,30 @@ export default function ProjectCard(
             target="_blank"
             rel="noopener noreferrer"
         >
-            <Card className="w-full max-w-lg">
+            <Card className="">
                 <CardHeader>
-                    <CardTitle className="text-center text-text group-hover:text-accent text-xl font-semibold transition-colors">{name}</CardTitle>
+                    <CardTitle className="text-text group-hover:text-accent text-xl font-semibold transition-colors">{name}</CardTitle>
                 </CardHeader>
                 <CardContent>
                     <Image
-                        className="aspect-video w-full transition-transform duration-300 group-hover:scale-105"
+                        className="aspect-video w-full transition-transform duration-300 group-hover:scale-105 mb-6"
                         src={imagePath}
                         alt={alt}
                         width={width}
                         height={height}
                     />
-                </CardContent>
-                <CardFooter>
                     <CardDescription className="">
-                    <div className="">
-                        {technologies.map((tech) => {
-                            return <Tag key={tech} lang={tech} />
-                        })}
-                    </div>
-                    <p className="">
-                        <span className="">{description}</span>
-                    </p>
+                        <div className="flex flex-wrap gap-2 overflow-hidden text-xs">
+                            <Image className="" priority src={TagLogo} alt="Tag Logo" height={16} width={16} />
+                            {technologies.map(({name, color}) => {
+                                return <Tag key={name} lang={name} _color={color} />
+                            })}
+                        </div>
+                        <p className="mt-2">
+                            {description}
+                        </p>
                     </CardDescription>
-                </CardFooter>
+                </CardContent>
             </Card>
         </a>
     );

@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
 
-type TagProps = {
+interface TagProps {
     lang: string;
     key: string;
 }

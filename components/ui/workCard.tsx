@@ -1,7 +1,7 @@
 import { ReactElement } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
-type WorkProps = {
+interface WorkProps {
     company: string;
     title: string;
     time: string;

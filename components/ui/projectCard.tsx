@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import Tag from "./tag";
 
-type ProjectProps = {
+interface ProjectProps {
     name: string;
     alt: string;
     imagePath: string;

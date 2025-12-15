@@ -1,7 +1,10 @@
+import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import ProjectCard from "@/components/ui/projectCard";
 import SoundcloudEmbed from "@/components/ui/soundcloudEmbed";
 import WorkCard from "@/components/ui/workCard";
+import GitHubLogo from "@/public/github.svg";
+import LinkedInLogo from "@/public/linkedin.svg";
 
 export default function Home() {
   return (
@@ -23,16 +26,15 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <span>GitHub</span>
+                <Image className="" priority src={GitHubLogo} alt="GitHub Logo" height={16} />GitHub
               </a>
-              <span className="text-surface1 text-xs">|</span>
               <a
                 className="text-subtext1 hover:text-accent inline-flex items-center gap-1.5 transition-colors duration-200 text-sm"
                 href="https://www.linkedin.com/in/ordon/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <span>LinkedIn</span>
+                <Image priority src={LinkedInLogo} alt="LinkedIn Logo" height={16} />LinkedIn
               </a>
             </div>
           </section>
@@ -50,11 +52,6 @@ export default function Home() {
                 time="Feb. 2025 - Sep. 2025"
                 description={<>
                   Helped build the next generation of Verbit's realtime captioning solution.
-                  <br/><strong>Achievements</strong>: Revamped and expanded our APIs unit tests, writing 117 new tests; developed 
-                  an AI tool for our support team; improved our long-awaited end-to-end test suite, scoring 100% on our KPIs; helped
-                  management budget server costs; updated the way we compute realtime metrics for Prometheus and Grafana; standardized logging to match
-                  company-wide use of AWS CloudWatch; deeply hardened an important process to withstand over 3000 SIGHUP signals
-                  per second from multiple processes: a &gt;1000x improvement.
                 </>}
               />
               <WorkCard
@@ -63,15 +60,9 @@ export default function Home() {
                 title="R&D Intern: Full-Stack Pythonista"
                 time="Sep. 2021 - Apr. 2023"
                 description={<>
-                  <em>Six consecutive fulltime internships</em>. Developed two major projects:<br />
-                  an AI tool for optimizing the efficiency of a client's warehouse workers, and an internal CLI tool and accompanying data pipeline to improve
-                  the process for onboarding new clients into our software ecosystem. 
-                  <br/><strong>Responsibilities</strong>: front-end and back-end coding, sprint planning, code review, bug fixing, and quality assurance.
-                  <br/><strong>Achievements</strong>: Designed the backbone of our CLI apps, ensured reproducible builds, containerized an application, 
-                  and wrote extensive documentation.
+                  Six consecutive fulltime internships. Developed two large internal projects with a small R&D team.
                 </>}
               />
-
             </div>
           </section>
 

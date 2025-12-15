@@ -2,7 +2,7 @@ import { ReactElement } from "react";
 import Image from "next/image";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Tag from "./tag";
-import TagLogo from "@/public/tag-svgrepo-com.svg"
+import TagLogo from "@/public/tag.svg"
 
 interface Technology {
     name: string;

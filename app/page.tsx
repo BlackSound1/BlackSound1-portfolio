@@ -78,7 +78,7 @@ export default function Home() {
                 imagePath="/static/images/TSMScreenshot.png"
                 alt="TSM"
                 technologies={["Python", "Textual", "Makefile", "Terminal", "TUI"]}
-                description="A beautiful system monitoring app created in Python, using Textual"
+                description="A beautiful system monitoring app created in Python, using Textual."
                 width={1906}
                 height={998}
               />
@@ -88,9 +88,17 @@ export default function Home() {
                 imagePath="/static/images/GoBandBHomePage.png"
                 alt="Go B&B"
                 technologies={["Web", "Go", "Docker", "REST", "Kubernetes", "JS"]}
-                description="A beautiful system monitoring app created in Python, using Textual"
+                description="A web app for a fictional Bed and Breakfast, written in Go."
                 width={1111}
                 height={893}
+              />
+              <ProjectCard
+                name="Basic C++ Shell"
+                link="https://github.com/BlackSound1/Basic-CPP-Shell"
+                imagePath=""
+                alt="Basic C++ Shell"
+                technologies={["Shell", "Terminal", "Cpp"]}
+                description="A minimum viable product for a terminal shell, written in C++."
               />
             </div>
           </section>

@@ -8,12 +8,12 @@ import TagLogo from "@/public/tag.svg"
 interface ProjectProps {
     name: string;
     alt: string;
-    imagePath: string;
+    imagePath?: string;
     technologies: string[];
     description: string;
     link: string;
-    width: number;
-    height: number;
+    width?: number;
+    height?: number;
 }
 
 export default function ProjectCard(
@@ -39,13 +39,15 @@ export default function ProjectCard(
                     <CardTitle className="text-text group-hover:text-accent text-xl font-semibold transition-colors">{name}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                    <Image
-                        className="aspect-video w-full transition-transform duration-300 group-hover:scale-102 mb-6"
-                        src={imagePath}
-                        alt={alt}
-                        width={width}
-                        height={height}
-                    />
+                    {imagePath &&
+                        <Image
+                            className="aspect-video w-full transition-transform duration-300 group-hover:scale-102 mb-6"
+                            src={imagePath}
+                            alt={alt}
+                            width={width}
+                            height={height}
+                        />
+                    }
                     <CardDescription className="">
                         <div className="flex flex-wrap gap-2 overflow-hidden text-xs">
                             <Image className="" priority src={TagLogo} alt="Tag Logo" height={16} />

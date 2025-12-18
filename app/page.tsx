@@ -82,8 +82,6 @@ export default function Home() {
                 alt="TSM"
                 technologies={["Python", "Textual", "Makefile", "Terminal", "TUI"]}
                 description="A beautiful system monitoring app created in Python, using Textual."
-                width={1906}
-                height={998}
               />
               <ProjectCard 
                 name="Go B&B"
@@ -92,8 +90,6 @@ export default function Home() {
                 alt="Go B&B"
                 technologies={["Web", "Go", "Docker", "REST", "Kubernetes", "JS"]}
                 description="A web app for a fictional Bed and Breakfast, written in Go."
-                width={1111}
-                height={893}
               />
               <ProjectCard 
                 name="This site"
@@ -102,8 +98,6 @@ export default function Home() {
                 alt="This site"
                 technologies={["TS", "NextJS", "HTML", "CSS", "Web"]}
                 description="A simple, WIP portfolio site. You're on it now!"
-                width={657}
-                height={243}
               />
               <ProjectCard 
                 name="Redis Clone"
@@ -112,8 +106,6 @@ export default function Home() {
                 alt="Redis Clone"
                 technologies={["Go", "Redis", "Terminal"]}
                 description="A minimal clone of a Redis server, written in Go."
-                width={502}
-                height={228}
               />
               <ProjectCard 
                 name="Basic C++ Shell"
@@ -122,8 +114,6 @@ export default function Home() {
                 alt="Basic C++ Shell"
                 technologies={["Shell", "Terminal", "Cpp"]}
                 description="A minimum viable product for a terminal shell, written in C++."
-                width={438}
-                height={253}
               />
               <ProjectCard 
                 name="Go Microservices"
@@ -132,8 +122,6 @@ export default function Home() {
                 alt="Go Microservices"
                 technologies={["Go", "Docker", "Kubernetes", "Makefile", "Microservices"]}
                 description="A project I made to teach myself Go and the microservices architecture."
-                width={1383}
-                height={531}
               />
             </div>
           </section>

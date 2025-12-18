@@ -12,8 +12,6 @@ interface ProjectProps {
     technologies: string[];
     description: string;
     link: string;
-    width?: number;
-    height?: number;
 }
 
 export default function ProjectCard(
@@ -24,8 +22,6 @@ export default function ProjectCard(
         technologies,
         description,
         link,
-        width,
-        height
     }: ProjectProps
 ): ReactElement {
     return (

@@ -38,11 +38,16 @@ export default function ProjectCard(
                 </CardHeader>
                 <CardContent className="flex-1">
                     {imagePath &&
-                        <img
-                            className="mx-auto w-full max-h-40 object-cover transition-transform duration-300 group-hover:scale-102 mb-6"
-                            src={imagePath}
-                            alt={alt}
-                        />
+                        <div className="mx-auto w-full mb-6 h-80 md:h-56 lg:h-44 flex items-center justify-center overflow-hidden transform transition-transform duration-300 group-hover:scale-105">
+                            <Image
+                                src={imagePath}
+                                alt={alt}
+                                width={800}
+                                height={450}
+                                className="max-h-full w-auto object-contain"
+                                priority
+                            />
+                        </div>
                     }
                     <CardDescription className="">
                         <div className="flex flex-wrap gap-2 overflow-hidden text-xs">
@@ -51,7 +56,7 @@ export default function ProjectCard(
                                 return <Tag key={name} lang={name} />
                             })}
                         </div>
-                        <p className="mt-2 font-semibold">
+                        <p className="mt-3 font-semibold">
                             {description}
                         </p>
                     </CardDescription>

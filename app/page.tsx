@@ -45,7 +45,7 @@ export default function Home() {
           {/* Work */}
           <section className="px-4 md:px-0">
             <div className="mb-8">
-              <h2 className="text-left gap-3 text-2xl font-semibold md:text-3xl font-mono">Work Experience</h2>
+              <h2 className="text-left gap-3 text-2xl font-semibold md:text-3xl font-mono hover:text-accent">Work Experience</h2>
             </div>
             <div className="grid grid-cols-1">
               <WorkCard
@@ -72,7 +72,7 @@ export default function Home() {
           {/* Projects */}
           <section className="px-4 md:px-0">
             <div className="mb-8">
-              <h2 className="text-left gap-3 text-2xl font-semibold md:text-3xl font-mono">Some Projects</h2>
+              <h2 className="text-left gap-3 text-2xl font-semibold md:text-3xl font-mono hover:text-accent">Some Projects</h2>
             </div>
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:auto-rows-[minmax(0,520px)] lg:auto-rows-[minmax(0,420px)] xl:auto-rows-[minmax(0,380px)]">
               <ProjectCard 
@@ -129,7 +129,7 @@ export default function Home() {
           {/* Music */}
           <section className="px-4 md:px-0">
             <div className="mb-8">
-              <h2 className="text-left gap-3 text-2xl font-semibold md:text-3xl font-mono">Some of My Music</h2>
+              <h2 className="text-left gap-3 text-2xl font-semibold md:text-3xl font-mono hover:text-accent">Some of My Music</h2>
             </div>
             <div className="grid grid-cols-1 gap-6">
               <Card className="border-surface0 bg-mantle hover:border-accent focus-visible:border-accent transition-colors">

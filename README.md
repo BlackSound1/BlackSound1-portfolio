@@ -1,23 +1,18 @@
 # BlackSound1's Portfolio Website
 
 Upon realizing that I should probably have a portfolio, I decided to make one.
-Not being a frontend -focused dev, I decided to just make a simple single-page static app using NextJS and some ShadCN components, where applicable. 
+Not being a frontend -focused dev, I decided to just make a simple single-page static app using NextJS and some ShadCN components, where applicable.
 
-## How to Run
-
-First, run the development server:
-
-```bash
-pnpm dev
-```
-
-Then, open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Deployed At: https://blacksound1-portfolio.vercel.app/
 
 ## Stack
 
-- NextJS
-- TypeScript
-- Vercel
-- ShadCN
-- TailwindCSS
-- PNPM
+- NextJS (React meta-framework)
+- TypeScript (Language)
+- ESLint (Linter)
+- Vercel (Host)
+- ShadCN (Component library)
+- TailwindCSS (Style)
+- Node.js (JavaScript runtime)
+- PNPM (package manager)
+- PostHog (Analytics)

@@ -4,6 +4,8 @@ import { ReactElement, useEffect, useState } from "react";
 import { Card, CardHeader, CardTitle, CardContent } from "./card";
 import posthog from "posthog-js";
 
+import { darkenHex } from '@/lib/utils';
+
 
 /**
  * A color picker section for styling the site.
@@ -16,6 +18,8 @@ export default function ColorPickerSection(): ReactElement {
     // Overwrite the --accent color throughout app
     if (typeof document !== "undefined") {
         document.documentElement.style.setProperty("--accent", accent);
+        document.documentElement.style.setProperty("--scrollbar-thumb", accent);
+        document.documentElement.style.setProperty("--scrollbar-thumb-hover", darkenHex(accent, 20));
     }
     }, [accent]);
 

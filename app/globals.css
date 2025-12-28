@@ -128,3 +128,30 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb, #eb575a);
+  border-radius: 20px;
+  border: 3px solid transparent;
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--scrollbar-thumb-hover, #c00);
+}
+
+/* Scrollbar for Firefox only, as it doesn't support Webkit */
+@supports not selector(::-webkit-scrollbar) {
+  :root {
+    scrollbar-color: var(--scrollbar-thumb, red) transparent;
+  }
+}

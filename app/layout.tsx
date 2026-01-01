@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { AccentProvider } from "@/context/AccentContext";
+import { ColorCheckboxProvider } from "@/context/ColorCheckboxContext";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,7 +30,9 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <AccentProvider>
-          {children}
+          <ColorCheckboxProvider>
+            {children}
+          </ColorCheckboxProvider>
         </AccentProvider>
       </body>
     </html>

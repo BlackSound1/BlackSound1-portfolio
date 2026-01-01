@@ -1,7 +1,8 @@
 'use client';
 
-import { darkenHex } from "@/lib/utils";
 import { createContext, Dispatch, ReactNode, SetStateAction, useContext, useEffect, useMemo, useState } from "react";
+
+import { darkenHex } from "@/lib/utils";
 
 
 type AccentContextType = {
@@ -32,15 +33,19 @@ export const AccentProvider: React.FC<{ children: ReactNode }> = ({ children }) 
 
     const value = useMemo(
         () => ({ accent, setAccent }),
-        [accent, setAccent]
+        [accent, setAccent],
     );
 
-    return <AccentContext.Provider value={value}>{children}</AccentContext.Provider>;
+    return (
+        <AccentContext.Provider value={value}>
+            {children}
+        </AccentContext.Provider>
+    );
 };
 
 /**
  * Activates the accent context.
- * @returns The accent context
+ * @returns The accent context.
  */
 export function useAccent(): AccentContextType {
     const ctx = useContext(AccentContext);

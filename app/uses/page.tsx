@@ -3,6 +3,8 @@ import posthog from 'posthog-js';
 import SocialLinksSection from '@/components/ui/SocialLinksSection';
 import ComputerCard from '@/components/ui/computerCard';
 import SoftwareCard from '@/components/ui/softwareCard';
+import SimpleListCard from '@/components/ui/SimpleListCard';
+import Break from '@/components/ui/break';
 
 export default function Uses() {
   posthog.capture('$pageview', { page: 'uses' });
@@ -46,7 +48,9 @@ export default function Uses() {
         os='Omarchy 3.23 (for now)'
       />
 
-      <h2 className='text-left gap-3 text-2xl font-semibold md:text-3xl font-mono hover:text-accent transition-colors duration-200'>Software</h2>
+      <Break />
+
+      <h1 className='mb-5 text-3xl font-bold md:text-4xl font-mono hover:text-accent transition-colors duration-200'>Software</h1>
 
       <SoftwareCard
         type='Programming'
@@ -56,6 +60,22 @@ export default function Uses() {
       <SoftwareCard 
         type='Music'
         software={['REAPER', 'Amplitude 5', 'Kontakt', 'Vital', 'BBC Symphony Orchestra', 'MODO DRUM', 'MODO BASS', 'Spitfire LABS', 'Various old free VSTs']}
+      />
+
+      <Break />
+
+      <h1 className='mb-5 text-3xl font-bold md:text-4xl font-mono hover:text-accent transition-colors duration-200'>Hardware</h1>
+
+      <h2 className='text-left gap-3 text-2xl font-semibold md:text-3xl font-mono hover:text-accent transition-colors duration-200'>Peripherals</h2>
+
+      <SimpleListCard 
+        list={['PreSonus Studio 24c audio interface', 'Logi MX Master 3S mouse', 'Logi Z200 speakers', 'AKG k240 headphones', 'KORG guitar tuner and metronome', 'Nektar Impact LX25+ MIDI controller']}
+      />
+
+      <h2 className='text-left gap-3 text-2xl font-semibold md:text-3xl font-mono hover:text-accent transition-colors duration-200'>Instruments</h2>
+
+      <SimpleListCard 
+        list={['Ibanez Jem Jr. electric guitar (white)', 'Epiphone Les Paul Studio electric guitar (black)', 'Yamaha FX370C acoustic guitar', 'Yamaha Portatone electronic keyboard']}
       />
     </section>
   );

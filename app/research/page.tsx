@@ -12,7 +12,7 @@ export default function Research() {
           This page details my original academic research.
           <br />
           <br />
-          This is the culmination of the research I did Concordia University's Sustainability Perspectives
+          This is the culmination of the research I did Concordia University&apos;s Sustainability Perspectives
           graduate-level microprogram. It focuses on electronic waste: what it is; where it comes from; where it goes;
           and the environmental, health, and equity concerns inherent to recycling it. I propose an alternative model of
           recycling based on the existing 3R model (reduce, reuse, recycle), that considers these three activities in

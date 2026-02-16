@@ -33,7 +33,7 @@ export default function Uses() {
         ram={128}
         storage='1 TB'
         graphics='Quadro P620'
-        os='Ubuntu 24.04'
+        os='Ubuntu 24.04 LTS'
       />
 
       <h2 className='text-left gap-3 text-2xl font-semibold md:text-3xl font-mono hover:text-accent transition-colors duration-200'>Laptop</h2>

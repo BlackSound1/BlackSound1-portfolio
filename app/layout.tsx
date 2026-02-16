@@ -42,6 +42,7 @@ export default function RootLayout({
                   <div></div>
                   <nav className='font-mono'>
                     <Link className='navitem px-3 transition-colors duration-200' href="/research">Research</Link>
+                    <Link className='navitem px-3 transition-colors duration-200' href="/uses">Uses</Link>
                   </nav>
                 </div>
                 <main className="flex-1 px-0 py-8 md:px-5">

@@ -1,6 +1,6 @@
 import { ReactElement } from 'react';
 
-import SocialLink from './SocialLink';
+import SocialLinksSection from './SocialLinksSection';
 
 /**
  * The About Me section.
@@ -17,10 +17,7 @@ export default function AboutMeSection(): ReactElement {
         <br />
         This site is a <span className="text-accent">work in progress</span>. No vibe coding!
       </p>
-      <div className="flex flex-wrap items-center gap-x-4 pt-2">
-        <SocialLink name="GitHub" url="https://github.com/BlackSound1" />
-        <SocialLink name="LinkedIn" url="https://www.linkedin.com/in/ordon/" />
-      </div>
+      <SocialLinksSection />
     </section>
   );
 }

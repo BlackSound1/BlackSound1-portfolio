@@ -7,6 +7,7 @@ import { ColorCheckboxProvider } from '@/context/ColorCheckboxContext';
 import { ThemeProvider } from '@/context/ThemeContext';
 import Footer from '@/components/ui/Footer';
 import SocialLink from '@/components/ui/SocialLink';
+
 import './globals.css';
 
 const geistSans = Geist({
@@ -28,12 +29,12 @@ export default function GlobalNotFound() {
   return (
     <html>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <div className="text-text mx-auto flex min-h-screen max-w-[90%] flex-col md:max-w-[80%]">
-          <main className="flex-1 px-0 py-8 md:px-5">
-            <div className="mx-auto max-w-6xl space-y-12 px-0 py-8 md:space-y-16 md:px-4 md:py-12">
-              <AccentProvider>
-                <ColorCheckboxProvider>
-                  <ThemeProvider>
+        <AccentProvider>
+          <ColorCheckboxProvider>
+            <ThemeProvider>
+              <div className="text-text mx-auto flex min-h-screen max-w-[90%] flex-col md:max-w-[80%]">
+                <main className="flex-1 px-0 py-8 md:px-5">
+                  <div className="mx-auto max-w-6xl space-y-12 px-0 py-8 md:space-y-16 md:px-4 md:py-12">
                     <section id="global-404-section" className="space-y-5 px-4 md:px-0">
                       <a href="/">
                         <h1 className="mb-5 text-3xl font-bold md:text-4xl font-mono hover:text-accent">BlackSound1</h1>
@@ -56,12 +57,12 @@ export default function GlobalNotFound() {
                     </section>
                     <Footer />
                     <SpeedInsights />
-                  </ThemeProvider>
-                </ColorCheckboxProvider>
-              </AccentProvider>
-            </div>
-          </main>
-        </div>
+                  </div>
+                </main>
+              </div>
+            </ThemeProvider>
+          </ColorCheckboxProvider>
+        </AccentProvider>
       </body>
     </html>
   );

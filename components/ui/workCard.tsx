@@ -26,7 +26,7 @@ interface WorkProps {
  * @param url A link to the company's page
  * @returns {ReactElement} A clickable card showing an individual work experience.
  */
-export default function WorkCard({ 
+export default function WorkCard({
   company,
   title,
   time,

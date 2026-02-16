@@ -33,8 +33,14 @@ export default function GlobalNotFound() {
           <ColorCheckboxProvider>
             <ThemeProvider>
               <div className="text-text mx-auto flex min-h-screen max-w-[90%] flex-col md:max-w-[80%]">
+                <div className="header sticky top-0 z-10 flex items-center justify-between p-5 select-none ">
+                  <div></div>
+                  <nav className="font-mono">
+                    <a className="navitem px-3 transition-colors duration-200" href="/research">Research</a>
+                  </nav>
+                </div>
                 <main className="flex-1 px-0 py-8 md:px-5">
-                  <div className="mx-auto max-w-6xl space-y-12 px-0 py-8 md:space-y-16 md:px-4 md:py-12">
+                  <div className="mx-auto max-w-6xl space-y-12 px-0 md:space-y-16 md:px-4">
                     <section id="global-404-section" className="space-y-5 px-4 md:px-0">
                       <a href="/">
                         <h1 className="mb-5 text-3xl font-bold md:text-4xl font-mono hover:text-accent">BlackSound1</h1>

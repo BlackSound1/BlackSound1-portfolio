@@ -25,9 +25,9 @@ export default function SoftwareCard({
         <CardContent>
           <CardDescription>
             <ul>
-              {software.map((soft) => {
-                return <li key={soft}>{soft}</li>
-              })}
+              {software.map((soft) => (
+                <li key={soft}>{soft}</li>
+              ))}
             </ul>
           </CardDescription>
         </CardContent>

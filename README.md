@@ -12,6 +12,8 @@ Deployed At: https://blacksound1-portfolio.vercel.app/
 - My social links
 - My work experience
 - My projects
+- A Research page detailing my research, with embedded PDF
+- A Uses page showing what I use
 - A theme selector (themes persist on reload):
   - My own default theme
   - Catpuccin (4 variants)

@@ -2,6 +2,7 @@ import posthog from 'posthog-js';
 
 import SocialLinksSection from '@/components/ui/SocialLinksSection';
 import ComputerCard from '@/components/ui/computerCard';
+import SoftwareCard from '@/components/ui/softwareCard';
 
 export default function Uses() {
   posthog.capture('$pageview', { page: 'uses' });
@@ -43,6 +44,18 @@ export default function Uses() {
         storage='256 GB'
         graphics='Intel UHD'
         os='Omarchy 3.23 (for now)'
+      />
+
+      <h2 className='text-left gap-3 text-2xl font-semibold md:text-3xl font-mono hover:text-accent transition-colors duration-200'>Software</h2>
+
+      <SoftwareCard
+        type='Programming'
+        software={['VS Code', 'IntelliJ', 'PyCharm', 'Docker', 'Windows', 'Linux', 'UV', 'Git', 'GitHub']}
+      />
+
+      <SoftwareCard 
+        type='Music'
+        software={['REAPER', 'Amplitude 5', 'Kontakt', 'Vital', 'BBC Symphony Orchestra', 'MODO DRUM', 'MODO BASS', 'Spitfire LABS', 'Various old free VSTs']}
       />
     </section>
   );

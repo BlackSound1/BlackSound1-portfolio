@@ -19,7 +19,7 @@ export default function ColorPickerSection(): ReactElement {
   return (
     <section id="color-picker-section" className="px-4 md:col-span-2">
       <div className="mb-8">
-        <h3 className="text-left gap-3 text-xl font-semibold md:text-2xl font-mono hover:text-accent">Accent Color Picker</h3>
+        <h3 className="text-left gap-3 text-xl font-semibold md:text-2xl font-mono hover:text-accent transition-colors duration-200">Accent Color Picker</h3>
       </div>
       <div className="grid grid-cols-1 gap-6 lg:auto-rows-[minmax(0,206px)]">
         <Card className="bg-mantle hover:border-accent focus-visible:border-accent transition-colors duration-200 shadow-lg hover:shadow-xl">

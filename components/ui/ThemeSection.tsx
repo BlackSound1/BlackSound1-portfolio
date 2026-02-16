@@ -10,7 +10,7 @@ export default function ThemeSection(): ReactElement {
   return (
     <section id="theme-section" className="px-4">
       <div className="mb-8">
-        <h3 className="text-left gap-3 text-xl font-semibold md:text-2xl font-mono hover:text-accent">
+        <h3 className="text-left gap-3 text-xl font-semibold md:text-2xl font-mono hover:text-accent transition-colors duration-200">
           Theme Selector
         </h3>
       </div>

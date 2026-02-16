@@ -46,7 +46,7 @@ export default function RootLayout({
                 <main className="flex-1 px-0 py-8 md:px-5">
                   <div className="mx-auto max-w-6xl space-y-12 px-0 md:space-y-16 md:px-4">
                     <a href="/">
-                      <h1 className="mb-5 text-3xl font-bold md:text-4xl font-mono hover:text-accent">BlackSound1</h1>
+                      <h1 className="mb-5 text-3xl font-bold md:text-4xl font-mono hover:text-accent transition-colors duration-200">BlackSound1</h1>
                     </a>
                     {children}
                     <Footer />

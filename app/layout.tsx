@@ -7,6 +7,7 @@ import { AccentProvider } from '@/context/AccentContext';
 import { ColorCheckboxProvider } from '@/context/ColorCheckboxContext';
 import { ThemeProvider } from '@/context/ThemeContext';
 
+import Header from '@/components/ui/NavHeader';
 import Footer from '@/components/ui/Footer';
 
 import './globals.css';
@@ -38,17 +39,13 @@ export default function RootLayout({
           <ColorCheckboxProvider>
             <ThemeProvider>
               <div className="text-text mx-auto flex min-h-screen max-w-[90%] flex-col md:max-w-[80%]">
-                <div className="header sticky top-0 z-10 flex items-center justify-between p-5 select-none ">
-                  <div></div>
-                  <nav className='font-mono'>
-                    <Link className='navitem px-3 transition-colors duration-200' href="/research">Research</Link>
-                    <Link className='navitem px-3 transition-colors duration-200' href="/uses">Uses</Link>
-                  </nav>
-                </div>
-                <main className="flex-1 px-0 py-8 md:px-5">
+                <main className="flex-1 px-0 md:px-5">
                   <div className="mx-auto max-w-6xl space-y-12 px-0 md:space-y-16 md:px-4">
+                    <Header />
                     <Link href="/">
-                      <h1 className="mb-5 text-3xl font-bold md:text-4xl font-mono hover:text-accent transition-colors duration-200">BlackSound1</h1>
+                      <h1 className="mb-5 text-3xl font-bold md:text-4xl font-mono hover:text-accent transition-colors duration-200">
+                        BlackSound1
+                      </h1>
                     </Link>
                     {children}
                     <Footer />

@@ -39,7 +39,7 @@ export default function RootLayout({
           <ColorCheckboxProvider>
             <ThemeProvider>
               <div className="text-text mx-auto flex min-h-screen max-w-[90%] flex-col md:max-w-[80%]">
-                <main className="flex-1 px-0 md:px-5">
+                <main className="flex-1 px-0 pb-8 md:px-5">
                   <div className="mx-auto max-w-6xl space-y-12 px-0 md:space-y-16 md:px-4">
                     <Header />
                     <Link href="/">

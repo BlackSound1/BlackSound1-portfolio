@@ -39,11 +39,13 @@ export default function RootLayout({
           <ColorCheckboxProvider>
             <ThemeProvider>
               <div className="text-text mx-auto flex min-h-screen max-w-[90%] flex-col md:max-w-[80%]">
-                <Header />
-                <main className="flex-1 px-0 py-8 md:px-5">
+                <main className="flex-1 px-0 md:px-5">
                   <div className="mx-auto max-w-6xl space-y-12 px-0 md:space-y-16 md:px-4">
+                    <Header />
                     <Link href="/">
-                      <h1 className="mb-5 text-3xl font-bold md:text-4xl font-mono hover:text-accent transition-colors duration-200">BlackSound1</h1>
+                      <h1 className="mb-5 text-3xl font-bold md:text-4xl font-mono hover:text-accent transition-colors duration-200">
+                        BlackSound1
+                      </h1>
                     </Link>
                     {children}
                     <Footer />

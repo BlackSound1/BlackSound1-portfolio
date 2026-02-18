@@ -67,6 +67,16 @@
     backdrop-filter: blur(10px);
     --webkit-backdrop-filter: blur(10px);
   }
+
+  /* #default-sidebar {
+    mask: linear-gradient(black, black, transparent);
+    backdrop-filter: blur(10px);
+    --webkit-backdrop-filter: blur(10px);
+  } */
+
+  .sidebar-text {
+    color: var(--text);
+  }
 }
 
 :root[data-theme='default-default'] {

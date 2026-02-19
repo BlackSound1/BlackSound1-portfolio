@@ -24,10 +24,10 @@ export const AccentProvider: React.FC<{ children: ReactNode }> = ({ children }) 
     if (typeof window === 'undefined') {
       return;
     }
-    const accentColor = localStorage.getItem('accent');
-    if (accentColor) {
+    const storedColor = localStorage.getItem('accent');
+    if (storedColor) {
       const id = setTimeout(() => {
-        setAccent(prev => (prev === accentColor ? prev : accentColor));
+        setAccent(storedColor);
       }, 0);
       return () => clearTimeout(id);
     }

@@ -45,7 +45,7 @@ export const ThemeProvider: React.FC<{ children: ReactNode }> = ({ children }) =
   const setThemeUser: Dispatch<SetStateAction<string>> = useCallback(
     (value) => {
       userInitiatedRef.current = true;
-      setTheme(value as any);
+      setTheme(value);
     },
     [setTheme],
   );

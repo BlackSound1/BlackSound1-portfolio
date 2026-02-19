@@ -76,6 +76,10 @@
   .tag-path {
     stroke: var(--text);
   }
+
+  a:hover {
+    color: var(--sc-color);
+  }
 }
 
 @layer base {

@@ -1,9 +1,9 @@
 import posthog from 'posthog-js';
 
+import ComputerCard from '@/components/cards/computerCard';
+import SimpleListCard from '@/components/cards/SimpleListCard';
 import SocialLinksSection from '@/components/sections/SocialLinksSection';
 import Break from '@/components/ui/break';
-import ComputerCard from '@/components/ui/computerCard';
-import SimpleListCard from '@/components/ui/SimpleListCard';
 
 export default function Uses() {
   posthog.capture('$pageview', { page: 'uses' });

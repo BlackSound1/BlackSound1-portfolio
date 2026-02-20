@@ -4,8 +4,8 @@ import posthog from 'posthog-js';
 import { ReactElement } from 'react';
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import Tag from './tag';
-import TagIcon from './TagIcon';
+import Tag from '@/components/ui/tag';
+import TagIcon from '@/components/ui/TagIcon';
 
 interface WorkProps {
   company: string;
@@ -26,14 +26,7 @@ interface WorkProps {
  * @param url A link to the company's page
  * @returns {ReactElement} A clickable card showing an individual work experience.
  */
-export default function WorkCard({
-  company,
-  title,
-  time,
-  technologies,
-  description,
-  url
-}: WorkProps): ReactElement {
+export default function WorkCard({ company, title, time, technologies, description, url }: WorkProps): ReactElement {
   return (
     <a
       href={url}

@@ -1,14 +1,13 @@
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import { Geist, Geist_Mono } from 'next/font/google';
+import Link from 'next/link';
 
+import Header from '@/components/ui/NavHeader';
+import Footer from '@/components/cards/Footer';
 import { AccentProvider } from '@/context/AccentContext';
 import { ColorCheckboxProvider } from '@/context/ColorCheckboxContext';
 import { ThemeProvider } from '@/context/ThemeContext';
-
-import Header from '@/components/ui/NavHeader';
-import Footer from '@/components/ui/Footer';
 
 import './globals.css';
 

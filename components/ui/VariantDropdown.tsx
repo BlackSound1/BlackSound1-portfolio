@@ -60,10 +60,12 @@ export default function VariantDropdown(): ReactElement {
                   key={variant}
                   type="button"
                   className="dropdown-option block text-left px-4 py-2 text-sm w-full text-black hover:bg-gray-100"
-                  onClick={() => ((selectedVariant: string) => {
-                    setTheme(`${themeOnly}-${selectedVariant}`);
-                    setIsOpen(false);
-                  })(variant)}
+                  onClick={() =>
+                    ((selectedVariant: string) => {
+                      setTheme(`${themeOnly}-${selectedVariant}`);
+                      setIsOpen(false);
+                    })(variant)
+                  }
                 >
                   {capitalize(variant)}
                 </button>

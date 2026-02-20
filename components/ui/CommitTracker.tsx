@@ -39,9 +39,12 @@ export default function CommitTracker(): ReactElement {
   }, []);
 
   return (
-    <div id="commit-tracker" className="flex flex-wrap items-center justify-center hover:text-accent transition-colors duration-200">
+    <div
+      id="commit-tracker"
+      className="flex flex-wrap items-center justify-center hover:text-accent transition-colors duration-200"
+    >
       {/* Commit SVG */}
-      <svg 
+      <svg
         xmlns="http://www.w3.org/2000/svg"
         width="18"
         viewBox="0 0 24 24"
@@ -52,7 +55,7 @@ export default function CommitTracker(): ReactElement {
         strokeLinejoin="round"
         className="icon icon-tabler icons-tabler-outline icon-tabler-git-commit"
       >
-        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
         <path d="M9 12a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
         <path d="M12 3l0 6" />
         <path d="M12 15l0 6" />

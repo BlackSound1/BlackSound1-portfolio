@@ -21,11 +21,15 @@ export const AccentProvider: React.FC<{ children: ReactNode }> = ({ children }) 
   const [accent, setAccent] = useState<string>('#eb575a');
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const accentColor = localStorage.getItem('accent');
-      if (accentColor) {
-        setAccent(accentColor);
-      }
+    if (typeof window === 'undefined') {
+      return;
+    }
+    const storedColor = localStorage.getItem('accent');
+    if (storedColor) {
+      const id = setTimeout(() => {
+        setAccent(storedColor);
+      }, 0);
+      return () => clearTimeout(id);
     }
   }, []);
 

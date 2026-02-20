@@ -1,5 +1,3 @@
-import { title } from 'process';
-
 import { Card, CardContent, CardHeader, CardTitle } from './card';
 
 interface SimpleListCardProps {

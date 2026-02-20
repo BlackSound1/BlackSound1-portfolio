@@ -45,7 +45,7 @@ export const ThemeProvider: React.FC<{ children: ReactNode }> = ({ children }) =
   const setThemeUser: Dispatch<SetStateAction<string>> = useCallback(
     (value) => {
       userInitiatedRef.current = true;
-      setTheme(value as any);
+      setTheme(value);
     },
     [setTheme],
   );
@@ -55,11 +55,13 @@ export const ThemeProvider: React.FC<{ children: ReactNode }> = ({ children }) =
     if (typeof window === 'undefined') {
       return;
     }
-
     const storedTheme = localStorage.getItem('theme');
-    const targetTheme = storedTheme ?? 'default-default';
-
-    setTheme(targetTheme);
+    if (storedTheme) {
+      const id = setTimeout(() => {
+        setTheme(storedTheme);
+      }, 0);
+      return () => clearTimeout(id);
+    }
   }, []);
 
   // Update local storage when theme changes

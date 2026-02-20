@@ -19,7 +19,16 @@ export default function MusicSection(): ReactElement {
   const DEFAULT_COLOR = '#eb575a';
 
   const makeEmbedURL = (hex: string) => {
-    return `https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A112988860&color=%23${hex.replace(/^#/, '')}&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=true`;
+    const CLEANED_HEX = hex.replace(/^#/, '');
+    return `https://w.soundcloud.com/player/?\
+url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A112988860\
+&color=%23${CLEANED_HEX}\
+&auto_play=false\
+&hide_related=true\
+&show_comments=false\
+&show_user=true\
+&show_reposts=false\
+&show_teaser=true`;
   };
 
   const [embedURL, setEmbedURL] = useState<string>(() => {
@@ -30,7 +39,10 @@ export default function MusicSection(): ReactElement {
   useEffect(() => {
     // When reloads are allowed, update the embed with current accent
     if (!checked) {
-      setEmbedURL(makeEmbedURL(accent || DEFAULT_COLOR));
+      const id = setTimeout(() => {
+        setEmbedURL(makeEmbedURL(accent || DEFAULT_COLOR));
+      });
+      return () => clearTimeout(id);
     }
   }, [checked, accent]);
 

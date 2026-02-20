@@ -39,7 +39,10 @@ url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A11298886
   useEffect(() => {
     // When reloads are allowed, update the embed with current accent
     if (!checked) {
-      setEmbedURL(makeEmbedURL(accent || DEFAULT_COLOR));
+      const id = setTimeout(() => {
+        setEmbedURL(makeEmbedURL(accent || DEFAULT_COLOR));
+      });
+      return () => clearTimeout(id);
     }
   }, [checked, accent]);
 

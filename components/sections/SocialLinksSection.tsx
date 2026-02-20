@@ -1,4 +1,4 @@
-import SocialLink from './SocialLink';
+import SocialLink from '../ui/SocialLink';
 
 export default function SocialLinksSection() {
   return (

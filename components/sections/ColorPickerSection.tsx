@@ -6,7 +6,7 @@ import posthog from 'posthog-js';
 import { useAccent } from '@/context/AccentContext';
 import { useColorCheckbox } from '@/context/ColorCheckboxContext';
 
-import { Card, CardContent, CardHeader, CardTitle } from './card';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 /**
  * A color picker section for styling the site.

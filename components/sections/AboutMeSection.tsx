@@ -2,6 +2,7 @@ import { ReactElement } from 'react';
 
 import SocialLinksSection from './SocialLinksSection';
 
+
 /**
  * The About Me section.
  * @returns {ReactElement} The About Me section.

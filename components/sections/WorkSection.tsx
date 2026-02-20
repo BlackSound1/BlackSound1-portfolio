@@ -1,6 +1,6 @@
 import { ReactElement } from 'react';
 
-import WorkCard from './workCard';
+import WorkCard from '@/components/ui/workCard';
 
 /**
  * A section component that displays a list of work experience items.

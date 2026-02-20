@@ -1,12 +1,11 @@
 'use client';
 
-import { ReactElement, useEffect, useState } from 'react';
-
 import { useAccent } from '@/context/AccentContext';
 import { useColorCheckbox } from '@/context/ColorCheckboxContext';
+import { ReactElement, useEffect, useState } from 'react';
 
-import { Card, CardContent } from './card';
-import SoundcloudEmbed from './soundcloudEmbed';
+import { Card, CardContent } from '@/components/ui/card';
+import SoundcloudEmbed from '@/components/ui/soundcloudEmbed';
 
 /**
  * A section element containing a card with a Soundcloud playlist player with some of my music.

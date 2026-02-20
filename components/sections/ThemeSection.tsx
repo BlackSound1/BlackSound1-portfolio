@@ -2,9 +2,9 @@
 
 import { ReactElement } from 'react';
 
-import { Card, CardContent } from './card';
-import ThemeDropdown from './ThemeDropdown';
-import VariantDropdown from './VariantDropdown';
+import { Card, CardContent } from '@/components/ui/card';
+import ThemeDropdown from '@/components/ui/ThemeDropdown';
+import VariantDropdown from '@/components/ui/VariantDropdown';
 
 export default function ThemeSection(): ReactElement {
   return (
@@ -19,10 +19,10 @@ export default function ThemeSection(): ReactElement {
           <CardContent>
             <div className="grid grid-cols-2 lg:grid-cols-1">
               <span>
-                <div className='font-semibold'>Choose a theme</div>
+                <div className="font-semibold">Choose a theme</div>
                 <ThemeDropdown />
               </span>
-              <span className='lg:mt-6'>
+              <span className="lg:mt-6">
                 <div className="font-semibold">Choose a variant</div>
                 <VariantDropdown />
               </span>

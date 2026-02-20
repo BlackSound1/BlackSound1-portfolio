@@ -1,7 +1,7 @@
 import posthog from 'posthog-js';
 
+import SocialLinksSection from '@/components/sections/SocialLinksSection';
 import PDF_Viewer from '@/components/ui/PDFViewer';
-import SocialLinksSection from '@/components/ui/SocialLinksSection';
 
 export default function Research() {
   posthog.capture('$pageview', { page: 'research' });

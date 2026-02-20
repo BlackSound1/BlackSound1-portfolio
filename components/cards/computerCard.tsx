@@ -1,4 +1,4 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './card';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
 interface ComputerProps {
   name: string;
@@ -19,19 +19,12 @@ interface ComputerProps {
  * @param os The operating system of the computer.
  * @returns A card with info about an individual computer.
  */
-export default function ComputerCard({
-  name,
-  cpu,
-  ram,
-  storage,
-  graphics,
-  os
-}: ComputerProps) {
+export default function ComputerCard({ name, cpu, ram, storage, graphics, os }: ComputerProps) {
   return (
-    <Card className='mb-4 bg-mantle hover:border-accent focus-visible:border-accent group block overflow-hidden rounded-xl border shadow-lg transition-all duration-200 hover:shadow-xl focus:outline-none'>
+    <Card className="mb-4 bg-mantle hover:border-accent focus-visible:border-accent group block overflow-hidden rounded-xl border shadow-lg transition-all duration-200 hover:shadow-xl focus:outline-none">
       <CardHeader>
-        <CardTitle className='text-text group-hover:text-accent text-xl font-semibold transition-colors duration-200'>
-            {name}
+        <CardTitle className="text-text group-hover:text-accent text-xl font-semibold transition-colors duration-200">
+          {name}
         </CardTitle>
       </CardHeader>
       <CardContent>

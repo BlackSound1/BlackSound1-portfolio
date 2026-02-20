@@ -1,13 +1,12 @@
 'use client';
 
+import Image from 'next/image';
 import posthog from 'posthog-js';
 import { ReactElement } from 'react';
-import Image from 'next/image';
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-
-import Tag from './tag';
-import TagIcon from './TagIcon';
+import Tag from '@/components/ui/tag';
+import TagIcon from '@/components/ui/TagIcon';
 
 interface ProjectProps {
   name: string;

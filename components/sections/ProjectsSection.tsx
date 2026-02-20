@@ -1,6 +1,6 @@
 import { ReactElement } from 'react';
 
-import ProjectCard from './projectCard';
+import ProjectCard from '@/components/cards/projectCard';
 
 /**
  * A section component that displays a list of projects.

@@ -79,6 +79,8 @@ export default function Uses() {
           'MODO DRUM',
           'MODO BASS',
           'Spitfire LABS',
+          'MuseScore',
+          'Guitar Pro',
           'Various old free VSTs',
         ]}
       />

@@ -69,7 +69,7 @@
   }
 
   /* External link styling.
-    Based on https://css-tricks.com/css-link-hover-effects/#aa-the-passing-underline-link-hover-effect
+     Based on https://css-tricks.com/css-link-hover-effects/#aa-the-passing-underline-link-hover-effect
   */
   .external-link {
     color: #18272F;
@@ -84,7 +84,7 @@
     height: 4px;
     border-radius: 4px;
     background-color: var(--sc-color);
-    bottom: 0;
+    bottom: -6px;
     left: 0;
     transform-origin: right;
     transform: scaleX(0);

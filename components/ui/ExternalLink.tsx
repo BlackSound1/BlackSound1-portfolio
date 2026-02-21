@@ -5,8 +5,10 @@ interface ExternalLinkProps {
 
 export default function ExternalLink({ url, description }: ExternalLinkProps) {
   return (
-    <a href={url} target="_blank" rel="noopener noreferrer">
-      <span className="external-link">{description}</span>
-    </a>
+    <span className="external-link w-fit">
+      <a href={url} target="_blank" rel="noopener noreferrer">
+        {description}
+      </a>
+    </span>
   );
 }

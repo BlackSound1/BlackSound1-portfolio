@@ -11,6 +11,9 @@ export default function Header() {
         <Link className="navitem px-3 transition-colors duration-200" href="/uses">
           Uses
         </Link>
+        <Link className="navitem px-3 transition-colors duration-200" href="/links">
+          Links
+        </Link>
       </nav>
     </div>
   );

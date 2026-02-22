@@ -77,9 +77,9 @@ interface OsIconProps {
   system: string;
 }
 
-const OsIcon = async ({ system }: OsIconProps) => {
+const OsIcon = ({ system }: OsIconProps) => {
   const osCleaned = system.split(' ')[0].toLowerCase();
-  return await getLogoSVG(osCleaned);
+  return getLogoSVG(osCleaned);
 };
 
 /**

@@ -1,4 +1,4 @@
-export const WINDOWS_SVG = async () => (
+export const WINDOWS_SVG = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="18"
@@ -17,7 +17,7 @@ export const WINDOWS_SVG = async () => (
   </svg>
 );
 
-export const UBUNTU_SVG = async () => (
+export const UBUNTU_SVG = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="18"
@@ -37,7 +37,7 @@ export const UBUNTU_SVG = async () => (
   </svg>
 );
 
-export const CACHYOS_SVG = async () => (
+export const CACHYOS_SVG = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="18"

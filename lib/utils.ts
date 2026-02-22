@@ -159,14 +159,14 @@ export const tagColorMap: Record<string, string[]> = {
  * @param os The operating system to get the SVG for.
  * @returns An HTML `<svg>` element with an SVG logo corresponding to `os`.
  */
-export async function getLogoSVG(os: string) {
+export function getLogoSVG(os: string) {
   switch (os) {
     case 'windows':
-      return await WINDOWS_SVG();
+      return WINDOWS_SVG();
     case 'ubuntu':
-      return await UBUNTU_SVG();
+      return UBUNTU_SVG();
     case 'cachyos':
-      return await CACHYOS_SVG();
+      return CACHYOS_SVG();
     default:
       return null;
   }

@@ -1,6 +1,8 @@
 import { type ClassValue, clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 
+import { CACHYOS_SVG, UBUNTU_SVG, WINDOWS_SVG } from './computerSVGs';
+
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
@@ -150,4 +152,22 @@ export const tagColorMap: Record<string, string[]> = {
     '#8BE9FD', '#BD93F9', '#FF79C6'
   ],
 
+}
+
+/**
+ * Get an SVG logo based on the operating system given.
+ * @param os The operating system to get the SVG for.
+ * @returns An HTML `<svg>` element with an SVG logo corresponding to `os`.
+ */
+export async function getLogoSVG(os: string) {
+  switch (os) {
+    case 'windows':
+      return await WINDOWS_SVG();
+    case 'ubuntu':
+      return await UBUNTU_SVG();
+    case 'cachyos':
+      return await CACHYOS_SVG();
+    default:
+      return null;
+  }
 }

@@ -54,7 +54,7 @@ export default function Uses() {
         ram={8}
         storage="256 GB"
         graphics="Intel UHD"
-        os="CachyOS 6.19.3-2 (for now)"
+        os="CachyOS 6 (for now)"
       />
 
       <Break />

@@ -20,20 +20,8 @@
     color: var(--text);
   }
 
-  h1:hover, h2:hover, h3:hover, a:hover, .project-card:hover {
-    color: var(--sc-color);
-  }
-
   .tag {
     background-color: #CFCFDE;
-  }
-
-  .tag-path {
-    stroke: var(--text);
-  }
-
-  .tag-path, .social-path, .commit-path {
-    stroke: currentColor;
   }
 
   .dropdown-button, .dropdown-option {
@@ -69,16 +57,8 @@
     color: var(--text);
   }
 
-  h1:hover, h2:hover, h3:hover, a:hover, .project-card:hover {
-    color: var(--sc-color);
-  }
-
   .tag {
     background-color: #44475A;
-  }
-
-  .tag-path, .social-path, .commit-path {
-    stroke: currentColor;
   }
 
   .dropdown-button, .dropdown-option {

@@ -68,6 +68,14 @@
     --webkit-backdrop-filter: blur(10px);
   }
 
+  h1:hover, h2:hover, h3:hover, a:hover {
+    color: var(--sc-color);
+  }
+  
+  .tag-path, .social-path, .commit-path {
+    stroke: currentcolor;
+  }
+
   /* External link styling.
      Based on https://css-tricks.com/css-link-hover-effects/#aa-the-passing-underline-link-hover-effect
   */

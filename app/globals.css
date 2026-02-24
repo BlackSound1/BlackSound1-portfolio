@@ -8,7 +8,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -51,57 +50,13 @@
   --input: oklch(0.922 0 0);
   
   --sc-color: #eb575a;
-
   --radius: 0.625rem;
+  --scrollbar-thumb: var(--sc-color);
+  --scrollbar-thumb-hover: #c00;
 
-  section {
-    margin-bottom: 2.5rem;
-  }
-
-  .color-checkbox {
-    accent-color: var(--sc-color);
-  }
-
-  .header {
-    mask: linear-gradient(black, black, transparent);
-    backdrop-filter: blur(10px);
-    --webkit-backdrop-filter: blur(10px);
-  }
-
+  /* Global hover interaction should be applied across all themes */
   h1:hover, h2:hover, h3:hover, a:hover {
     color: var(--sc-color);
-  }
-  
-  .tag-path, .social-path, .commit-path {
-    stroke: currentcolor;
-  }
-
-  /* External link styling.
-     Based on https://css-tricks.com/css-link-hover-effects/#aa-the-passing-underline-link-hover-effect
-  */
-  .external-link {
-    color: #18272F;
-    position: relative;
-    text-decoration: none;
-  }
-
-  .external-link::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 4px;
-    border-radius: 4px;
-    background-color: var(--sc-color);
-    bottom: -6px;
-    left: 0;
-    transform-origin: right;
-    transform: scaleX(0);
-    transition: transform 0.2s ease-in-out;
-  }
-
-  .external-link:hover::before {
-    transform-origin: left;
-    transform: scaleX(1);
   }
 }
 
@@ -112,44 +67,96 @@
   .tag-path {
     stroke: var(--text);
   }
-
-  a:hover {
-    color: var(--sc-color);
-  }
 }
 
+/*
+* Base styles
+* The purpose of this is to define component and element styling
+*/
 @layer base {
   * {
     @apply border-border;
   }
+  
   body {
     @apply bg-background text-foreground;
   }
+
+  section {
+    margin-bottom: 2.5rem;
+  }
+
+  .header {
+    mask: linear-gradient(black, black, transparent);
+    backdrop-filter: blur(10px);
+  }
+
+  .color-checkbox {
+    accent-color: var(--sc-color);
+  }
+
+  .tag-path, .social-path, .commit-path {
+    stroke: currentcolor;
+  }
+
+  /*
+  * External link styling.
+  * Based on https://css-tricks.com/css-link-hover-effects/#aa-the-passing-underline-link-hover-effect
+  */
+  .external-link {
+    color: #18272F;
+    position: relative;
+    text-decoration: none;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 4px;
+      border-radius: 4px;
+      background-color: var(--sc-color);
+      bottom: -6px;
+      left: 0;
+      transform-origin: right;
+      transform: scaleX(0);
+      transition: transform 0.2s ease-in-out;
+    }
+
+    &:hover::before {
+      transform-origin: left;
+      transform: scaleX(1);
+    }
+  }
+
+  /* Scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb);
+    border-radius: 20px;
+    border: 3px solid transparent;
+    background-clip: padding-box;
+
+    &:hover {
+      background-color: var(--scrollbar-thumb-hover);
+    }
+  }
 }
 
-/* Scrollbar styling */
-::-webkit-scrollbar {
-  width: 12px;
-}
-
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: var(--scrollbar-thumb, #eb575a);
-  border-radius: 20px;
-  border: 3px solid transparent;
-  background-clip: padding-box;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: var(--scrollbar-thumb-hover, #c00);
-}
-
-/* Scrollbar for Firefox only, as it doesn't support Webkit */
+/*
+* Firefox scrollbar.
+* This is outside `@layer base` because `@supports` checks browser compatibility.
+* It's not a style definition, per se. Plus, I'm manipulating `:root` here, so it
+* should be outside of any `@layer`.
+*/
 @supports not selector(::-webkit-scrollbar) {
   :root {
-    scrollbar-color: var(--scrollbar-thumb, red) transparent;
+    scrollbar-color: var(--scrollbar-thumb) transparent;
   }
 }

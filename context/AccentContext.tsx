@@ -2,8 +2,6 @@
 
 import { createContext, Dispatch, ReactNode, SetStateAction, useContext, useEffect, useMemo, useState } from 'react';
 
-import { darkenHex } from '@/lib/utils';
-
 type AccentContextType = {
   accent: string;
   setAccent: Dispatch<SetStateAction<string>>;
@@ -39,7 +37,8 @@ export const AccentProvider: React.FC<{ children: ReactNode }> = ({ children }) 
     }
     document.documentElement.style.setProperty('--accent', accent);
     document.documentElement.style.setProperty('--scrollbar-thumb', accent);
-    document.documentElement.style.setProperty('--scrollbar-thumb-hover', darkenHex(accent, 20));
+    // Hover is 10% darker
+    document.documentElement.style.setProperty('--scrollbar-thumb-hover', 'hsl(from var(--accent) h s calc(l - 10))');
     document.documentElement.style.setProperty('--sc-color', accent);
     localStorage.setItem('accent', accent);
   }, [accent]);

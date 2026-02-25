@@ -16,9 +16,9 @@ interface PDF_Props {
  */
 export default function PDF_Viewer({ file }: PDF_Props): ReactElement {
   return (
-    <Card className="bg-mantle hover:border-accent focus-visible:border-accent group h-full flex flex-col overflow-hidden rounded-xl border shadow-lg transition-all duration-200 hover:shadow-xl focus:outline-none">
-      <CardContent className="flex-1">
-        <CardDescription className="h-200 w-full overflow-hidden rounded-xl border border-gray-300 shadow-lg dark:border-gray-600">
+    <Card className="py-0 bg-mantle hover:border-accent focus-visible:border-accent group flex flex-col overflow-hidden rounded-xl border shadow-lg transition-all duration-200 hover:shadow-xl focus:outline-none">
+      <CardContent className="px-0">
+        <CardDescription className="h-200 overflow-hidden rounded-xl shadow-lg">
           <PDFViewer
             config={{
               src: file,

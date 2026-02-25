@@ -1,7 +1,8 @@
+import { JSX } from 'react';
 import { type ClassValue, clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 
-import { CACHYOS_SVG, UBUNTU_SVG, WINDOWS_SVG } from './computerSVGs';
+import { CACHYOS_SVG, REAPER_SVG, UBUNTU_SVG, WINDOWS_SVG } from './SVG_store';
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -119,20 +120,22 @@ export const tagColorMap: Record<string, string[]> = {
 
 }
 
+const _SVG_map: Record<string, () => JSX.Element> = {
+  "windows": WINDOWS_SVG,
+  'ubuntu': UBUNTU_SVG,
+  'cachyos': CACHYOS_SVG,
+  'reaper': REAPER_SVG,
+};
+
 /**
- * Get an SVG logo based on the operating system given.
- * @param os The operating system to get the SVG for.
- * @returns An HTML `<svg>` element with an SVG logo corresponding to `os`.
+ * Get an SVG logo based on the string given.
+ * @param svg The string to get the SVG for.
+ * @returns An HTML `<svg>` element with an SVG logo corresponding to `svg`.
  */
-export function getLogoSVG(os: string) {
-  switch (os) {
-    case 'windows':
-      return WINDOWS_SVG();
-    case 'ubuntu':
-      return UBUNTU_SVG();
-    case 'cachyos':
-      return CACHYOS_SVG();
-    default:
-      return null;
+export function getLogoSVG(svg: string) {
+  const found_SVG = _SVG_map[svg];
+  if (!found_SVG) {
+    return null;
   }
+  return found_SVG();
 }

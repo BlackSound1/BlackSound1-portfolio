@@ -2,7 +2,7 @@ import { JSX } from 'react';
 import { type ClassValue, clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 
-import { CACHYOS_SVG, REAPER_SVG, UBUNTU_SVG, WINDOWS_SVG } from './SVG_store';
+import { SVG_CachyOS, SVG_Reaper, SVG_Ubuntu, SVG_Windows, SVG_LinkedIn, SVG_GitHub } from './SVG_store';
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -120,11 +120,14 @@ export const tagColorMap: Record<string, string[]> = {
 
 }
 
+// A map of SVG names to their `JSX.Elements`
 const _SVG_map: Record<string, () => JSX.Element> = {
-  "windows": WINDOWS_SVG,
-  'ubuntu': UBUNTU_SVG,
-  'cachyos': CACHYOS_SVG,
-  'reaper': REAPER_SVG,
+  "windows": SVG_Windows,
+  'ubuntu': SVG_Ubuntu,
+  'cachyos': SVG_CachyOS,
+  'reaper': SVG_Reaper,
+  'linkedin': SVG_LinkedIn,
+  'github': SVG_GitHub,
 };
 
 /**
@@ -139,3 +142,4 @@ export function getLogoSVG(svg: string) {
   }
   return found_SVG();
 }
+

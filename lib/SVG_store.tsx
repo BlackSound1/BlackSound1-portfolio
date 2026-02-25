@@ -1,4 +1,48 @@
-export const WINDOWS_SVG = () => (
+export const SVG_GitHub = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="18"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className="icon icon-tabler icons-tabler-outline social-icon"
+  >
+    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+    <path
+      className="social-path"
+      d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"
+    />
+  </svg>
+);
+
+export const SVG_LinkedIn = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="18"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className="icon icon-tabler icons-tabler-outline social-icon"
+  >
+    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+    <path className="social-path" d="M8 11v5" />
+    <path className="social-path" d="M8 8v.01" />
+    <path className="social-path" d="M12 16v-5" />
+    <path className="social-path" d="M16 16v-3a2 2 0 1 0 -4 0" />
+    <path
+      className="social-path"
+      d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4l0 -10"
+    />
+  </svg>
+);
+
+export const SVG_Windows = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="18"
@@ -17,7 +61,7 @@ export const WINDOWS_SVG = () => (
   </svg>
 );
 
-export const UBUNTU_SVG = () => (
+export const SVG_Ubuntu = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="18"
@@ -37,7 +81,7 @@ export const UBUNTU_SVG = () => (
   </svg>
 );
 
-export const CACHYOS_SVG = () => (
+export const SVG_CachyOS = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="18" version="1.1" viewBox="0 0 28.8 28.8">
     <path
       fill="currentColor"
@@ -91,12 +135,8 @@ export const CACHYOS_SVG = () => (
   </svg>
 );
 
-export const REAPER_SVG = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 256 256"
-    fill="none"
-  >
+export const SVG_Reaper = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none">
     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
     <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
     <g id="SVGRepo_iconCarrier">

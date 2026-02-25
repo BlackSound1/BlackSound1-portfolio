@@ -1,4 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { getLogoSVG } from '@/lib/utils';
 
 interface SimpleListCardProps {
   title: string;
@@ -21,9 +22,10 @@ export default function SimpleListCard({ list, title }: SimpleListCardProps) {
       </CardHeader>
       <CardContent>
         <ul>
-          {list.map((item) => (
-            <li key={item}>{item}</li>
-          ))}
+          {list.map((item) => {
+            const Icon = getLogoSVG(item.toLowerCase());
+            return <li className="flex items-center gap-1.5" key={item}>{Icon} {item}</li>;
+          })}
         </ul>
       </CardContent>
     </Card>

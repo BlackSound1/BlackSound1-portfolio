@@ -30,7 +30,7 @@ export default function SocialLink({ url, name }: SocialLinkProps): ReactElement
       onClick={() => posthog.capture('social-link-clicked', { site: name })}
       aria-label={name}
     >
-      {Icon ? Icon : null}
+      {Icon}
       {name}
     </a>
   );

@@ -2,7 +2,7 @@ import { JSX } from 'react';
 import { type ClassValue, clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 
-import { SVG_CachyOS, SVG_Reaper, SVG_Ubuntu, SVG_Windows, SVG_LinkedIn, SVG_GitHub } from './SVG_store';
+import { SVG_CachyOS, SVG_Reaper, SVG_Ubuntu, SVG_Windows, SVG_LinkedIn, SVG_GitHub, SVG_Unknown } from './SVG_store';
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -138,7 +138,7 @@ const _SVG_map: Record<string, () => JSX.Element> = {
 export function getLogoSVG(svg: string) {
   const found_SVG = _SVG_map[svg];
   if (!found_SVG) {
-    return null;
+    return SVG_Unknown();
   }
   return found_SVG();
 }

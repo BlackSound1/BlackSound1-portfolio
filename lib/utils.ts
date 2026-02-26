@@ -176,3 +176,14 @@ export function getLogoSVG(svg: string) {
   }
   return found_SVG();
 }
+
+export function handleLogoExceptions(name: string) {
+  const oldName = name.toLowerCase();
+  let newName;
+  if (oldName === 'vs code') {
+    newName = oldName;
+  } else {
+    newName = oldName.split(' ')[0];
+  }
+  return newName;
+}

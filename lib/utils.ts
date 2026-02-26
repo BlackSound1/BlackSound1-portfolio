@@ -1,8 +1,23 @@
-import { JSX } from 'react';
 import { type ClassValue, clsx } from 'clsx';
+import { JSX } from 'react';
 import { twMerge } from 'tailwind-merge';
 
-import { SVG_CachyOS, SVG_Reaper, SVG_Ubuntu, SVG_Windows, SVG_LinkedIn, SVG_GitHub, SVG_Unknown } from './SVG_store';
+import {
+  SVG_CachyOS,
+  SVG_Docker,
+  SVG_Git,
+  SVG_GitHub,
+  SVG_IntelliJ,
+  SVG_LinkedIn,
+  SVG_Linux,
+  SVG_Logi,
+  SVG_PyCharm,
+  SVG_Reaper,
+  SVG_Ubuntu,
+  SVG_Unknown,
+  SVG_VS_Code,
+  SVG_Windows,
+} from './SVG_store';
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -122,12 +137,19 @@ export const tagColorMap: Record<string, string[]> = {
 
 // A map of SVG names to their `JSX.Elements`
 const _SVG_map: Record<string, () => JSX.Element> = {
-  "windows": SVG_Windows,
+  'windows': SVG_Windows,
   'ubuntu': SVG_Ubuntu,
   'cachyos': SVG_CachyOS,
   'reaper': SVG_Reaper,
   'linkedin': SVG_LinkedIn,
   'github': SVG_GitHub,
+  'vs code': SVG_VS_Code,
+  'docker': SVG_Docker,
+  'linux': SVG_Linux,
+  'git': SVG_Git,
+  'pycharm': SVG_PyCharm,
+  'intellij': SVG_IntelliJ,
+  'logi': SVG_Logi,
 };
 
 /**
@@ -142,4 +164,3 @@ export function getLogoSVG(svg: string) {
   }
   return found_SVG();
 }
-

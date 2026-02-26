@@ -23,8 +23,19 @@ export default function SimpleListCard({ list, title }: SimpleListCardProps) {
       <CardContent>
         <ul>
           {list.map((item) => {
-            const Icon = getLogoSVG(item.toLowerCase());
-            return <li className="flex items-center gap-1.5" key={item}>{Icon} {item}</li>;
+            const oldName = item.toLowerCase();
+            let newName;
+            if (oldName === 'vs code') {
+              newName = oldName;
+            } else {
+              newName = oldName.split(' ')[0];
+            }
+            const Icon = getLogoSVG(newName);
+            return (
+              <li className="flex items-center gap-1.5" key={item}>
+                {Icon} {item}
+              </li>
+            );
           })}
         </ul>
       </CardContent>

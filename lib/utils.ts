@@ -3,11 +3,13 @@ import { JSX } from 'react';
 import { twMerge } from 'tailwind-merge';
 
 import {
+  SVG_AKG,
   SVG_CachyOS,
   SVG_Docker,
   SVG_Git,
   SVG_GitHub,
   SVG_IntelliJ,
+  SVG_Korg,
   SVG_LinkedIn,
   SVG_Linux,
   SVG_Logi,
@@ -17,6 +19,7 @@ import {
   SVG_Unknown,
   SVG_VS_Code,
   SVG_Windows,
+  SVG_Yamaha,
 } from './SVG_store';
 
 export function cn(...inputs: ClassValue[]) {
@@ -150,6 +153,9 @@ const _SVG_map: Record<string, () => JSX.Element> = {
   'pycharm': SVG_PyCharm,
   'intellij': SVG_IntelliJ,
   'logi': SVG_Logi,
+  'yamaha': SVG_Yamaha,
+  'korg': SVG_Korg,
+  'akg': SVG_AKG,
 };
 
 /**

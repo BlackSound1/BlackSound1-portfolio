@@ -6,13 +6,16 @@ import {
   SVG_AKG,
   SVG_CachyOS,
   SVG_Docker,
+  SVG_Epiphone,
   SVG_Git,
   SVG_GitHub,
+  SVG_Ibanez,
   SVG_IntelliJ,
   SVG_Korg,
   SVG_LinkedIn,
   SVG_Linux,
   SVG_Logi,
+  SVG_Nektar,
   SVG_PyCharm,
   SVG_Reaper,
   SVG_Ubuntu,
@@ -156,6 +159,9 @@ const _SVG_map: Record<string, () => JSX.Element> = {
   'yamaha': SVG_Yamaha,
   'korg': SVG_Korg,
   'akg': SVG_AKG,
+  'nektar': SVG_Nektar,
+  'ibanez': SVG_Ibanez,
+  'epiphone': SVG_Epiphone,
 };
 
 /**

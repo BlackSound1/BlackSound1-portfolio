@@ -4,7 +4,6 @@ import { twMerge } from 'tailwind-merge';
 
 import {
   SVG_AKG,
-  SVG_Amplitube,
   SVG_BBC,
   SVG_CachyOS,
   SVG_Docker,
@@ -175,7 +174,6 @@ const _SVG_map: Record<string, () => JSX.Element> = {
   'epiphone': SVG_Epiphone,
   'kontakt': SVG_Kontakt,
   'labs': SVG_LABS,
-  'amplitube': SVG_Amplitube,
   'musescore': SVG_Musescore,
   'presonus': SVG_PreSonus,
   'vst': SVG_VST,

@@ -4,6 +4,7 @@ import { twMerge } from 'tailwind-merge';
 
 import {
   SVG_AKG,
+  SVG_Amplitube,
   SVG_CachyOS,
   SVG_Docker,
   SVG_Epiphone,
@@ -13,9 +14,11 @@ import {
   SVG_IntelliJ,
   SVG_Kontakt,
   SVG_Korg,
+  SVG_LABS,
   SVG_LinkedIn,
   SVG_Linux,
   SVG_Logi,
+  SVG_Musescore,
   SVG_Nektar,
   SVG_PyCharm,
   SVG_Reaper,
@@ -164,6 +167,9 @@ const _SVG_map: Record<string, () => JSX.Element> = {
   'ibanez': SVG_Ibanez,
   'epiphone': SVG_Epiphone,
   'kontakt': SVG_Kontakt,
+  'labs': SVG_LABS,
+  'amplitube': SVG_Amplitube,
+  'musescore': SVG_Musescore,
 };
 
 /**
@@ -184,6 +190,8 @@ export function handleLogoExceptions(name: string) {
   let newName;
   if (oldName === 'vs code') {
     newName = oldName;
+  } else if (oldName === 'spitfire labs') {
+    newName = 'labs';
   } else {
     newName = oldName.split(' ')[0];
   }

@@ -5,6 +5,7 @@ import { twMerge } from 'tailwind-merge';
 import {
   SVG_AKG,
   SVG_Amplitube,
+  SVG_BBC,
   SVG_CachyOS,
   SVG_Docker,
   SVG_Epiphone,
@@ -27,6 +28,7 @@ import {
   SVG_Reaper,
   SVG_Ubuntu,
   SVG_Unknown,
+  SVG_UV,
   SVG_Vital,
   SVG_VS_Code,
   SVG_VST,
@@ -180,6 +182,8 @@ const _SVG_map: Record<string, () => JSX.Element> = {
   'ik': SVG_IK_Multimedia,
   'guitar pro': SVG_Guitar_Pro,
   'vital': SVG_Vital,
+  'bbc': SVG_BBC,
+  'uv': SVG_UV,
 };
 
 /**

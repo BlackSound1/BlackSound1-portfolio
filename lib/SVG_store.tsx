@@ -1,3 +1,5 @@
+import { JSX } from "react";
+
 export const SVG_Unknown = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -701,3 +703,37 @@ export const SVG_UV = () => (
     <path d="M-5.28619e-06 0.168629L0.0843098 20.1685L0.151762 36.1683C0.161075 38.3774 1.95947 40.1607 4.16859 40.1514L20.1684 40.084L30.1684 40.0418L31.1852 40.0375C33.3877 40.0282 35.1683 38.2026 35.1683 36V36L37.0003 36L37.0003 39.9992L40.1683 39.9996L39.9996 -9.94653e-07L21.5998 0.0775689L21.6774 16.0185L21.6774 25.9998L20.0774 25.9998L18.3998 25.9998L18.4774 16.032L18.3998 0.0910593L-5.28619e-06 0.168629Z" />
   </svg>
 );
+
+// A map of SVG names to their `JSX.Elements`.
+// Must be after all SVG definitions
+export const recordOfSVGs: Record<string, () => JSX.Element> = {
+  'windows': SVG_Windows,
+  'ubuntu': SVG_Ubuntu,
+  'cachyos': SVG_CachyOS,
+  'reaper': SVG_Reaper,
+  'linkedin': SVG_LinkedIn,
+  'github': SVG_GitHub,
+  'vs code': SVG_VS_Code,
+  'docker': SVG_Docker,
+  'linux': SVG_Linux,
+  'git': SVG_Git,
+  'pycharm': SVG_PyCharm,
+  'intellij': SVG_IntelliJ,
+  'logi': SVG_Logi,
+  'yamaha': SVG_Yamaha,
+  'korg': SVG_Korg,
+  'akg': SVG_AKG,
+  'nektar': SVG_Nektar,
+  'ibanez': SVG_Ibanez,
+  'epiphone': SVG_Epiphone,
+  'kontakt': SVG_Kontakt,
+  'labs': SVG_LABS,
+  'musescore': SVG_Musescore,
+  'presonus': SVG_PreSonus,
+  'vst': SVG_VST,
+  'ik': SVG_IK_Multimedia,
+  'guitar pro': SVG_Guitar_Pro,
+  'vital': SVG_Vital,
+  'bbc': SVG_BBC,
+  'uv': SVG_UV,
+};

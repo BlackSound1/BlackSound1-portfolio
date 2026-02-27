@@ -52,7 +52,7 @@ export default function ProjectSection(): ReactElement {
           link="https://github.com/BlackSound1/Basic-CPP-Shell"
           imagePath="/static/images/ShellScreenshot.png"
           alt="Basic C++ Shell"
-          technologies={['Shell', 'Terminal', 'Cpp']}
+          technologies={['Shell', 'Terminal', 'C++']}
           description="A minimum viable product for a terminal shell, written in C++."
         />
         <ProjectCard

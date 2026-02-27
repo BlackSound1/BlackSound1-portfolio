@@ -20,11 +20,13 @@ import {
   SVG_Logi,
   SVG_Musescore,
   SVG_Nektar,
+  SVG_PreSonus,
   SVG_PyCharm,
   SVG_Reaper,
   SVG_Ubuntu,
   SVG_Unknown,
   SVG_VS_Code,
+  SVG_VST,
   SVG_Windows,
   SVG_Yamaha,
 } from './SVG_store';
@@ -170,6 +172,8 @@ const _SVG_map: Record<string, () => JSX.Element> = {
   'labs': SVG_LABS,
   'amplitube': SVG_Amplitube,
   'musescore': SVG_Musescore,
+  'presonus': SVG_PreSonus,
+  'vst': SVG_VST,
 };
 
 /**
@@ -192,7 +196,11 @@ export function handleLogoExceptions(name: string) {
     newName = oldName;
   } else if (oldName === 'spitfire labs') {
     newName = 'labs';
-  } else {
+  } else if (oldName.includes('vst')) {
+    newName = 'vst';
+  }
+  
+  else {
     newName = oldName.split(' ')[0];
   }
   return newName;

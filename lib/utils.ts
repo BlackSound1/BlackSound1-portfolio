@@ -199,21 +199,24 @@ export function getLogoSVG(svg: string) {
   return found_SVG();
 }
 
+/**
+ * I want to look up certain names in `_SVG_map` in a special way.
+ * This function checks for those special cases and returns the
+ * actual name to look up. If a special case is not matched,
+ * return the lowercase version of the first word in the name.
+ * @param name The name to check for special cases of.
+ * @returns The actual name to use in the lookup phase.
+ */
 export function handleLogoExceptions(name: string) {
   const oldName = name.toLowerCase();
-  let newName;
   if (oldName === 'vs code' || oldName === 'guitar pro') {
-    newName = oldName;
+    return oldName;
   } else if (oldName === 'spitfire labs') {
-    newName = 'labs';
+    return 'labs';
   } else if (oldName.includes('vst')) {
-    newName = 'vst';
+    return 'vst';
   } else if (oldName.includes('modo') || oldName.includes('amplitube')) {
-    newName = 'ik';
+    return 'ik';
   }
-  
-  else {
-    newName = oldName.split(' ')[0];
-  }
-  return newName;
+  return oldName.split(' ')[0];
 }

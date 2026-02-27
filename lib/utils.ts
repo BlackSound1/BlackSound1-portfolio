@@ -144,11 +144,14 @@ export function handleLogoExceptions(name: string) {
   const oldName = name.toLowerCase();
   if (oldName === 'vs code' || oldName === 'guitar pro') {
     return oldName;
-  } else if (oldName === 'spitfire labs') {
+  }
+  if (oldName === 'spitfire labs') {
     return 'labs';
-  } else if (oldName.includes('vst')) {
+  }
+  if (oldName.includes('vst')) {
     return 'vst';
-  } else if (oldName.includes('modo') || oldName.includes('amplitube')) {
+  }
+  if (oldName.includes('modo') || oldName.includes('amplitube')) {
     return 'ik';
   }
   return oldName.split(' ')[0];

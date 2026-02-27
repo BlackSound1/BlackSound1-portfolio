@@ -64,7 +64,7 @@ export const ThemeProvider: React.FC<{ children: ReactNode }> = ({ children }) =
     }
   }, []);
 
-  // Update local storage when theme changes
+  // Update session storage when theme changes
   useEffect(() => {
     sessionStorage.setItem('theme', theme);
   }, [theme]);

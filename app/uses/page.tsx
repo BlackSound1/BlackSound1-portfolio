@@ -72,7 +72,7 @@ export default function Uses() {
         title="Music"
         list={[
           'REAPER',
-          'Amplitude 5',
+          'Amplitube 5',
           'Kontakt',
           'Vital',
           'BBC Symphony Orchestra',

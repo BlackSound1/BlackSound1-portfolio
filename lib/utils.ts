@@ -10,7 +10,9 @@ import {
   SVG_Epiphone,
   SVG_Git,
   SVG_GitHub,
+  SVG_Guitar_Pro,
   SVG_Ibanez,
+  SVG_IK_Multimedia,
   SVG_IntelliJ,
   SVG_Kontakt,
   SVG_Korg,
@@ -25,6 +27,7 @@ import {
   SVG_Reaper,
   SVG_Ubuntu,
   SVG_Unknown,
+  SVG_Vital,
   SVG_VS_Code,
   SVG_VST,
   SVG_Windows,
@@ -174,6 +177,9 @@ const _SVG_map: Record<string, () => JSX.Element> = {
   'musescore': SVG_Musescore,
   'presonus': SVG_PreSonus,
   'vst': SVG_VST,
+  'ik': SVG_IK_Multimedia,
+  'guitar pro': SVG_Guitar_Pro,
+  'vital': SVG_Vital,
 };
 
 /**
@@ -192,12 +198,14 @@ export function getLogoSVG(svg: string) {
 export function handleLogoExceptions(name: string) {
   const oldName = name.toLowerCase();
   let newName;
-  if (oldName === 'vs code') {
+  if (oldName === 'vs code' || oldName === 'guitar pro') {
     newName = oldName;
   } else if (oldName === 'spitfire labs') {
     newName = 'labs';
   } else if (oldName.includes('vst')) {
     newName = 'vst';
+  } else if (oldName.includes('modo') || oldName.includes('amplitube')) {
+    newName = 'ik';
   }
   
   else {

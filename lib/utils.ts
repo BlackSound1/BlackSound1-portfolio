@@ -11,6 +11,7 @@ import {
   SVG_GitHub,
   SVG_Ibanez,
   SVG_IntelliJ,
+  SVG_Kontakt,
   SVG_Korg,
   SVG_LinkedIn,
   SVG_Linux,
@@ -162,6 +163,7 @@ const _SVG_map: Record<string, () => JSX.Element> = {
   'nektar': SVG_Nektar,
   'ibanez': SVG_Ibanez,
   'epiphone': SVG_Epiphone,
+  'kontakt': SVG_Kontakt,
 };
 
 /**

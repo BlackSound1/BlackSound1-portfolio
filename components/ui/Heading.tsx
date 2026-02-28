@@ -23,5 +23,13 @@ export default function Heading({ level, text }: HeadingProps) {
           {text}
         </h2>
       );
+    case 3:
+      return (
+        <h3 className="text-left gap-3 text-xl font-semibold md:text-2xl font-mono hover:text-accent transition-colors duration-200">
+          {text}
+        </h3>
+      );
+    default:
+      return <p style={{ color: 'red', fontWeight: 'bold' }}>{text}</p>;
   }
 }

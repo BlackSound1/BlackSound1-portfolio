@@ -5,14 +5,13 @@ import { ReactElement } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import ThemeDropdown from '@/components/ui/ThemeDropdown';
 import VariantDropdown from '@/components/ui/VariantDropdown';
+import Heading from '@/components/ui/Heading';
 
 export default function ThemeSection(): ReactElement {
   return (
     <section id="theme-section" className="px-4">
       <div className="mb-8">
-        <h3 className="text-left gap-3 text-xl font-semibold md:text-2xl font-mono hover:text-accent transition-colors duration-200">
-          Theme Selector
-        </h3>
+        <Heading level={3} text="Theme Selector" />
       </div>
       <div className="grid grid-cols-1 gap-6">
         <Card className="bg-mantle hover:border-accent focus-visible:border-accent transition-colors duration-200 shadow-lg hover:shadow-xl">

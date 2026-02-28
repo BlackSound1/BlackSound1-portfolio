@@ -17,9 +17,7 @@ export default function Uses() {
 
       <Heading level={2} text="Computers" />
 
-      <h3 className="text-left gap-3 text-xl font-semibold md:text-2xl font-mono hover:text-accent transition-colors duration-200">
-        Main Computer
-      </h3>
+      <Heading level={3} text="Main Computer" />
 
       <ComputerCard
         name="Acer Aspire T"
@@ -30,9 +28,7 @@ export default function Uses() {
         os="Windows 11 Home"
       />
 
-      <h3 className="text-left gap-3 text-xl font-semibold md:text-2xl font-mono hover:text-accent transition-colors duration-200">
-        Development Computer
-      </h3>
+      <Heading level={3} text="Development Computer" />
 
       <ComputerCard
         name="Lenovo ThinkStation P920"
@@ -43,9 +39,7 @@ export default function Uses() {
         os="Ubuntu 24.04 LTS"
       />
 
-      <h3 className="text-left gap-3 text-xl font-semibold md:text-2xl font-mono hover:text-accent transition-colors duration-200">
-        Laptop
-      </h3>
+      <Heading level={3} text="Laptop" />
 
       <ComputerCard
         name="Lenovo ThinkPad T490s"

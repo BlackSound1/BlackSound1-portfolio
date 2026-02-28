@@ -14,13 +14,13 @@ export default function Uses() {
       </p>
       <SocialLinksSection />
 
-      <h1 className="mb-5 text-3xl font-bold md:text-4xl font-mono hover:text-accent transition-colors duration-200">
+      <h2 className="mb-5 text-3xl font-bold md:text-4xl font-mono hover:text-accent transition-colors duration-200">
         Computers
-      </h1>
-
-      <h2 className="text-left gap-3 text-2xl font-semibold md:text-3xl font-mono hover:text-accent transition-colors duration-200">
-        Main Computer
       </h2>
+
+      <h3 className="text-left gap-3 text-2xl font-semibold md:text-3xl font-mono hover:text-accent transition-colors duration-200">
+        Main Computer
+      </h3>
 
       <ComputerCard
         name="Acer Aspire T"
@@ -31,9 +31,9 @@ export default function Uses() {
         os="Windows 11 Home"
       />
 
-      <h2 className="text-left gap-3 text-2xl font-semibold md:text-3xl font-mono hover:text-accent transition-colors duration-200">
+      <h3 className="text-left gap-3 text-2xl font-semibold md:text-3xl font-mono hover:text-accent transition-colors duration-200">
         Development Computer
-      </h2>
+      </h3>
 
       <ComputerCard
         name="Lenovo ThinkStation P920"
@@ -44,9 +44,9 @@ export default function Uses() {
         os="Ubuntu 24.04 LTS"
       />
 
-      <h2 className="text-left gap-3 text-2xl font-semibold md:text-3xl font-mono hover:text-accent transition-colors duration-200">
+      <h3 className="text-left gap-3 text-2xl font-semibold md:text-3xl font-mono hover:text-accent transition-colors duration-200">
         Laptop
-      </h2>
+      </h3>
 
       <ComputerCard
         name="Lenovo ThinkPad T490s"
@@ -59,9 +59,9 @@ export default function Uses() {
 
       <Break />
 
-      <h1 className="mb-5 text-3xl font-bold md:text-4xl font-mono hover:text-accent transition-colors duration-200">
+      <h2 className="mb-5 text-3xl font-bold md:text-4xl font-mono hover:text-accent transition-colors duration-200">
         Software
-      </h1>
+      </h2>
 
       <SimpleListCard
         title="Programming"
@@ -87,9 +87,9 @@ export default function Uses() {
 
       <Break />
 
-      <h1 className="mb-5 text-3xl font-bold md:text-4xl font-mono hover:text-accent transition-colors duration-200">
+      <h2 className="mb-5 text-3xl font-bold md:text-4xl font-mono hover:text-accent transition-colors duration-200">
         Hardware
-      </h1>
+      </h2>
 
       <SimpleListCard
         title="Peripherals"

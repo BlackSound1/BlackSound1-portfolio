@@ -11,9 +11,9 @@ export default function Links() {
       <p className="max-w-prose text-lg leading-relaxed">This page has a bunch of cool links I found.</p>
       <SocialLinksSection />
 
-      <h1 className="mb-5 text-3xl font-bold md:text-4xl font-mono hover:text-accent transition-colors duration-200">
+      <h2 className="mb-5 text-3xl font-bold md:text-4xl font-mono hover:text-accent transition-colors duration-200">
         Computer Science
-      </h1>
+      </h2>
 
       <section className="flex flex-col gap-4">
         <ExternalLink url="https://quantum.country/" description="Quantum Country" />
@@ -32,9 +32,9 @@ export default function Links() {
 
       <Break />
 
-      <h1 className="mb-5 text-3xl font-bold md:text-4xl font-mono hover:text-accent transition-colors duration-200">
+      <h2 className="mb-5 text-3xl font-bold md:text-4xl font-mono hover:text-accent transition-colors duration-200">
         Programming
-      </h1>
+      </h2>
 
       <section className="flex flex-col gap-4">
         <ExternalLink url="https://gigamonkeys.com/book/" description="Practical Common LISP" />
@@ -48,9 +48,9 @@ export default function Links() {
 
       <Break />
 
-      <h1 className="mb-5 text-3xl font-bold md:text-4xl font-mono hover:text-accent transition-colors duration-200">
+      <h2 className="mb-5 text-3xl font-bold md:text-4xl font-mono hover:text-accent transition-colors duration-200">
         Other Personal Sites I Think are Cool
-      </h1>
+      </h2>
 
       <section className="flex flex-col gap-4">
         <ExternalLink
@@ -66,9 +66,9 @@ export default function Links() {
 
       <Break />
 
-      <h1 className="mb-5 text-3xl font-bold md:text-4xl font-mono hover:text-accent transition-colors duration-200">
+      <h2 className="mb-5 text-3xl font-bold md:text-4xl font-mono hover:text-accent transition-colors duration-200">
         Miscellaneous
-      </h1>
+      </h2>
 
       <section className="flex flex-col gap-4">
         <ExternalLink url="https://joy.recurse.com/?page=1" description="The Joy of Computing" />

@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import Link from 'next/link';
 
+import Heading from '@/components/ui/Heading';
 import Header from '@/components/ui/NavHeader';
 import Footer from '@/components/cards/Footer';
 import { AccentProvider } from '@/context/AccentContext';
@@ -42,9 +43,7 @@ export default function RootLayout({
                   <div className="mx-auto max-w-6xl space-y-12 px-0 md:space-y-16 md:px-4">
                     <Header />
                     <Link href="/">
-                      <h1 className="mb-5 text-3xl font-bold md:text-4xl font-mono hover:text-accent transition-colors duration-200">
-                        BlackSound1
-                      </h1>
+                      <Heading level={1} text="BlackSound1" />
                     </Link>
                     {children}
                     <Footer />

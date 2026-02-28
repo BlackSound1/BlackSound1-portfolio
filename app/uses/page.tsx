@@ -14,11 +14,11 @@ export default function Uses() {
       </p>
       <SocialLinksSection />
 
-      <h2 className="mb-5 text-3xl font-bold md:text-4xl font-mono hover:text-accent transition-colors duration-200">
+      <h2 className="text-left gap-3 text-2xl font-semibold md:text-3xl font-mono hover:text-accent transition-colors duration-200">
         Computers
       </h2>
 
-      <h3 className="text-left gap-3 text-2xl font-semibold md:text-3xl font-mono hover:text-accent transition-colors duration-200">
+      <h3 className="text-left gap-3 text-xl font-semibold md:text-2xl font-mono hover:text-accent transition-colors duration-200">
         Main Computer
       </h3>
 
@@ -31,7 +31,7 @@ export default function Uses() {
         os="Windows 11 Home"
       />
 
-      <h3 className="text-left gap-3 text-2xl font-semibold md:text-3xl font-mono hover:text-accent transition-colors duration-200">
+      <h3 className="text-left gap-3 text-xl font-semibold md:text-2xl font-mono hover:text-accent transition-colors duration-200">
         Development Computer
       </h3>
 
@@ -44,7 +44,7 @@ export default function Uses() {
         os="Ubuntu 24.04 LTS"
       />
 
-      <h3 className="text-left gap-3 text-2xl font-semibold md:text-3xl font-mono hover:text-accent transition-colors duration-200">
+      <h3 className="text-left gap-3 text-xl font-semibold md:text-2xl font-mono hover:text-accent transition-colors duration-200">
         Laptop
       </h3>
 
@@ -59,7 +59,7 @@ export default function Uses() {
 
       <Break />
 
-      <h2 className="mb-5 text-3xl font-bold md:text-4xl font-mono hover:text-accent transition-colors duration-200">
+      <h2 className="text-left gap-3 text-2xl font-semibold md:text-3xl font-mono hover:text-accent transition-colors duration-200">
         Software
       </h2>
 
@@ -87,7 +87,7 @@ export default function Uses() {
 
       <Break />
 
-      <h2 className="mb-5 text-3xl font-bold md:text-4xl font-mono hover:text-accent transition-colors duration-200">
+      <h2 className="text-left gap-3 text-2xl font-semibold md:text-3xl font-mono hover:text-accent transition-colors duration-200">
         Hardware
       </h2>
 

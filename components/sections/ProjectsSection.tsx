@@ -1,5 +1,6 @@
 import { ReactElement } from 'react';
 
+import Heading from '@/components/ui/Heading';
 import ProjectCard from '@/components/cards/projectCard';
 
 /**
@@ -10,9 +11,7 @@ export default function ProjectSection(): ReactElement {
   return (
     <section id="projects-section" className="px-4 md:px-0">
       <div className="mb-8">
-        <h2 className="text-left gap-3 text-2xl font-semibold md:text-3xl font-mono hover:text-accent transition-colors duration-200">
-          Some Projects
-        </h2>
+        <Heading level={2} text="Some Projects" />
       </div>
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:auto-rows-[minmax(0,520px)] lg:auto-rows-[minmax(0,420px)] xl:auto-rows-[minmax(0,380px)]">
         <ProjectCard

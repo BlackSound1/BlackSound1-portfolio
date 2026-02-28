@@ -17,5 +17,11 @@ export default function Heading({ level, text }: HeadingProps) {
           {text}
         </h1>
       );
+    case 2:
+      return (
+        <h2 className="text-left gap-3 text-2xl font-semibold md:text-3xl font-mono hover:text-accent transition-colors duration-200">
+          {text}
+        </h2>
+      );
   }
 }

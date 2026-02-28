@@ -1,6 +1,7 @@
 import { ReactElement } from 'react';
 
 import WorkCard from '@/components/cards/workCard';
+import Heading from '@/components/ui/Heading';
 
 /**
  * A section component that displays a list of work experience items.
@@ -10,9 +11,7 @@ export default function WorkSection(): ReactElement {
   return (
     <section id="work-section" className="px-4 md:px-0">
       <div className="mb-8">
-        <h2 className="text-left gap-3 text-2xl font-semibold md:text-3xl font-mono hover:text-accent transition-colors duration-200">
-          Work Experience
-        </h2>
+        <Heading level={2} text="Work Experience" />
       </div>
       <div className="grid grid-cols-1">
         <WorkCard

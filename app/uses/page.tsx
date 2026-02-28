@@ -4,6 +4,7 @@ import ComputerCard from '@/components/cards/computerCard';
 import SimpleListCard from '@/components/cards/SimpleListCard';
 import SocialLinksSection from '@/components/sections/SocialLinksSection';
 import Break from '@/components/ui/break';
+import Heading from '@/components/ui/Heading';
 
 export default function Uses() {
   posthog.capture('$pageview', { page: 'uses' });
@@ -14,9 +15,7 @@ export default function Uses() {
       </p>
       <SocialLinksSection />
 
-      <h2 className="text-left gap-3 text-2xl font-semibold md:text-3xl font-mono hover:text-accent transition-colors duration-200">
-        Computers
-      </h2>
+      <Heading level={2} text="Computers" />
 
       <h3 className="text-left gap-3 text-xl font-semibold md:text-2xl font-mono hover:text-accent transition-colors duration-200">
         Main Computer
@@ -59,9 +58,7 @@ export default function Uses() {
 
       <Break />
 
-      <h2 className="text-left gap-3 text-2xl font-semibold md:text-3xl font-mono hover:text-accent transition-colors duration-200">
-        Software
-      </h2>
+      <Heading level={2} text="Software" />
 
       <SimpleListCard
         title="Programming"
@@ -87,9 +84,7 @@ export default function Uses() {
 
       <Break />
 
-      <h2 className="text-left gap-3 text-2xl font-semibold md:text-3xl font-mono hover:text-accent transition-colors duration-200">
-        Hardware
-      </h2>
+      <Heading level={2} text="Hardware" />
 
       <SimpleListCard
         title="Peripherals"

@@ -1,3 +1,4 @@
+import Heading from '@/components/ui/Heading';
 import SocialLink from '@/components/ui/SocialLink';
 
 export default function NotFound() {
@@ -6,9 +7,7 @@ export default function NotFound() {
       <p className="max-w-prose text-lg leading-relaxed">This page does not exist!</p>
 
       <div className="flex justify-center">
-        <h2 className="text-left gap-3 text-2xl font-semibold md:text-3xl font-mono hover:text-accent transition-colors duration-200">
-          [404]
-        </h2>
+        <Heading level={2} text="[404]" />
       </div>
 
       <div className="flex flex-wrap items-center gap-x-4 pt-2">

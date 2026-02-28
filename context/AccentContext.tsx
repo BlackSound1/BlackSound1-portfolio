@@ -22,7 +22,7 @@ export const AccentProvider: React.FC<{ children: ReactNode }> = ({ children }) 
     if (typeof window === 'undefined') {
       return;
     }
-    const storedColor = localStorage.getItem('accent');
+    const storedColor = sessionStorage.getItem('accent');
     if (storedColor) {
       const id = setTimeout(() => {
         setAccent(storedColor);
@@ -40,7 +40,7 @@ export const AccentProvider: React.FC<{ children: ReactNode }> = ({ children }) 
     // Hover is 10% darker
     document.documentElement.style.setProperty('--scrollbar-thumb-hover', 'hsl(from var(--accent) h s calc(l - 10))');
     document.documentElement.style.setProperty('--sc-color', accent);
-    localStorage.setItem('accent', accent);
+    sessionStorage.setItem('accent', accent);
   }, [accent]);
 
   const value = useMemo(() => ({ accent, setAccent }), [accent, setAccent]);

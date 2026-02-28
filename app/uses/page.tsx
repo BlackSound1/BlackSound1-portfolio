@@ -4,6 +4,7 @@ import ComputerCard from '@/components/cards/computerCard';
 import SimpleListCard from '@/components/cards/SimpleListCard';
 import SocialLinksSection from '@/components/sections/SocialLinksSection';
 import Break from '@/components/ui/break';
+import Heading from '@/components/ui/Heading';
 
 export default function Uses() {
   posthog.capture('$pageview', { page: 'uses' });
@@ -14,13 +15,9 @@ export default function Uses() {
       </p>
       <SocialLinksSection />
 
-      <h1 className="mb-5 text-3xl font-bold md:text-4xl font-mono hover:text-accent transition-colors duration-200">
-        Computers
-      </h1>
+      <Heading level={2} text="Computers" />
 
-      <h2 className="text-left gap-3 text-2xl font-semibold md:text-3xl font-mono hover:text-accent transition-colors duration-200">
-        Main Computer
-      </h2>
+      <Heading level={3} text="Main Computer" />
 
       <ComputerCard
         name="Acer Aspire T"
@@ -31,9 +28,7 @@ export default function Uses() {
         os="Windows 11 Home"
       />
 
-      <h2 className="text-left gap-3 text-2xl font-semibold md:text-3xl font-mono hover:text-accent transition-colors duration-200">
-        Development Computer
-      </h2>
+      <Heading level={3} text="Development Computer" />
 
       <ComputerCard
         name="Lenovo ThinkStation P920"
@@ -44,9 +39,7 @@ export default function Uses() {
         os="Ubuntu 24.04 LTS"
       />
 
-      <h2 className="text-left gap-3 text-2xl font-semibold md:text-3xl font-mono hover:text-accent transition-colors duration-200">
-        Laptop
-      </h2>
+      <Heading level={3} text="Laptop" />
 
       <ComputerCard
         name="Lenovo ThinkPad T490s"
@@ -59,9 +52,7 @@ export default function Uses() {
 
       <Break />
 
-      <h1 className="mb-5 text-3xl font-bold md:text-4xl font-mono hover:text-accent transition-colors duration-200">
-        Software
-      </h1>
+      <Heading level={2} text="Software" />
 
       <SimpleListCard
         title="Programming"
@@ -87,9 +78,7 @@ export default function Uses() {
 
       <Break />
 
-      <h1 className="mb-5 text-3xl font-bold md:text-4xl font-mono hover:text-accent transition-colors duration-200">
-        Hardware
-      </h1>
+      <Heading level={2} text="Hardware" />
 
       <SimpleListCard
         title="Peripherals"

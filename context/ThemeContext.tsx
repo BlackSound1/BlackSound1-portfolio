@@ -55,7 +55,7 @@ export const ThemeProvider: React.FC<{ children: ReactNode }> = ({ children }) =
     if (typeof window === 'undefined') {
       return;
     }
-    const storedTheme = localStorage.getItem('theme');
+    const storedTheme = sessionStorage.getItem('theme');
     if (storedTheme) {
       const id = setTimeout(() => {
         setTheme(storedTheme);
@@ -64,9 +64,9 @@ export const ThemeProvider: React.FC<{ children: ReactNode }> = ({ children }) =
     }
   }, []);
 
-  // Update local storage when theme changes
+  // Update session storage when theme changes
   useEffect(() => {
-    localStorage.setItem('theme', theme);
+    sessionStorage.setItem('theme', theme);
   }, [theme]);
 
   // Add/ update data attr on root for theme
@@ -89,11 +89,8 @@ export const ThemeProvider: React.FC<{ children: ReactNode }> = ({ children }) =
     userInitiatedRef.current = false;
   }, [theme]);
 
-    // Only recompute when deps change
-    const value = useMemo(
-        () => ({ theme, setTheme: setThemeUser }),
-        [theme, setThemeUser]
-    );
+  // Only recompute when deps change
+  const value = useMemo(() => ({ theme, setTheme: setThemeUser }), [theme, setThemeUser]);
 
   return <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>;
 };

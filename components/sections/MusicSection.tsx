@@ -1,11 +1,14 @@
 'use client';
 
-import { useAccent } from '@/context/AccentContext';
-import { useColorCheckbox } from '@/context/ColorCheckboxContext';
 import { ReactElement, useEffect, useState } from 'react';
 
 import { Card, CardContent } from '@/components/ui/card';
 import SoundcloudEmbed from '@/components/ui/soundcloudEmbed';
+import Heading from '@/components/ui/Heading';
+
+import { useAccent } from '@/context/AccentContext';
+import { useColorCheckbox } from '@/context/ColorCheckboxContext';
+
 
 /**
  * A section element containing a card with a Soundcloud playlist player with some of my music.
@@ -48,9 +51,7 @@ url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A11298886
   return (
     <section id="music-section" className="px-4">
       <div className="mb-8">
-        <h3 className="text-left gap-3 text-xl font-semibold md:text-2xl font-mono hover:text-accent transition-colors duration-200">
-          Some of My Music
-        </h3>
+        <Heading level={3} text="Some of My Music" />
       </div>
       <div className="grid grid-cols-1 gap-6">
         <Card className="bg-mantle hover:border-accent focus-visible:border-accent transition-colors duration-200 shadow-lg hover:shadow-xl">

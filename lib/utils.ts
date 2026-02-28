@@ -1,39 +1,7 @@
 import { type ClassValue, clsx } from 'clsx';
-import { JSX } from 'react';
 import { twMerge } from 'tailwind-merge';
 
-import {
-  SVG_AKG,
-  SVG_BBC,
-  SVG_CachyOS,
-  SVG_Docker,
-  SVG_Epiphone,
-  SVG_Git,
-  SVG_GitHub,
-  SVG_Guitar_Pro,
-  SVG_Ibanez,
-  SVG_IK_Multimedia,
-  SVG_IntelliJ,
-  SVG_Kontakt,
-  SVG_Korg,
-  SVG_LABS,
-  SVG_LinkedIn,
-  SVG_Linux,
-  SVG_Logi,
-  SVG_Musescore,
-  SVG_Nektar,
-  SVG_PreSonus,
-  SVG_PyCharm,
-  SVG_Reaper,
-  SVG_Ubuntu,
-  SVG_Unknown,
-  SVG_UV,
-  SVG_Vital,
-  SVG_VS_Code,
-  SVG_VST,
-  SVG_Windows,
-  SVG_Yamaha,
-} from './SVG_store';
+import { recordOfSVGs, SVG_Unknown } from './SVG_store';
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -151,46 +119,13 @@ export const tagColorMap: Record<string, string[]> = {
 
 }
 
-// A map of SVG names to their `JSX.Elements`
-const _SVG_map: Record<string, () => JSX.Element> = {
-  'windows': SVG_Windows,
-  'ubuntu': SVG_Ubuntu,
-  'cachyos': SVG_CachyOS,
-  'reaper': SVG_Reaper,
-  'linkedin': SVG_LinkedIn,
-  'github': SVG_GitHub,
-  'vs code': SVG_VS_Code,
-  'docker': SVG_Docker,
-  'linux': SVG_Linux,
-  'git': SVG_Git,
-  'pycharm': SVG_PyCharm,
-  'intellij': SVG_IntelliJ,
-  'logi': SVG_Logi,
-  'yamaha': SVG_Yamaha,
-  'korg': SVG_Korg,
-  'akg': SVG_AKG,
-  'nektar': SVG_Nektar,
-  'ibanez': SVG_Ibanez,
-  'epiphone': SVG_Epiphone,
-  'kontakt': SVG_Kontakt,
-  'labs': SVG_LABS,
-  'musescore': SVG_Musescore,
-  'presonus': SVG_PreSonus,
-  'vst': SVG_VST,
-  'ik': SVG_IK_Multimedia,
-  'guitar pro': SVG_Guitar_Pro,
-  'vital': SVG_Vital,
-  'bbc': SVG_BBC,
-  'uv': SVG_UV,
-};
-
 /**
  * Get an SVG logo based on the string given.
  * @param svg The string to get the SVG for.
  * @returns An HTML `<svg>` element with an SVG logo corresponding to `svg`.
  */
 export function getLogoSVG(svg: string) {
-  const found_SVG = _SVG_map[svg];
+  const found_SVG = recordOfSVGs[svg];
   if (!found_SVG) {
     return SVG_Unknown();
   }
@@ -209,11 +144,14 @@ export function handleLogoExceptions(name: string) {
   const oldName = name.toLowerCase();
   if (oldName === 'vs code' || oldName === 'guitar pro') {
     return oldName;
-  } else if (oldName === 'spitfire labs') {
+  }
+  if (oldName === 'spitfire labs') {
     return 'labs';
-  } else if (oldName.includes('vst')) {
+  }
+  if (oldName.includes('vst')) {
     return 'vst';
-  } else if (oldName.includes('modo') || oldName.includes('amplitube')) {
+  }
+  if (oldName.includes('modo') || oldName.includes('amplitube')) {
     return 'ik';
   }
   return oldName.split(' ')[0];

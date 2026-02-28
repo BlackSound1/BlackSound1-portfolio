@@ -1,3 +1,5 @@
+import { SVG_Link } from "@/lib/SVG_store";
+
 interface ExternalLinkProps {
   url: string;
   description: string;
@@ -13,8 +15,8 @@ interface ExternalLinkProps {
 export default function ExternalLink({ url, description }: ExternalLinkProps) {
   return (
     <span className="external-link w-fit">
-      <a href={url} target="_blank" rel="noopener noreferrer">
-        {description}
+      <a href={url} target="_blank" rel="noopener noreferrer" className="flex flex-col-1 gap-2">
+       {SVG_Link()} {description}
       </a>
     </span>
   );

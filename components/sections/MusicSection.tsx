@@ -34,7 +34,7 @@ url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A11298886
   };
 
   const [embedURL, setEmbedURL] = useState<string>(() => {
-    return CheckBoxStore.getIsChecked() ? makeEmbedURL(DEFAULT_COLOR) : makeEmbedURL(accent || DEFAULT_COLOR);
+    return isChecked ? makeEmbedURL(DEFAULT_COLOR) : makeEmbedURL(accent || DEFAULT_COLOR);
   });
 
   // Update embed URL only when reloads are allowed

@@ -32,13 +32,14 @@ export default function ColorPickerSection(): ReactElement {
             <div className="grid grid-rows-2">
               <span>
                 <input
-                  className="color-checkbox mr-2 mb-4 mt-[-4]"
+                  className="color-checkbox mr-2 mb-4 mt-[-4] hover:cursor-pointer"
                   type="checkbox"
+                  id='sc-color-enable'
                   name="sc-color-enable"
                   checked={isChecked}
                   onChange={() => CheckBoxStore.toggleIsChecked()}
                 />
-                <label className="font-semibold text-muted-foreground" htmlFor="sc-color-enable">
+                <label className="font-semibold text-muted-foreground hover:cursor-pointer" htmlFor="sc-color-enable">
                   Don&apos;t reload Soundcloud on color change
                 </label>
               </span>

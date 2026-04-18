@@ -39,12 +39,8 @@ url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A11298886
 
   // Update embed URL only when reloads are allowed
   useEffect(() => {
-    // When reloads are allowed, update the embed with current accent
-    if (!isChecked ) {
-      const id = setTimeout(() => {
-        setEmbedURL(makeEmbedURL(accent || DEFAULT_COLOR));
-      });
-      return () => clearTimeout(id);
+    if (!isChecked) {
+      setEmbedURL(makeEmbedURL(accent || DEFAULT_COLOR));
     }
   }, [isChecked, accent]);
 

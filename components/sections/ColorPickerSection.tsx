@@ -14,7 +14,7 @@ import { CheckBoxStore } from '@/app/stores/colorCheckboxStore';
  */
 export default function ColorPickerSection(): ReactElement {
   const { accent, setAccent } = useAccent();
-  const _ = useSyncExternalStore(CheckBoxStore.subscribe, CheckBoxStore.getIsChecked, () => false);
+  const isChecked = useSyncExternalStore(CheckBoxStore.subscribe, CheckBoxStore.getIsChecked, () => false);
 
   return (
     <section id="color-picker-section" className="px-4 md:col-span-2">
@@ -35,7 +35,8 @@ export default function ColorPickerSection(): ReactElement {
                   className="color-checkbox mr-2 mb-4 mt-[-4]"
                   type="checkbox"
                   name="sc-color-enable"
-                  onClick={() => CheckBoxStore.toggleIsChecked()}
+                  checked={isChecked}
+                  onChange={() => CheckBoxStore.toggleIsChecked()}
                 />
                 <label className="font-semibold text-muted-foreground" htmlFor="sc-color-enable">
                   Don&apos;t reload Soundcloud on color change

@@ -1,4 +1,4 @@
-let isChecked = false;
+let isChecked = typeof window !== "undefined" ? sessionStorage.getItem('sc-color-checkbox') === "true" : false;
 const listeners: Set<() => void> = new Set();
 
 export const CheckBoxStore = {
@@ -15,6 +15,10 @@ export const CheckBoxStore = {
      */
     toggleIsChecked() {
         isChecked = !isChecked;
+        // Persist value
+        if (typeof window !== "undefined") {
+            sessionStorage.setItem('sc-color-checkbox', String(isChecked));
+        }
         listeners.forEach(l => l());
     },
     /**

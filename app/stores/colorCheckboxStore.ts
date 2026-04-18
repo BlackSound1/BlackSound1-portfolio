@@ -23,8 +23,8 @@ export const CheckBoxStore = {
     },
     /**
      * Subscribe to the color checkbox state change event.
-     * @param {() => void} cb The callback function to be called when the state of the color checkbox changes.
-     * @returns {() => void} A function to unsubscribe from the event.
+     * @param cb The callback function to be called when the state of the color checkbox changes.
+     * @returns A function to unsubscribe from the event.
      */
     subscribe(cb: () => void): () => void {
         listeners.add(cb);

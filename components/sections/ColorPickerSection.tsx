@@ -1,13 +1,12 @@
 'use client';
 
-import { ReactElement } from 'react';
+import { ReactElement, useSyncExternalStore } from 'react';
 import posthog from 'posthog-js';
 
 import { useAccent } from '@/context/AccentContext';
-import { useColorCheckbox } from '@/context/ColorCheckboxContext';
-
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Heading from '@/components/ui/Heading';
+import { CheckBoxStore } from '@/app/stores/colorCheckboxStore';
 
 /**
  * A color picker section for styling the site.
@@ -15,7 +14,7 @@ import Heading from '@/components/ui/Heading';
  */
 export default function ColorPickerSection(): ReactElement {
   const { accent, setAccent } = useAccent();
-  const { checked, setChecked } = useColorCheckbox();
+  const isChecked = useSyncExternalStore(CheckBoxStore.subscribe, CheckBoxStore.getIsChecked, () => false);
 
   return (
     <section id="color-picker-section" className="px-4 md:col-span-2">
@@ -33,12 +32,14 @@ export default function ColorPickerSection(): ReactElement {
             <div className="grid grid-rows-2">
               <span>
                 <input
-                  className="color-checkbox mr-2 mb-4 mt-[-4]"
+                  className="color-checkbox mr-2 mb-4 mt-[-4] hover:cursor-pointer"
                   type="checkbox"
+                  id='sc-color-enable'
                   name="sc-color-enable"
-                  onClick={() => setChecked(!checked)}
+                  checked={isChecked}
+                  onChange={() => CheckBoxStore.toggleIsChecked()}
                 />
-                <label className="font-semibold text-muted-foreground" htmlFor="sc-color-enable">
+                <label className="font-semibold text-muted-foreground hover:cursor-pointer" htmlFor="sc-color-enable">
                   Don&apos;t reload Soundcloud on color change
                 </label>
               </span>

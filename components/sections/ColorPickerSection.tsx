@@ -4,8 +4,6 @@ import { ReactElement, useSyncExternalStore } from 'react';
 import posthog from 'posthog-js';
 
 import { useAccent } from '@/context/AccentContext';
-// import { useColorCheckbox } from '@/context/ColorCheckboxContext';
-
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Heading from '@/components/ui/Heading';
 import { CheckBoxStore } from '@/app/stores/colorCheckboxStore';
@@ -16,8 +14,7 @@ import { CheckBoxStore } from '@/app/stores/colorCheckboxStore';
  */
 export default function ColorPickerSection(): ReactElement {
   const { accent, setAccent } = useAccent();
-  // const { checked, setChecked } = useColorCheckbox();
-  const checkboxStore = useSyncExternalStore(CheckBoxStore.subscribe, CheckBoxStore.getIsChecked, () => false);
+  const _ = useSyncExternalStore(CheckBoxStore.subscribe, CheckBoxStore.getIsChecked, () => false);
 
   return (
     <section id="color-picker-section" className="px-4 md:col-span-2">

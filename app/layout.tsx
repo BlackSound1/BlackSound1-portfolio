@@ -7,7 +7,6 @@ import Heading from '@/components/ui/Heading';
 import Header from '@/components/ui/NavHeader';
 import Footer from '@/components/cards/Footer';
 import { AccentProvider } from '@/context/AccentContext';
-import { ColorCheckboxProvider } from '@/context/ColorCheckboxContext';
 import { ThemeProvider } from '@/context/ThemeContext';
 
 import './globals.css';
@@ -36,23 +35,21 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <AccentProvider>
-          {/* <ColorCheckboxProvider> */}
-            <ThemeProvider>
-              <div className="text-text mx-auto flex min-h-screen max-w-[90%] flex-col md:max-w-[80%]">
-                <main className="flex-1 px-0 pb-8 md:px-5">
-                  <div className="mx-auto max-w-6xl space-y-12 px-0 md:space-y-16 md:px-4">
-                    <Header />
-                    <Link href="/">
-                      <Heading level={1} text="BlackSound1" />
-                    </Link>
-                    {children}
-                    <Footer />
-                    <SpeedInsights />
-                  </div>
-                </main>
-              </div>
-            </ThemeProvider>
-          {/* </ColorCheckboxProvider> */}
+          <ThemeProvider>
+            <div className="text-text mx-auto flex min-h-screen max-w-[90%] flex-col md:max-w-[80%]">
+              <main className="flex-1 px-0 pb-8 md:px-5">
+                <div className="mx-auto max-w-6xl space-y-12 px-0 md:space-y-16 md:px-4">
+                  <Header />
+                  <Link href="/">
+                    <Heading level={1} text="BlackSound1" />
+                  </Link>
+                  {children}
+                  <Footer />
+                  <SpeedInsights />
+                </div>
+              </main>
+            </div>
+          </ThemeProvider>
         </AccentProvider>
       </body>
     </html>

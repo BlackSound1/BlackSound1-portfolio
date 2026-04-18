@@ -1,21 +1,20 @@
 'use client';
 
+import { ReactElement, useEffect, useState, useSyncExternalStore } from 'react';
+
 import { CheckBoxStore } from '@/app/stores/colorCheckboxStore';
 import { Card, CardContent } from '@/components/ui/card';
 import Heading from '@/components/ui/Heading';
 import SoundcloudEmbed from '@/components/ui/soundcloudEmbed';
 import { useAccent } from '@/context/AccentContext';
-import { ReactElement, useEffect, useState, useSyncExternalStore } from 'react';
 
-// import { useColorCheckbox } from '@/context/ColorCheckboxContext';
 
 /**
  * A section element containing a card with a Soundcloud playlist player with some of my music.
  * @returns {ReactElement} A section element containing a card with a Soundcloud playlist player with some of my music.
  */
 export default function MusicSection(): ReactElement {
-  // const { checked } = useColorCheckbox();
-  const checkboxStore = useSyncExternalStore(CheckBoxStore.subscribe, CheckBoxStore.getIsChecked, () => false);
+  const isChecked = useSyncExternalStore(CheckBoxStore.subscribe, CheckBoxStore.getIsChecked, () => false);
 
   const { accent } = useAccent();
 
@@ -41,13 +40,13 @@ url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A11298886
   // Update embed URL only when reloads are allowed
   useEffect(() => {
     // When reloads are allowed, update the embed with current accent
-    if (!CheckBoxStore.getIsChecked() ) {
+    if (!isChecked ) {
       const id = setTimeout(() => {
         setEmbedURL(makeEmbedURL(accent || DEFAULT_COLOR));
       });
       return () => clearTimeout(id);
     }
-  }, [CheckBoxStore.getIsChecked(), accent]);
+  }, [isChecked, accent]);
 
   return (
     <section id="music-section" className="px-4">

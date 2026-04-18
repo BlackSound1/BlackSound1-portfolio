@@ -36,7 +36,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <AccentProvider>
-          <ColorCheckboxProvider>
+          {/* <ColorCheckboxProvider> */}
             <ThemeProvider>
               <div className="text-text mx-auto flex min-h-screen max-w-[90%] flex-col md:max-w-[80%]">
                 <main className="flex-1 px-0 pb-8 md:px-5">
@@ -52,7 +52,7 @@ export default function RootLayout({
                 </main>
               </div>
             </ThemeProvider>
-          </ColorCheckboxProvider>
+          {/* </ColorCheckboxProvider> */}
         </AccentProvider>
       </body>
     </html>

@@ -11,9 +11,9 @@ lint:
     @pnpm run lint
 
 # Building
-[group('Building')]
-[arg('type', pattern='dev|build|start')]
-build type='dev':
+[group('Running')]
+[arg('type', long, short='t', pattern='dev|build|start')]
+run type='dev':
     @echo "Running {{ type }}..."
     @pnpm run {{ type }}
 

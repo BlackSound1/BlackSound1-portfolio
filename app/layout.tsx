@@ -1,28 +1,28 @@
-import { SpeedInsights } from '@vercel/speed-insights/next';
-import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
-import Link from 'next/link';
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import type { Metadata } from "next";
+import { Geist, Geist_Mono } from "next/font/google";
+import Link from "next/link";
 
-import Heading from '@/components/ui/Heading';
-import Header from '@/components/ui/NavHeader';
-import Footer from '@/components/cards/Footer';
-import { AccentProvider } from '@/context/AccentContext';
-import { ThemeProvider } from '@/context/ThemeContext';
+import Footer from "@/components/cards/Footer";
+import Heading from "@/components/ui/Heading";
+import Header from "@/components/ui/NavHeader";
+import { AccentProvider } from "@/context/AccentContext";
+import { ThemeProvider } from "@/context/ThemeContext";
 
-import './globals.css';
+import "./globals.css";
 
 const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin'],
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
 });
 
 const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: 'BlackSound1',
+  title: "BlackSound1",
   description: "BlackSound1's Portfolio",
 };
 

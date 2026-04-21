@@ -6,9 +6,12 @@
   "importOrder": [
     "<BUILTIN_MODULES>",
     "<THIRD_PARTY_MODULES>",
-    "^@context/(.*)$",
+    "^@components/cards/(.*)$",
+    "^@components/sections/(.*)$",
     "^@components/ui/(.*)$",
+    "^@context/(.*)$",
     "^@lib/(.*)$",
+    "^@stores/(.*)$",
     "^[./]"
   ],
   "importOrderSeparation": true,

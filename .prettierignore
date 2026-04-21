@@ -1,0 +1,13 @@
+.next/
+.vscode/
+public/*
+images/
+
+*.ico
+*.md
+*txt
+
+.gitignore
+.env.local
+pnpm-lock.yaml
+Justfile

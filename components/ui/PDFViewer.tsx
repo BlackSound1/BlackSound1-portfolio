@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import { PDFViewer, ZoomMode } from '@embedpdf/react-pdf-viewer';
-import { ReactElement } from 'react';
+import { PDFViewer, ZoomMode } from "@embedpdf/react-pdf-viewer";
+import { ReactElement } from "react";
 
-import { Card, CardContent, CardDescription } from './card';
+import { Card, CardContent, CardDescription } from "./card";
 
 interface PDF_Props {
   file: string;
@@ -22,13 +22,13 @@ export default function PDF_Viewer({ file }: PDF_Props): ReactElement {
           <PDFViewer
             config={{
               src: file,
-              tabBar: 'never',
+              tabBar: "never",
               zoom: {
                 defaultZoomLevel: ZoomMode.FitPage,
               },
-              disabledCategories: ['annotation', 'redaction', 'document', 'panel-comment', 'page'],
+              disabledCategories: ["annotation", "redaction", "document", "panel-comment", "page"],
             }}
-            style={{ height: '100%' }}
+            style={{ height: "100%" }}
           />
         </CardDescription>
       </CardContent>

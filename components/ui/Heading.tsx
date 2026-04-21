@@ -30,6 +30,6 @@ export default function Heading({ level, text }: HeadingProps) {
         </h3>
       );
     default:
-      return <p style={{ color: 'red', fontWeight: 'bold' }}>{text}</p>;
+      return <p style={{ color: "red", fontWeight: "bold" }}>{text}</p>;
   }
 }

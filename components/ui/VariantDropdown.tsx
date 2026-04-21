@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { ReactElement, useEffect, useRef, useState } from "react";
 import { FaCaretDown, FaCaretRight } from "react-icons/fa6";
@@ -6,12 +6,11 @@ import { FaCaretDown, FaCaretRight } from "react-icons/fa6";
 import { THEME_VARIANTS, useTheme } from "@/context/ThemeContext";
 import { capitalize } from "@/lib/utils";
 
-
 export default function VariantDropdown(): ReactElement {
   const [isOpen, setIsOpen] = useState(false);
   const { theme, setTheme } = useTheme();
-  const [themeOnly, setThemeOnly] = useState('default');
-  const [variantOnly, setVariantOnly] = useState('default');
+  const [themeOnly, setThemeOnly] = useState("default");
+  const [variantOnly, setVariantOnly] = useState("default");
   const dropdownRef = useRef<HTMLDivElement | null>(null);
 
   const toggleDropdown = () => {
@@ -29,8 +28,8 @@ export default function VariantDropdown(): ReactElement {
 
   // Update the theme and variant as distinct names whenever the theme-variant name changes
   useEffect(() => {
-    setThemeOnly(theme.split('-')[0]);
-    setVariantOnly(theme.split('-')[1]);
+    setThemeOnly(theme.split("-")[0]);
+    setVariantOnly(theme.split("-")[1]);
   }, [theme]);
 
   return (

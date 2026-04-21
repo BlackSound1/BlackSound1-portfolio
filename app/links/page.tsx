@@ -1,12 +1,12 @@
-import posthog from 'posthog-js';
+import posthog from "posthog-js";
 
-import SocialLinksSection from '@/components/sections/SocialLinksSection';
-import Break from '@/components/ui/break';
-import ExternalLink from '@/components/ui/ExternalLink';
-import Heading from '@/components/ui/Heading';
+import SocialLinksSection from "@/components/sections/SocialLinksSection";
+import Break from "@/components/ui/break";
+import ExternalLink from "@/components/ui/ExternalLink";
+import Heading from "@/components/ui/Heading";
 
 export default function Links() {
-  posthog.capture('$pageview', { page: 'links' });
+  posthog.capture("$pageview", { page: "links" });
   return (
     <section id="links-section" className="space-y-5">
       <p className="max-w-prose text-lg leading-relaxed">This page has a bunch of cool links I found.</p>

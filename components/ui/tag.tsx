@@ -1,8 +1,7 @@
-import { ReactElement, useEffect, useState } from 'react';
+import { ReactElement, useEffect, useState } from "react";
 
-import { useTheme } from '@/context/ThemeContext';
-import { tagColorMap } from '@/lib/utils';
-
+import { useTheme } from "@/context/ThemeContext";
+import { tagColorMap } from "@/lib/utils";
 
 interface TagProps {
   lang: string;
@@ -15,7 +14,7 @@ interface TagProps {
  * @returns A randomly-chosen color based on the current theme and variant.
  */
 const _fetchRandomColor = (theme: string): string => {
-  const colorChoices = tagColorMap[theme] ?? tagColorMap['default-default'];
+  const colorChoices = tagColorMap[theme] ?? tagColorMap["default-default"];
   return colorChoices[Math.floor(Math.random() * colorChoices.length)];
 };
 
@@ -26,7 +25,7 @@ const _fetchRandomColor = (theme: string): string => {
  */
 export default function Tag({ lang }: TagProps): ReactElement {
   const { theme } = useTheme();
-  const [color, setColor] = useState<string>('black');
+  const [color, setColor] = useState<string>("black");
 
   // Set the tag color based on the variant
   useEffect(() => {

@@ -108,7 +108,7 @@ export const SVG_CachyOS = () => (
       d="M7.7785653 4.4693458H19.677168l-3.011712 5.208633h-6.453077L7.5235656 14.326065l2.7257804 4.715231h12.588159l-3.089419 5.339151H7.5231884L1.6249999 14.183099l5.6462065-9.7635461Z"
       className="ColorScheme-Text"
       opacity="1"
-      style={{ display: 'inline', strokeWidth: 0.377219 }}
+      style={{ display: "inline", strokeWidth: 0.377219 }}
     />
     <ellipse
       cx="25.144464"
@@ -716,7 +716,7 @@ export const SVG_Link = () => (
     strokeLinejoin="round"
     className="icon icon-tabler icons-tabler-outline icon-tabler-link"
   >
-    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
     <path d="M9 15l6 -6" />
     <path d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464" />
     <path d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463" />
@@ -726,34 +726,34 @@ export const SVG_Link = () => (
 // A map of SVG names to their `JSX.Elements`.
 // Must be after all SVG definitions
 export const recordOfSVGs: Record<string, () => JSX.Element> = {
-  'windows': SVG_Windows,
-  'ubuntu': SVG_Ubuntu,
-  'cachyos': SVG_CachyOS,
-  'reaper': SVG_Reaper,
-  'linkedin': SVG_LinkedIn,
-  'github': SVG_GitHub,
-  'vs code': SVG_VS_Code,
-  'docker': SVG_Docker,
-  'linux': SVG_Linux,
-  'git': SVG_Git,
-  'pycharm': SVG_PyCharm,
-  'intellij': SVG_IntelliJ,
-  'logi': SVG_Logi,
-  'yamaha': SVG_Yamaha,
-  'korg': SVG_Korg,
-  'akg': SVG_AKG,
-  'nektar': SVG_Nektar,
-  'ibanez': SVG_Ibanez,
-  'epiphone': SVG_Epiphone,
-  'kontakt': SVG_Kontakt,
-  'labs': SVG_LABS,
-  'musescore': SVG_Musescore,
-  'presonus': SVG_PreSonus,
-  'vst': SVG_VST,
-  'ik': SVG_IK_Multimedia,
-  'guitar pro': SVG_Guitar_Pro,
-  'vital': SVG_Vital,
-  'bbc': SVG_BBC,
-  'uv': SVG_UV,
-  'link': SVG_Link,
+  "windows": SVG_Windows,
+  "ubuntu": SVG_Ubuntu,
+  "cachyos": SVG_CachyOS,
+  "reaper": SVG_Reaper,
+  "linkedin": SVG_LinkedIn,
+  "github": SVG_GitHub,
+  "vs code": SVG_VS_Code,
+  "docker": SVG_Docker,
+  "linux": SVG_Linux,
+  "git": SVG_Git,
+  "pycharm": SVG_PyCharm,
+  "intellij": SVG_IntelliJ,
+  "logi": SVG_Logi,
+  "yamaha": SVG_Yamaha,
+  "korg": SVG_Korg,
+  "akg": SVG_AKG,
+  "nektar": SVG_Nektar,
+  "ibanez": SVG_Ibanez,
+  "epiphone": SVG_Epiphone,
+  "kontakt": SVG_Kontakt,
+  "labs": SVG_LABS,
+  "musescore": SVG_Musescore,
+  "presonus": SVG_PreSonus,
+  "vst": SVG_VST,
+  "ik": SVG_IK_Multimedia,
+  "guitar pro": SVG_Guitar_Pro,
+  "vital": SVG_Vital,
+  "bbc": SVG_BBC,
+  "uv": SVG_UV,
+  "link": SVG_Link,
 };

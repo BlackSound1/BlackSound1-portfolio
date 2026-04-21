@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import posthog from 'posthog-js';
-import { ReactElement } from 'react';
+import posthog from "posthog-js";
+import { ReactElement } from "react";
 
-import { getLogoSVG } from '@/lib/utils';
+import { getLogoSVG } from "@/lib/utils";
 
 interface SocialLinkProps {
   name: string;
@@ -27,7 +27,7 @@ export default function SocialLink({ url, name }: SocialLinkProps): ReactElement
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      onClick={() => posthog.capture('social-link-clicked', { site: name })}
+      onClick={() => posthog.capture("social-link-clicked", { site: name })}
       aria-label={name}
     >
       {Icon}

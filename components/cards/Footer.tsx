@@ -1,8 +1,8 @@
-import { ReactElement } from 'react';
+import { ReactElement } from "react";
 
-import { Card, CardContent, CardDescription } from '@/components/ui/card';
-import CommitTracker from '@/components/ui/CommitTracker';
-import ViewCounter from '@/components/ui/ViewCounter';
+import { Card, CardContent, CardDescription } from "@/components/ui/card";
+import CommitTracker from "@/components/ui/CommitTracker";
+import ViewCounter from "@/components/ui/ViewCounter";
 
 /**
  * Define and display a global footer.

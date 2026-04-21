@@ -1,9 +1,10 @@
-import { ReactElement } from 'react';
+import { ReactElement } from "react";
 
-import MusicSection from '@/components/sections/MusicSection';
-import ThemeSection from '@/components/sections/ThemeSection';
-import Heading from '@/components/ui/Heading';
-import ColorPickerSection from './ColorPickerSection';
+import MusicSection from "@/components/sections/MusicSection";
+import ThemeSection from "@/components/sections/ThemeSection";
+import Heading from "@/components/ui/Heading";
+
+import ColorPickerSection from "./ColorPickerSection";
 
 /**
  * A section containing the non-professional aspects of the site.

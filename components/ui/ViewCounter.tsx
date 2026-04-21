@@ -1,19 +1,19 @@
-'use client';
+"use client";
 
-import { ReactElement, useEffect, useState } from 'react';
+import { ReactElement, useEffect, useState } from "react";
 
 /**
  * Query Abacus to count how many times the site has been visited and display the value.
  * @returns The View Counter.
  */
 export default function ViewCounter(): ReactElement {
-  const [count, setCount] = useState('Fetching...');
+  const [count, setCount] = useState("Fetching...");
 
   /**
    * Query Abacus to get the page view count.
    */
   const trackHit = async () => {
-    const URL = 'https://abacus.jasoncameron.dev/hit/blacksound1-portfolio.vercel.app/visits';
+    const URL = "https://abacus.jasoncameron.dev/hit/blacksound1-portfolio.vercel.app/visits";
     await fetch(URL)
       .then((resp) => {
         return resp.json();

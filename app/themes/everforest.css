@@ -1,4 +1,4 @@
-:root[data-theme='everforest-light'] {
+:root[data-theme="everforest-light"] {
   --text: #5c6a72;
   --background: #f4f0d9;
   --card-foreground: var(--text);
@@ -16,7 +16,9 @@
     color: #708089;
   }
 
-  p, a, .project-card {
+  p,
+  a,
+  .project-card {
     color: var(--text);
   }
 
@@ -24,18 +26,20 @@
     background-color: #fdf6e3;
   }
 
-  .dropdown-button, .dropdown-option {
+  .dropdown-button,
+  .dropdown-option {
     background-color: #fdf6e3;
     color: #3a94c5;
   }
 
-  .dropdown-button:hover, .dropdown-option:hover {
+  .dropdown-button:hover,
+  .dropdown-option:hover {
     background-color: #f4f0d9;
     color: #f57d26;
   }
 }
 
-:root[data-theme='everforest-dark'] {
+:root[data-theme="everforest-dark"] {
   --text: #d3c6aa;
   --background: #2d353b;
   --card-foreground: var(--text);
@@ -53,7 +57,9 @@
     color: #d3c6aa;
   }
 
-  p, a, .project-card {
+  p,
+  a,
+  .project-card {
     color: var(--text);
   }
 
@@ -61,12 +67,14 @@
     background-color: #343f44;
   }
 
-  .dropdown-button, .dropdown-option {
+  .dropdown-button,
+  .dropdown-option {
     background-color: #343f44;
     color: #7fbbb3;
   }
 
-  .dropdown-button:hover, .dropdown-option:hover {
+  .dropdown-button:hover,
+  .dropdown-option:hover {
     background-color: #3a464c;
     color: #e69875;
   }

@@ -1,13 +1,13 @@
-import posthog from 'posthog-js';
+import posthog from "posthog-js";
 
-import ComputerCard from '@/components/cards/computerCard';
-import SimpleListCard from '@/components/cards/SimpleListCard';
-import SocialLinksSection from '@/components/sections/SocialLinksSection';
-import Break from '@/components/ui/break';
-import Heading from '@/components/ui/Heading';
+import ComputerCard from "@/components/cards/computerCard";
+import SimpleListCard from "@/components/cards/SimpleListCard";
+import SocialLinksSection from "@/components/sections/SocialLinksSection";
+import Break from "@/components/ui/break";
+import Heading from "@/components/ui/Heading";
 
 export default function Uses() {
-  posthog.capture('$pageview', { page: 'uses' });
+  posthog.capture("$pageview", { page: "uses" });
   return (
     <section id="uses-section" className="space-y-5">
       <p className="max-w-prose text-lg leading-relaxed">
@@ -56,23 +56,23 @@ export default function Uses() {
 
       <SimpleListCard
         title="Programming"
-        list={['VS Code', 'IntelliJ', 'PyCharm', 'Docker', 'Windows', 'Linux', 'UV', 'Git', 'GitHub']}
+        list={["VS Code", "IntelliJ", "PyCharm", "Docker", "Windows", "Linux", "UV", "Git", "GitHub"]}
       />
 
       <SimpleListCard
         title="Music"
         list={[
-          'REAPER',
-          'Amplitube 5',
-          'Kontakt',
-          'Vital',
-          'BBC Symphony Orchestra',
-          'MODO DRUM',
-          'MODO BASS',
-          'Spitfire LABS',
-          'MuseScore',
-          'Guitar Pro',
-          'Various old free VSTs',
+          "REAPER",
+          "Amplitube 5",
+          "Kontakt",
+          "Vital",
+          "BBC Symphony Orchestra",
+          "MODO DRUM",
+          "MODO BASS",
+          "Spitfire LABS",
+          "MuseScore",
+          "Guitar Pro",
+          "Various old free VSTs",
         ]}
       />
 
@@ -83,22 +83,22 @@ export default function Uses() {
       <SimpleListCard
         title="Peripherals"
         list={[
-          'PreSonus Studio 24c audio interface',
-          'Logi MX Master 3S mouse',
-          'Logi Z200 speakers',
-          'AKG k240 headphones',
-          'KORG guitar tuner and metronome',
-          'Nektar Impact LX25+ MIDI controller',
+          "PreSonus Studio 24c audio interface",
+          "Logi MX Master 3S mouse",
+          "Logi Z200 speakers",
+          "AKG k240 headphones",
+          "KORG guitar tuner and metronome",
+          "Nektar Impact LX25+ MIDI controller",
         ]}
       />
 
       <SimpleListCard
         title="Instruments"
         list={[
-          'Ibanez Jem Jr. electric guitar (white)',
-          'Epiphone Les Paul Studio electric guitar (black)',
-          'Yamaha FX370C acoustic guitar',
-          'Yamaha Portatone electronic keyboard',
+          "Ibanez Jem Jr. electric guitar (white)",
+          "Epiphone Les Paul Studio electric guitar (black)",
+          "Yamaha FX370C acoustic guitar",
+          "Yamaha Portatone electronic keyboard",
         ]}
       />
     </section>

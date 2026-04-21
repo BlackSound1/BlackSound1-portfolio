@@ -1,13 +1,12 @@
-'use client';
+"use client";
 
-import { ReactElement, useEffect, useState, useSyncExternalStore } from 'react';
+import { ReactElement, useEffect, useState, useSyncExternalStore } from "react";
 
-import { CheckBoxStore } from '@/app/stores/colorCheckboxStore';
-import { Card, CardContent } from '@/components/ui/card';
-import Heading from '@/components/ui/Heading';
-import SoundcloudEmbed from '@/components/ui/soundcloudEmbed';
-import { useAccent } from '@/context/AccentContext';
-
+import { Card, CardContent } from "@/components/ui/card";
+import Heading from "@/components/ui/Heading";
+import SoundcloudEmbed from "@/components/ui/soundcloudEmbed";
+import { useAccent } from "@/context/AccentContext";
+import { CheckBoxStore } from "@/stores/colorCheckboxStore";
 
 /**
  * A section element containing a card with a Soundcloud playlist player with some of my music.
@@ -18,10 +17,10 @@ export default function MusicSection(): ReactElement {
 
   const { accent } = useAccent();
 
-  const DEFAULT_COLOR = '#eb575a';
+  const DEFAULT_COLOR = "#eb575a";
 
   const makeEmbedURL = (hex: string) => {
-    const CLEANED_HEX = hex.replace(/^#/, '');
+    const CLEANED_HEX = hex.replace(/^#/, "");
     return `https://w.soundcloud.com/player/?\
 url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A112988860\
 &color=%23${CLEANED_HEX}\

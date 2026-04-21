@@ -1,5 +1,5 @@
-import Heading from '@/components/ui/Heading';
-import SocialLink from '@/components/ui/SocialLink';
+import Heading from "@/components/ui/Heading";
+import SocialLink from "@/components/ui/SocialLink";
 
 export default function NotFound() {
   return (

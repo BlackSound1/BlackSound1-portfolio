@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import { createContext, Dispatch, ReactNode, SetStateAction, useContext, useEffect, useMemo, useState } from 'react';
+import { createContext, Dispatch, ReactNode, SetStateAction, useContext, useEffect, useMemo, useState } from "react";
 
 type AccentContextType = {
   accent: string;
@@ -16,13 +16,13 @@ const AccentContext = createContext<AccentContextType | undefined>(undefined);
  * @returns The AccentContext provider.
  */
 export const AccentProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-  const [accent, setAccent] = useState<string>('#eb575a');
+  const [accent, setAccent] = useState<string>("#eb575a");
 
   useEffect(() => {
-    if (typeof window === 'undefined') {
+    if (typeof window === "undefined") {
       return;
     }
-    const storedColor = sessionStorage.getItem('accent');
+    const storedColor = sessionStorage.getItem("accent");
     if (storedColor) {
       const id = setTimeout(() => {
         setAccent(storedColor);
@@ -32,15 +32,15 @@ export const AccentProvider: React.FC<{ children: ReactNode }> = ({ children }) 
   }, []);
 
   useEffect(() => {
-    if (typeof document === 'undefined') {
+    if (typeof document === "undefined") {
       return;
     }
-    document.documentElement.style.setProperty('--accent', accent);
-    document.documentElement.style.setProperty('--scrollbar-thumb', accent);
+    document.documentElement.style.setProperty("--accent", accent);
+    document.documentElement.style.setProperty("--scrollbar-thumb", accent);
     // Hover is 10% darker
-    document.documentElement.style.setProperty('--scrollbar-thumb-hover', 'hsl(from var(--accent) h s calc(l - 10))');
-    document.documentElement.style.setProperty('--sc-color', accent);
-    sessionStorage.setItem('accent', accent);
+    document.documentElement.style.setProperty("--scrollbar-thumb-hover", "hsl(from var(--accent) h s calc(l - 10))");
+    document.documentElement.style.setProperty("--sc-color", accent);
+    sessionStorage.setItem("accent", accent);
   }, [accent]);
 
   const value = useMemo(() => ({ accent, setAccent }), [accent, setAccent]);
@@ -55,7 +55,7 @@ export const AccentProvider: React.FC<{ children: ReactNode }> = ({ children }) 
 export function useAccent(): AccentContextType {
   const ctx = useContext(AccentContext);
   if (!ctx) {
-    throw new Error('useAccent must be used within an AccentProvider');
+    throw new Error("useAccent must be used within an AccentProvider");
   }
   return ctx;
 }

@@ -1,4 +1,4 @@
-:root[data-theme='catpuccin-latte'] {
+:root[data-theme="catpuccin-latte"] {
   --text: #4c4f69;
   --background: #e6e9ef;
   --card-foreground: var(--text);
@@ -16,7 +16,9 @@
     color: #1e66f5;
   }
 
-  p, a, .project-card {
+  p,
+  a,
+  .project-card {
     color: var(--text);
   }
 
@@ -24,18 +26,20 @@
     background-color: #dce0e8;
   }
 
-  .dropdown-button, .dropdown-option {
+  .dropdown-button,
+  .dropdown-option {
     background-color: #eff1f5; /* Base */
     color: #1e66f5; /* Blue */
   }
 
-  .dropdown-button:hover, .dropdown-option:hover {
+  .dropdown-button:hover,
+  .dropdown-option:hover {
     background-color: #e6e9ef; /* Mantle */
     color: #7287fd; /* Lavender */
   }
 }
 
-:root[data-theme='catpuccin-frappe'] {
+:root[data-theme="catpuccin-frappe"] {
   --text: #c6d0f5;
   --background: #292c3c;
   --card-foreground: var(--text);
@@ -53,7 +57,9 @@
     color: #8caaee;
   }
 
-  p, a, .project-card {
+  p,
+  a,
+  .project-card {
     color: var(--text);
   }
 
@@ -61,18 +67,20 @@
     background-color: #414559;
   }
 
-  .dropdown-button, .dropdown-option {
+  .dropdown-button,
+  .dropdown-option {
     background-color: #303446; /* Base */
     color: #8caaee; /* Blue */
   }
 
-  .dropdown-button:hover, .dropdown-option:hover {
+  .dropdown-button:hover,
+  .dropdown-option:hover {
     background-color: #292c3c; /* Mantle */
     color: #babbf1; /* Lavender */
   }
 }
 
-:root[data-theme='catpuccin-macchiato'] {
+:root[data-theme="catpuccin-macchiato"] {
   --text: #cad3f5;
   --background: #1e2030;
   --card-foreground: var(--text);
@@ -90,7 +98,9 @@
     color: #8aadf4;
   }
 
-  p, a, .project-card {
+  p,
+  a,
+  .project-card {
     color: var(--text);
   }
 
@@ -98,18 +108,20 @@
     background-color: #363a4f;
   }
 
-  .dropdown-button, .dropdown-option {
+  .dropdown-button,
+  .dropdown-option {
     background-color: #24273a; /* Base */
     color: #8aadf4; /* Blue */
   }
 
-  .dropdown-button:hover, .dropdown-option:hover {
+  .dropdown-button:hover,
+  .dropdown-option:hover {
     background-color: #1e2030; /* Mantle */
     color: #b7bdf8; /* Lavender */
   }
 }
 
-:root[data-theme='catpuccin-mocha'] {
+:root[data-theme="catpuccin-mocha"] {
   --text: #cdd6f4;
   --background: #181825;
   --card-foreground: var(--text);
@@ -127,7 +139,9 @@
     color: #89b4fa;
   }
 
-  p, a, .project-card {
+  p,
+  a,
+  .project-card {
     color: var(--text);
   }
 
@@ -135,12 +149,14 @@
     background-color: #313244;
   }
 
-  .dropdown-button, .dropdown-option {
+  .dropdown-button,
+  .dropdown-option {
     background-color: #1e1e2e; /* Base */
     color: #89b4fa; /* Blue */
   }
 
-  .dropdown-button:hover, .dropdown-option:hover {
+  .dropdown-button:hover,
+  .dropdown-option:hover {
     background-color: #181825; /* Mantle */
     color: #b4befe; /* Lavender */
   }

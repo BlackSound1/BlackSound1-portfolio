@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import posthog from 'posthog-js';
+import posthog from "posthog-js";
 import {
   createContext,
   Dispatch,
@@ -12,7 +12,7 @@ import {
   useMemo,
   useRef,
   useState,
-} from 'react';
+} from "react";
 
 type ThemeContextType = {
   theme: string;
@@ -22,13 +22,13 @@ type ThemeContextType = {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export const THEME_VARIANTS: Record<string, string[]> = {
-  default: ['default'],
-  catpuccin: ['latte', 'frappe', 'macchiato', 'mocha'],
-  everforest: ['light', 'dark'],
-  nord: ['snow storm', 'polar night'],
-  gruvbox: ['light', 'dark'],
-  sonokai: ['default', 'atlantis', 'andromeda', 'shusia', 'maia', 'espresso'],
-  dracula: ['alucard', 'dracula'],
+  default: ["default"],
+  catpuccin: ["latte", "frappe", "macchiato", "mocha"],
+  everforest: ["light", "dark"],
+  nord: ["snow storm", "polar night"],
+  gruvbox: ["light", "dark"],
+  sonokai: ["default", "atlantis", "andromeda", "shusia", "maia", "espresso"],
+  dracula: ["alucard", "dracula"],
 };
 
 /**
@@ -37,7 +37,7 @@ export const THEME_VARIANTS: Record<string, string[]> = {
  * @returns The ThemeContext provider.
  */
 export const ThemeProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-  const [theme, setTheme] = useState<string>('default-default');
+  const [theme, setTheme] = useState<string>("default-default");
   const userInitiatedRef = useRef<boolean>(false);
 
   // When using setTheme throughout the app, actually use this instead
@@ -52,10 +52,10 @@ export const ThemeProvider: React.FC<{ children: ReactNode }> = ({ children }) =
 
   // Restore saved state once on mount (client-only)
   useEffect(() => {
-    if (typeof window === 'undefined') {
+    if (typeof window === "undefined") {
       return;
     }
-    const storedTheme = sessionStorage.getItem('theme');
+    const storedTheme = sessionStorage.getItem("theme");
     if (storedTheme) {
       const id = setTimeout(() => {
         setTheme(storedTheme);
@@ -66,24 +66,24 @@ export const ThemeProvider: React.FC<{ children: ReactNode }> = ({ children }) =
 
   // Update session storage when theme changes
   useEffect(() => {
-    sessionStorage.setItem('theme', theme);
+    sessionStorage.setItem("theme", theme);
   }, [theme]);
 
   // Add/ update data attr on root for theme
   useEffect(() => {
-    if (typeof window === 'undefined') {
+    if (typeof window === "undefined") {
       return;
     }
 
     const root = document.documentElement;
-    root.setAttribute('data-theme', theme);
+    root.setAttribute("data-theme", theme);
 
     // Only capture if change was explicitly user-initiated
     if (!userInitiatedRef.current) {
       return;
     }
 
-    posthog.capture('theme-changed', { newTheme: theme });
+    posthog.capture("theme-changed", { newTheme: theme });
 
     // Reset flag after capturing
     userInitiatedRef.current = false;
@@ -102,7 +102,7 @@ export const ThemeProvider: React.FC<{ children: ReactNode }> = ({ children }) =
 export function useTheme(): ThemeContextType {
   const ctx = useContext(ThemeContext);
   if (!ctx) {
-    throw new Error('useTheme must be used within an ThemeProvider');
+    throw new Error("useTheme must be used within an ThemeProvider");
   }
   return ctx;
 }

@@ -2,11 +2,11 @@
 
 import { ReactElement, useEffect, useState, useSyncExternalStore } from "react";
 
-import { CheckBoxStore } from "@/app/stores/colorCheckboxStore";
 import { Card, CardContent } from "@/components/ui/card";
 import Heading from "@/components/ui/Heading";
 import SoundcloudEmbed from "@/components/ui/soundcloudEmbed";
 import { useAccent } from "@/context/AccentContext";
+import { CheckBoxStore } from "@/stores/colorCheckboxStore";
 
 /**
  * A section element containing a card with a Soundcloud playlist player with some of my music.

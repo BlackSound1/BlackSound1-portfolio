@@ -3,10 +3,10 @@
 import posthog from "posthog-js";
 import { ReactElement, useSyncExternalStore } from "react";
 
-import { CheckBoxStore } from "@/app/stores/colorCheckboxStore";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Heading from "@/components/ui/Heading";
 import { useAccent } from "@/context/AccentContext";
+import { CheckBoxStore } from "@/stores/colorCheckboxStore";
 
 /**
  * A color picker section for styling the site.

@@ -40,7 +40,10 @@ url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A11298886
   // Update embed URL only when reloads are allowed
   useEffect(() => {
     if (!isChecked) {
-      setEmbedURL(makeEmbedURL(accent || DEFAULT_COLOR));
+      const id = setTimeout(() => {
+        setEmbedURL(makeEmbedURL(accent || DEFAULT_COLOR));
+      });
+      return () => clearTimeout(id);
     }
   }, [isChecked, accent]);
 

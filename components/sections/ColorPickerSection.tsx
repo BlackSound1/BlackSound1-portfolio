@@ -1,12 +1,12 @@
-'use client';
+"use client";
 
-import { ReactElement, useSyncExternalStore } from 'react';
-import posthog from 'posthog-js';
+import posthog from "posthog-js";
+import { ReactElement, useSyncExternalStore } from "react";
 
-import { useAccent } from '@/context/AccentContext';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import Heading from '@/components/ui/Heading';
-import { CheckBoxStore } from '@/app/stores/colorCheckboxStore';
+import { CheckBoxStore } from "@/app/stores/colorCheckboxStore";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import Heading from "@/components/ui/Heading";
+import { useAccent } from "@/context/AccentContext";
 
 /**
  * A color picker section for styling the site.
@@ -34,7 +34,7 @@ export default function ColorPickerSection(): ReactElement {
                 <input
                   className="color-checkbox mr-2 mb-4 mt-[-4] hover:cursor-pointer"
                   type="checkbox"
-                  id='sc-color-enable'
+                  id="sc-color-enable"
                   name="sc-color-enable"
                   checked={isChecked}
                   onChange={() => CheckBoxStore.toggleIsChecked()}
@@ -51,7 +51,7 @@ export default function ColorPickerSection(): ReactElement {
                 onChange={(e) => {
                   const newColor = e.target.value;
                   setAccent(newColor);
-                  posthog.capture('color-changed', { newColor: newColor });
+                  posthog.capture("color-changed", { newColor: newColor });
                 }}
               />
             </div>

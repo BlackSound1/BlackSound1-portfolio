@@ -1,7 +1,7 @@
-import { ReactElement } from 'react';
+import { ReactElement } from "react";
 
-import WorkCard from '@/components/cards/workCard';
-import Heading from '@/components/ui/Heading';
+import WorkCard from "@/components/cards/workCard";
+import Heading from "@/components/ui/Heading";
 
 /**
  * A section component that displays a list of work experience items.
@@ -19,7 +19,18 @@ export default function WorkSection(): ReactElement {
           url="https://verbit.ai/"
           title="Software Engineer"
           time="Feb. 2025 - Sep. 2025"
-          technologies={['C++17', 'Python', 'FastAPI', 'Bash', 'Docker', 'AWS', 'CircleCI', 'Make', 'Jira', 'REST']}
+          technologies={[
+            "C++17",
+            "Python",
+            "FastAPI",
+            "Bash",
+            "Docker",
+            "AWS",
+            "CircleCI",
+            "Make",
+            "Jira",
+            "REST",
+          ]}
           description={
             <>Helped build the next generation of North America&apos;s largest realtime captioning solution.</>
           }
@@ -30,19 +41,19 @@ export default function WorkSection(): ReactElement {
           title="R&D Intern: Full-Stack Pythonista"
           time="Sep. 2021 - Apr. 2023"
           technologies={[
-            'Python',
-            'Flask',
-            'Pandas',
-            'Jupyter',
-            'AI/ML',
-            'JavaScript',
-            'HTML',
-            'CSS',
-            'Docker',
-            'Bash',
-            'AWS',
-            'Make',
-            'Jira',
+            "Python",
+            "Flask",
+            "Pandas",
+            "Jupyter",
+            "AI/ML",
+            "JavaScript",
+            "HTML",
+            "CSS",
+            "Docker",
+            "Bash",
+            "AWS",
+            "Make",
+            "Jira",
           ]}
           description={
             <>Six consecutive fulltime internships. Developed two large internal projects with a small R&D team.</>

@@ -1,11 +1,11 @@
-'use client';
+"use client";
 
-import { ReactElement } from 'react';
+import { ReactElement } from "react";
 
-import { Card, CardContent } from '@/components/ui/card';
-import ThemeDropdown from '@/components/ui/ThemeDropdown';
-import VariantDropdown from '@/components/ui/VariantDropdown';
-import Heading from '@/components/ui/Heading';
+import { Card, CardContent } from "@/components/ui/card";
+import Heading from "@/components/ui/Heading";
+import ThemeDropdown from "@/components/ui/ThemeDropdown";
+import VariantDropdown from "@/components/ui/VariantDropdown";
 
 export default function ThemeSection(): ReactElement {
   return (

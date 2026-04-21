@@ -1,6 +1,6 @@
-import { ReactElement } from 'react';
+import { ReactElement } from "react";
 
-import SocialLinksSection from './SocialLinksSection';
+import SocialLinksSection from "./SocialLinksSection";
 
 /**
  * The About Me section.

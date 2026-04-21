@@ -1,7 +1,7 @@
-import { ReactElement } from 'react';
+import { ReactElement } from "react";
 
-import Heading from '@/components/ui/Heading';
-import ProjectCard from '@/components/cards/projectCard';
+import ProjectCard from "@/components/cards/projectCard";
+import Heading from "@/components/ui/Heading";
 
 /**
  * A section component that displays a list of projects.
@@ -19,7 +19,7 @@ export default function ProjectSection(): ReactElement {
           link="https://github.com/BlackSound1/textual-system-monitor"
           imagePath="/static/images/TSMScreenshot.png"
           alt="TSM"
-          technologies={['Python', 'Textual', 'Makefile', 'Terminal', 'TUI']}
+          technologies={["Python", "Textual", "Makefile", "Terminal", "TUI"]}
           description="A beautiful system monitoring app created in Python, using Textual."
         />
         <ProjectCard
@@ -27,7 +27,7 @@ export default function ProjectSection(): ReactElement {
           link="https://github.com/BlackSound1/Go-B-and-B"
           imagePath="/static/images/GoBandBHomePage.png"
           alt="Go B&B"
-          technologies={['Web', 'Go', 'Docker', 'REST', 'Kubernetes', 'JS']}
+          technologies={["Web", "Go", "Docker", "REST", "Kubernetes", "JS"]}
           description="A web app for a fictional Bed and Breakfast, written in Go."
         />
         <ProjectCard
@@ -35,7 +35,7 @@ export default function ProjectSection(): ReactElement {
           link="https://github.com/BlackSound1/BlackSound1-portfolio"
           imagePath="/static/images/PortfolioScreenshot.png"
           alt="This site"
-          technologies={['TS', 'NextJS', 'HTML', 'CSS', 'Web', 'Just', 'NodeJS']}
+          technologies={["TS", "NextJS", "HTML", "CSS", "Web", "Just", "NodeJS"]}
           description="A simple, WIP portfolio site. You're on it now!"
         />
         <ProjectCard
@@ -43,7 +43,7 @@ export default function ProjectSection(): ReactElement {
           link="https://github.com/BlackSound1/redis-clone"
           imagePath="/static/images/RedisCloneScreenshot.png"
           alt="Redis Clone"
-          technologies={['Go', 'Redis', 'Terminal']}
+          technologies={["Go", "Redis", "Terminal"]}
           description="A minimal clone of a Redis server, written in Go."
         />
         <ProjectCard
@@ -51,7 +51,7 @@ export default function ProjectSection(): ReactElement {
           link="https://github.com/BlackSound1/Basic-CPP-Shell"
           imagePath="/static/images/ShellScreenshot.png"
           alt="Basic C++ Shell"
-          technologies={['Shell', 'Terminal', 'C++']}
+          technologies={["Shell", "Terminal", "C++"]}
           description="A minimum viable product for a terminal shell, written in C++."
         />
         <ProjectCard
@@ -59,7 +59,7 @@ export default function ProjectSection(): ReactElement {
           link="https://github.com/BlackSound1/go-microservices"
           imagePath="/static/images/GoMicroservicesScreenshot.png"
           alt="Go Microservices"
-          technologies={['Go', 'Docker', 'Kubernetes', 'Makefile', 'Microservices']}
+          technologies={["Go", "Docker", "Kubernetes", "Makefile", "Microservices"]}
           description="A project I made to teach myself Go and the microservices architecture."
         />
       </div>

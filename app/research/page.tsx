@@ -1,10 +1,10 @@
-import posthog from 'posthog-js';
+import posthog from "posthog-js";
 
-import SocialLinksSection from '@/components/sections/SocialLinksSection';
-import PDF_Viewer from '@/components/ui/PDFViewer';
+import SocialLinksSection from "@/components/sections/SocialLinksSection";
+import PDF_Viewer from "@/components/ui/PDFViewer";
 
 export default function Research() {
-  posthog.capture('$pageview', { page: 'research' });
+  posthog.capture("$pageview", { page: "research" });
   return (
     <section id="research-section" className="space-y-5">
       <p className="max-w-prose text-lg leading-relaxed">This page details my original academic research.</p>

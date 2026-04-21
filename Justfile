@@ -1,6 +1,6 @@
-# Format 1 or more files
+# Format 1 or more files, or by default, everything
 [group('Formatting')]
-format +file:
+format +file='.':
     @echo "Formatting {{ file }}..."
     @pnpm prettier -w --config .prettierrc {{ file }}
 

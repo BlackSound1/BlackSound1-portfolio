@@ -1,4 +1,4 @@
-:root[data-theme='sonokai-default'] {
+:root[data-theme="sonokai-default"] {
   --text: #e2e2e3;
   --background: #2c2e34;
   --card-foreground: var(--text);
@@ -16,7 +16,9 @@
     color: #85d3f2;
   }
 
-  p, a, .project-card {
+  p,
+  a,
+  .project-card {
     color: var(--text);
   }
 
@@ -24,18 +26,20 @@
     background-color: #3b3e48;
   }
 
-  .dropdown-button, .dropdown-option {
+  .dropdown-button,
+  .dropdown-option {
     background-color: #3b3e48;
     color: #76cce0;
   }
 
-  .dropdown-button:hover, .dropdown-option:hover {
+  .dropdown-button:hover,
+  .dropdown-option:hover {
     background-color: #363944;
     color: #f39660;
   }
 }
 
-:root[data-theme='sonokai-atlantis'] {
+:root[data-theme="sonokai-atlantis"] {
   --text: #e1e3e4;
   --background: #2a2f38;
   --card-foreground: var(--text);
@@ -53,7 +57,9 @@
     color: #7ad5f1;
   }
 
-  p, a, .project-card {
+  p,
+  a,
+  .project-card {
     color: var(--text);
   }
 
@@ -61,18 +67,20 @@
     background-color: #3d4455;
   }
 
-  .dropdown-button, .dropdown-option {
+  .dropdown-button,
+  .dropdown-option {
     background-color: #3d4455;
     color: #7ad5f1;
   }
 
-  .dropdown-button:hover, .dropdown-option:hover {
+  .dropdown-button:hover,
+  .dropdown-option:hover {
     background-color: #373c48;
     color: #f69c5e;
   }
 }
 
-:root[data-theme='sonokai-andromeda'] {
+:root[data-theme="sonokai-andromeda"] {
   --text: #e1e3e4;
   --background: #2b2d3a;
   --card-foreground: var(--text);
@@ -90,7 +98,9 @@
     color: #77d5f0;
   }
 
-  p, a, .project-card {
+  p,
+  a,
+  .project-card {
     color: var(--text);
   }
 
@@ -98,18 +108,20 @@
     background-color: #393e53;
   }
 
-  .dropdown-button, .dropdown-option {
+  .dropdown-button,
+  .dropdown-option {
     background-color: #393e53;
     color: #77d5f0;
   }
 
-  .dropdown-button:hover, .dropdown-option:hover {
+  .dropdown-button:hover,
+  .dropdown-option:hover {
     background-color: #363a4e;
     color: #f89860;
   }
 }
 
-:root[data-theme='sonokai-shusia'] {
+:root[data-theme="sonokai-shusia"] {
   --text: #e3e1e4;
   --background: #2d2a2e;
   --card-foreground: var(--text);
@@ -127,7 +139,9 @@
     color: #78dce8;
   }
 
-  p, a, .project-card {
+  p,
+  a,
+  .project-card {
     color: var(--text);
   }
 
@@ -135,18 +149,20 @@
     background-color: #423f46;
   }
 
-  .dropdown-button, .dropdown-option {
+  .dropdown-button,
+  .dropdown-option {
     background-color: #423f46;
     color: #78dce8;
   }
 
-  .dropdown-button:hover, .dropdown-option:hover {
+  .dropdown-button:hover,
+  .dropdown-option:hover {
     background-color: #3b383e;
     color: #ef9062;
   }
 }
 
-:root[data-theme='sonokai-maia'] {
+:root[data-theme="sonokai-maia"] {
   --text: #e1e2e3;
   --background: #273136;
   --card-foreground: var(--text);
@@ -164,7 +180,9 @@
     color: #7cd5f1;
   }
 
-  p, a, .project-card {
+  p,
+  a,
+  .project-card {
     color: var(--text);
   }
 
@@ -172,18 +190,20 @@
     background-color: #3a444b;
   }
 
-  .dropdown-button, .dropdown-option {
+  .dropdown-button,
+  .dropdown-option {
     background-color: #3a444b;
     color: #7cd5f1;
   }
 
-  .dropdown-button:hover, .dropdown-option:hover {
+  .dropdown-button:hover,
+  .dropdown-option:hover {
     background-color: #353f46;
     color: #f3a96a;
   }
 }
 
-:root[data-theme='sonokai-espresso'] {
+:root[data-theme="sonokai-espresso"] {
   --text: #e4e3e1;
   --background: #312c2b;
   --card-foreground: var(--text);
@@ -201,7 +221,9 @@
     color: #85dad2;
   }
 
-  p, a, .project-card {
+  p,
+  a,
+  .project-card {
     color: var(--text);
   }
 
@@ -209,12 +231,14 @@
     background-color: #49403c;
   }
 
-  .dropdown-button, .dropdown-option {
+  .dropdown-button,
+  .dropdown-option {
     background-color: #49403c;
     color: #85dad2;
   }
 
-  .dropdown-button:hover, .dropdown-option:hover {
+  .dropdown-button:hover,
+  .dropdown-option:hover {
     background-color: #413937;
     color: #f08d71;
   }

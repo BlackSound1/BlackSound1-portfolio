@@ -1,4 +1,4 @@
-:root[data-theme='nord-snow storm'] {
+:root[data-theme="nord-snow storm"] {
   --text: #4c566a;
   --background: #eceff4;
   --card-foreground: var(--text);
@@ -16,7 +16,9 @@
     color: #88c0d0;
   }
 
-  p, a, .project-card {
+  p,
+  a,
+  .project-card {
     color: var(--text);
   }
 
@@ -24,18 +26,20 @@
     background-color: #e5e9f0;
   }
 
-  .dropdown-button, .dropdown-option {
+  .dropdown-button,
+  .dropdown-option {
     background-color: #e5e9f0;
     color: #5e81ac;
   }
 
-  .dropdown-button:hover, .dropdown-option:hover {
+  .dropdown-button:hover,
+  .dropdown-option:hover {
     background-color: #d8dee9;
     color: #bf616a;
   }
 }
 
-:root[data-theme='nord-polar night'] {
+:root[data-theme="nord-polar night"] {
   --text: #e5e9f0;
   --background: #4c566a;
   --card-foreground: var(--text);
@@ -53,7 +57,9 @@
     color: #8fbcbb;
   }
 
-  p, a, .project-card {
+  p,
+  a,
+  .project-card {
     color: var(--text);
   }
 
@@ -61,12 +67,14 @@
     background-color: #434c5e;
   }
 
-  .dropdown-button, .dropdown-option {
+  .dropdown-button,
+  .dropdown-option {
     background-color: #434c5e;
     color: #8fbcbb;
   }
 
-  .dropdown-button:hover, .dropdown-option:hover {
+  .dropdown-button:hover,
+  .dropdown-option:hover {
     background-color: #3b4252;
     color: #88c0d0;
   }

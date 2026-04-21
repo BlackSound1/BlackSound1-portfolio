@@ -1,6 +1,6 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { SVG_CPU, SVG_GPU, SVG_RAM, SVG_Storage } from '@/lib/SVG_store';
-import { getLogoSVG } from '@/lib/utils';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { SVG_CPU, SVG_GPU, SVG_RAM, SVG_Storage } from "@/lib/SVG_store";
+import { getLogoSVG } from "@/lib/utils";
 
 interface ComputerProps {
   name: string;
@@ -16,7 +16,7 @@ interface OsIconProps {
 }
 
 const OsIcon = ({ system }: OsIconProps) => {
-  const osCleaned = system.split(' ')[0].toLowerCase();
+  const osCleaned = system.split(" ")[0].toLowerCase();
   return getLogoSVG(osCleaned);
 };
 

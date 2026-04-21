@@ -1,5 +1,5 @@
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { getLogoSVG, handleLogoExceptions } from '@/lib/utils';
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { getLogoSVG, handleLogoExceptions } from "@/lib/utils";
 
 interface SimpleListCardProps {
   title: string;

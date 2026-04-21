@@ -1,11 +1,11 @@
-'use client';
+"use client";
 
-import posthog from 'posthog-js';
-import { ReactElement } from 'react';
+import posthog from "posthog-js";
+import { ReactElement } from "react";
 
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import Tag from '@/components/ui/tag';
-import TagIcon from '@/components/ui/TagIcon';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import Tag from "@/components/ui/tag";
+import TagIcon from "@/components/ui/TagIcon";
 
 interface WorkProps {
   company: string;
@@ -32,7 +32,7 @@ export default function WorkCard({ company, title, time, technologies, descripti
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      onClick={() => posthog.capture('work-clicked', { company: company })}
+      onClick={() => posthog.capture("work-clicked", { company: company })}
     >
       <Card className="mb-4 bg-mantle hover:border-accent focus-visible:border-accent group block overflow-hidden rounded-xl border shadow-lg transition-all duration-200 hover:shadow-xl focus:outline-none">
         <CardHeader>

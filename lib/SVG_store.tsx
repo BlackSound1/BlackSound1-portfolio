@@ -723,6 +723,25 @@ export const SVG_Link = () => (
   </svg>
 );
 
+export const SVG_commit = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="18"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className="icon icon-tabler icons-tabler-outline icon-tabler-git-commit"
+  >
+    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+    <path className="commit-path" d="M9 12a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+    <path className="commit-path" d="M12 3l0 6" />
+    <path className="commit-path" d="M12 15l0 6" />
+  </svg>
+);
+
 // A map of SVG names to their `JSX.Elements`.
 // Must be after all SVG definitions
 export const recordOfSVGs: Record<string, () => JSX.Element> = {
@@ -756,4 +775,5 @@ export const recordOfSVGs: Record<string, () => JSX.Element> = {
   "bbc": SVG_BBC,
   "uv": SVG_UV,
   "link": SVG_Link,
+  "commit": SVG_commit,
 };

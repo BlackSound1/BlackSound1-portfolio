@@ -10,12 +10,16 @@ type AccentContextType = {
 // Create the AccentContext
 const AccentContext = createContext<AccentContextType | undefined>(undefined);
 
+interface AccentProviderProps {
+  children: ReactNode;
+}
+
 /**
  * Defines and returns the AccentContext provider.
  * @param children Any `ReactNode` children.
  * @returns The AccentContext provider.
  */
-export const AccentProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
+export function AccentProvider({ children }: AccentProviderProps) {
   const [accent, setAccent] = useState<string>("#eb575a");
 
   useEffect(() => {
@@ -46,7 +50,7 @@ export const AccentProvider: React.FC<{ children: ReactNode }> = ({ children }) 
   const value = useMemo(() => ({ accent, setAccent }), [accent, setAccent]);
 
   return <AccentContext.Provider value={value}>{children}</AccentContext.Provider>;
-};
+}
 
 /**
  * Activates the accent context.

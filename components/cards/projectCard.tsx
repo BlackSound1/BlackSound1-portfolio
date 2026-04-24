@@ -35,8 +35,6 @@ export default function ProjectCard({
   description,
   link,
 }: ProjectProps): ReactElement {
-  const tagIcon = getLogoSVG("tag");
-
   return (
     <a
       href={link}
@@ -67,7 +65,7 @@ export default function ProjectCard({
           )}
           <CardDescription>
             <div className="flex flex-wrap gap-2 overflow-hidden text-xs">
-              {tagIcon}
+              {getLogoSVG("tag")}
               {technologies.map((name) => {
                 return <Tag key={name} lang={name} />;
               })}

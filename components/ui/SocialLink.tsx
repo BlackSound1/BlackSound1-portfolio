@@ -18,8 +18,6 @@ interface SocialLinkProps {
  * @returns A clickable link to one of my social pages.
  */
 export default function SocialLink({ url, name }: SocialLinkProps): ReactElement {
-  const Icon = getLogoSVG(name.toLowerCase());
-
   return (
     <a
       id={`${name}-link`}
@@ -30,7 +28,7 @@ export default function SocialLink({ url, name }: SocialLinkProps): ReactElement
       onClick={() => posthog.capture("social-link-clicked", { site: name })}
       aria-label={name}
     >
-      {Icon}
+      {getLogoSVG(name.toLowerCase())}
       {name}
     </a>
   );

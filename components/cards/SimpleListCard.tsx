@@ -23,10 +23,9 @@ export default function SimpleListCard({ list, title }: SimpleListCardProps) {
       <CardContent>
         <ul>
           {list.map((item) => {
-            const Icon = getLogoSVG(handleLogoExceptions(item));
             return (
               <li className="flex items-center gap-1.5" key={item}>
-                {Icon} {item}
+                {getLogoSVG(handleLogoExceptions(item))} {item}
               </li>
             );
           })}

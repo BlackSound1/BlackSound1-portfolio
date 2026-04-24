@@ -27,8 +27,6 @@ interface WorkProps {
  * @returns A clickable card showing an individual work experience.
  */
 export default function WorkCard({ company, title, time, technologies, description, url }: WorkProps): ReactElement {
-  const tagIcon = getLogoSVG("tag");
-
   return (
     <a
       href={url}
@@ -49,7 +47,7 @@ export default function WorkCard({ company, title, time, technologies, descripti
         <CardContent>
           <CardDescription>
             <div className="flex flex-wrap mt-2 gap-2 overflow-hidden text-xs">
-              {tagIcon}
+              {getLogoSVG("tag")}
               {technologies.map((name) => {
                 return <Tag key={name} lang={name} />;
               })}

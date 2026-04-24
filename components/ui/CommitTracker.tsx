@@ -10,7 +10,6 @@ import { getLogoSVG } from "@/lib/utils";
  */
 export default function CommitTracker(): ReactElement {
   const [commit, setCommit] = useState("Fetching...");
-  const Icon = getLogoSVG("commit");
 
   /**
    * Query GitHub for the most recent `main` commit
@@ -46,7 +45,7 @@ export default function CommitTracker(): ReactElement {
       id="commit-tracker"
       className="flex flex-wrap items-center justify-center hover:text-accent transition-colors duration-200"
     >
-      {Icon}
+      {getLogoSVG("commit")}
       {commit}
     </div>
   );

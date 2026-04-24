@@ -5,7 +5,7 @@ import { ReactElement } from "react";
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Tag from "@/components/ui/tag";
-import TagIcon from "@/components/ui/TagIcon";
+import { getLogoSVG } from "@/lib/utils";
 
 interface WorkProps {
   company: string;
@@ -27,6 +27,8 @@ interface WorkProps {
  * @returns A clickable card showing an individual work experience.
  */
 export default function WorkCard({ company, title, time, technologies, description, url }: WorkProps): ReactElement {
+  const tagIcon = getLogoSVG("tag");
+
   return (
     <a
       href={url}
@@ -47,7 +49,7 @@ export default function WorkCard({ company, title, time, technologies, descripti
         <CardContent>
           <CardDescription>
             <div className="flex flex-wrap mt-2 gap-2 overflow-hidden text-xs">
-              <TagIcon />
+              {tagIcon}
               {technologies.map((name) => {
                 return <Tag key={name} lang={name} />;
               })}

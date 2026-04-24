@@ -6,7 +6,7 @@ import { ReactElement } from "react";
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Tag from "@/components/ui/tag";
-import TagIcon from "@/components/ui/TagIcon";
+import { getLogoSVG } from "@/lib/utils";
 
 interface ProjectProps {
   name: string;
@@ -35,6 +35,8 @@ export default function ProjectCard({
   description,
   link,
 }: ProjectProps): ReactElement {
+  const tagIcon = getLogoSVG("tag");
+
   return (
     <a
       href={link}
@@ -65,7 +67,7 @@ export default function ProjectCard({
           )}
           <CardDescription>
             <div className="flex flex-wrap gap-2 overflow-hidden text-xs">
-              <TagIcon />
+              {tagIcon}
               {technologies.map((name) => {
                 return <Tag key={name} lang={name} />;
               })}

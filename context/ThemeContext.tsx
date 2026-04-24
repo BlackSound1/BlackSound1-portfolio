@@ -31,12 +31,16 @@ export const THEME_VARIANTS: Record<string, string[]> = {
   dracula: ["alucard", "dracula"],
 };
 
+interface ThemeProviderProps {
+  children: ReactNode;
+}
+
 /**
  * Defines and returns the ThemeContext provider.
  * @param children Any `ReactNode` children.
  * @returns The ThemeContext provider.
  */
-export const ThemeProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
+export function ThemeProvider({ children }: ThemeProviderProps) {
   const [theme, setTheme] = useState<string>("default-default");
   const userInitiatedRef = useRef<boolean>(false);
 
@@ -93,7 +97,7 @@ export const ThemeProvider: React.FC<{ children: ReactNode }> = ({ children }) =
   const value = useMemo(() => ({ theme, setTheme: setThemeUser }), [theme, setThemeUser]);
 
   return <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>;
-};
+}
 
 /**
  * Activates the theme context.

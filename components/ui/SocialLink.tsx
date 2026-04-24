@@ -15,11 +15,9 @@ interface SocialLinkProps {
  * @param name The name of the social site.
  * @param url The URL to my page on the site.
  * @param logo The logo of the site.
- * @returns {ReactElement} A clickable link to one of my social pages.
+ * @returns A clickable link to one of my social pages.
  */
 export default function SocialLink({ url, name }: SocialLinkProps): ReactElement {
-  const Icon = getLogoSVG(name.toLowerCase());
-
   return (
     <a
       id={`${name}-link`}
@@ -30,7 +28,7 @@ export default function SocialLink({ url, name }: SocialLinkProps): ReactElement
       onClick={() => posthog.capture("social-link-clicked", { site: name })}
       aria-label={name}
     >
-      {Icon}
+      {getLogoSVG(name.toLowerCase())}
       {name}
     </a>
   );

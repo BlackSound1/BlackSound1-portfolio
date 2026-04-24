@@ -6,7 +6,7 @@ import { ReactElement } from "react";
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Tag from "@/components/ui/tag";
-import TagIcon from "@/components/ui/TagIcon";
+import { getLogoSVG } from "@/lib/utils";
 
 interface ProjectProps {
   name: string;
@@ -25,7 +25,7 @@ interface ProjectProps {
  * @param technologies A list of technologies used in the making of the project.
  * @param description The description of the project.
  * @param link The link to the GitHub page for the project.
- * @returns {ReactElement} A section dedicated to my projects.
+ * @returns A section dedicated to my projects.
  */
 export default function ProjectCard({
   name,
@@ -65,7 +65,7 @@ export default function ProjectCard({
           )}
           <CardDescription>
             <div className="flex flex-wrap gap-2 overflow-hidden text-xs">
-              <TagIcon />
+              {getLogoSVG("tag")}
               {technologies.map((name) => {
                 return <Tag key={name} lang={name} />;
               })}

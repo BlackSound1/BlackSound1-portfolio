@@ -19,9 +19,9 @@ const _fetchRandomColor = (theme: string): string => {
 };
 
 /**
- * A \<span\> dedicated to a single technology tag.
+ * A `<span>` dedicated to a single technology tag.
  * @param lang The language tag.
- * @returns {ReactElement} A \<span\> dedicated to a single technology tag.
+ * @returns A `<span>` dedicated to a single technology tag.
  */
 export default function Tag({ lang }: TagProps): ReactElement {
   const { theme } = useTheme();

@@ -5,7 +5,7 @@ import Heading from "@/components/ui/Heading";
 
 /**
  * A section component that displays a list of projects.
- * @returns {ReactElement} A section element containing a list of projects I've done.
+ * @returns A section element containing a list of projects I've done.
  */
 export default function ProjectSection(): ReactElement {
   return (

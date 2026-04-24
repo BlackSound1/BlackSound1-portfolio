@@ -10,7 +10,7 @@ import { CheckBoxStore } from "@/stores/colorCheckboxStore";
 
 /**
  * A section element containing a card with a Soundcloud playlist player with some of my music.
- * @returns {ReactElement} A section element containing a card with a Soundcloud playlist player with some of my music.
+ * @returns A section element containing a card with a Soundcloud playlist player with some of my music.
  */
 export default function MusicSection(): ReactElement {
   const isChecked = useSyncExternalStore(CheckBoxStore.subscribe, CheckBoxStore.getIsChecked, () => false);

@@ -5,7 +5,7 @@ import Heading from "@/components/ui/Heading";
 
 /**
  * A section component that displays a list of work experience items.
- * @returns {ReactElement} A section element containing a list of work experience items.
+ * @returns A section element containing a list of work experience items.
  */
 export default function WorkSection(): ReactElement {
   return (

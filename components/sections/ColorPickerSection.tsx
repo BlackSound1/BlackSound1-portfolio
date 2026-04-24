@@ -10,7 +10,7 @@ import { CheckBoxStore } from "@/stores/colorCheckboxStore";
 
 /**
  * A color picker section for styling the site.
- * @returns {ReactElement} A color picker section for styling the site.
+ * @returns A color picker section for styling the site.
  */
 export default function ColorPickerSection(): ReactElement {
   const { accent, setAccent } = useAccent();

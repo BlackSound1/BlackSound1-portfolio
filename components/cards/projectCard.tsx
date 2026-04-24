@@ -25,7 +25,7 @@ interface ProjectProps {
  * @param technologies A list of technologies used in the making of the project.
  * @param description The description of the project.
  * @param link The link to the GitHub page for the project.
- * @returns {ReactElement} A section dedicated to my projects.
+ * @returns A section dedicated to my projects.
  */
 export default function ProjectCard({
   name,

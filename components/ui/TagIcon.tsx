@@ -2,7 +2,7 @@ import { ReactElement } from "react";
 
 /**
  * A Tag icon SVG.
- * @returns {ReactElement} A Tag icon SVG.
+ * @returns A Tag icon SVG.
  */
 export default function TagIcon(): ReactElement {
   return (

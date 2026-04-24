@@ -8,7 +8,7 @@ import ColorPickerSection from "./ColorPickerSection";
 
 /**
  * A section containing the non-professional aspects of the site.
- * @returns {ReactElement} A section containing the non-professional aspects of the site.
+ * @returns A section containing the non-professional aspects of the site.
  */
 export default function FunSection(): ReactElement {
   return (

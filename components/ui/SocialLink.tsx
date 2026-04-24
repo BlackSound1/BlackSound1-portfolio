@@ -15,7 +15,7 @@ interface SocialLinkProps {
  * @param name The name of the social site.
  * @param url The URL to my page on the site.
  * @param logo The logo of the site.
- * @returns {ReactElement} A clickable link to one of my social pages.
+ * @returns A clickable link to one of my social pages.
  */
 export default function SocialLink({ url, name }: SocialLinkProps): ReactElement {
   const Icon = getLogoSVG(name.toLowerCase());

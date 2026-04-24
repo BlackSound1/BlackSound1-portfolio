@@ -4,7 +4,7 @@ import SocialLinksSection from "./SocialLinksSection";
 
 /**
  * The About Me section.
- * @returns {ReactElement} The About Me section.
+ * @returns The About Me section.
  */
 export default function AboutMeSection(): ReactElement {
   return (

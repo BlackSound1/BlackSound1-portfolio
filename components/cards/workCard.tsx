@@ -24,7 +24,7 @@ interface WorkProps {
  * @param description A brief job description and some accomplishments.
  * @param technologies A list of technologies used during this job.
  * @param url A link to the company's page
- * @returns {ReactElement} A clickable card showing an individual work experience.
+ * @returns A clickable card showing an individual work experience.
  */
 export default function WorkCard({ company, title, time, technologies, description, url }: WorkProps): ReactElement {
   return (

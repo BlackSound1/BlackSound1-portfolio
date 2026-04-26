@@ -1,5 +1,5 @@
 interface HeadingProps {
-  level: number;
+  level?: number;
   text: string;
 }
 

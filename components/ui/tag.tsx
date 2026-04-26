@@ -33,7 +33,11 @@ export default function Tag({ lang }: TagProps): ReactElement {
   }, [theme]);
 
   return (
-    <span className="bg-[#eee] tag rounded-2xl px-2 py-1 font-semibold font-mono" style={{ color: color }}>
+    <span
+      className="bg-[#eee] tag rounded-2xl px-2 py-1 font-semibold font-mono"
+      style={{ color: color }}
+      data-testid="tag"
+    >
       {lang}
     </span>
   );

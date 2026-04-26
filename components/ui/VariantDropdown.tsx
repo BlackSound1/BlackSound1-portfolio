@@ -53,7 +53,7 @@ export default function VariantDropdown(): ReactElement {
 
         {isOpen && (
           <div className="origin-top-right absolute w-auto min-z-full z-10 left-0 mt-2 shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
-            <div className="">
+            <div>
               {THEME_VARIANTS[themeOnly].map((variant) => (
                 <button
                   key={variant}

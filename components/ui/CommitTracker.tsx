@@ -45,7 +45,9 @@ export default function CommitTracker(): ReactElement {
       id="commit-tracker"
       className="flex flex-wrap items-center justify-center hover:text-accent transition-colors duration-200"
     >
-      {getLogoSVG("commit")}
+      <div data-testid="commit-tracker-svg">
+        {getLogoSVG("commit")}
+      </div>
       {commit}
     </div>
   );

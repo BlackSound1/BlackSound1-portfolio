@@ -30,5 +30,9 @@ describe("CommitTracker", () => {
       "https://api.github.com/repos/BlackSound1/BlackSound1-portfolio/commits?sha=main",
       expect.any(Object),
     );
+
+    // Ensure the SVG is in the document
+    const svg = await screen.findByTestId("commit-tracker-svg");
+    expect(svg).toBeInTheDocument();
   });
 });

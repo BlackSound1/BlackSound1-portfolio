@@ -31,6 +31,8 @@ describe("CommitTracker", () => {
       expect.any(Object),
     );
 
+    expect(global.fetch).toHaveBeenCalledTimes(1);
+
     // Ensure the SVG is in the document
     const svg = await screen.findByTestId("commit-tracker-svg");
     expect(svg).toBeInTheDocument();

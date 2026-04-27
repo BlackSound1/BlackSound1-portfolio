@@ -28,8 +28,11 @@ export default function VariantDropdown(): ReactElement {
 
   // Update the theme and variant as distinct names whenever the theme-variant name changes
   useEffect(() => {
-    setThemeOnly(theme.split("-")[0]);
-    setVariantOnly(theme.split("-")[1]);
+    const id = setTimeout(() => {
+      setThemeOnly(theme.split("-")[0]);
+      setVariantOnly(theme.split("-")[1]);
+    });
+    return () => clearTimeout(id);
   }, [theme]);
 
   return (

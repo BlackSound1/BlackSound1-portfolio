@@ -29,7 +29,10 @@ export default function Tag({ lang }: TagProps): ReactElement {
 
   // Set the tag color based on the variant
   useEffect(() => {
-    setColor(_fetchRandomColor(theme));
+    const id = setTimeout(() => {
+      setColor(_fetchRandomColor(theme));
+    });
+    return () => clearTimeout(id);
   }, [theme]);
 
   return (

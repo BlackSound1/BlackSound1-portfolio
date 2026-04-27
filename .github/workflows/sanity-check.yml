@@ -1,6 +1,16 @@
 name: Sanity Check
 
 on:
+    push:
+        branches:
+            - "main"
+        paths:
+            - '**/*.ts' # Any TS files
+            - '**/*.tsx' # Any TSX files
+            - '**/*.mjs' # Any MJS files
+            - "tsconfig.json"
+            - '.github/workflows/sanity-check.yml' # This workflow
+
     pull_request:
         branches:
             - "main"

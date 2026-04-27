@@ -10,14 +10,14 @@ interface SoundcloudProps {
  * @returns An `<iframe>` dedicated to a Soundcloud playlist of some of my music.
  */
 export default function SoundcloudEmbed({ embedURL }: SoundcloudProps): ReactElement {
-    return (
-        <iframe
-            data-testid="soundcloud-iframe"
-            id="soundcloud-iframe"
-            width="100%"
-            height="370"
-            allow="autoplay"
-            src={embedURL}>
-        </iframe>
-    );
+  return (
+    <iframe
+      data-testid="soundcloud-iframe"
+      id="soundcloud-iframe"
+      width="100%"
+      height="370"
+      allow="autoplay"
+      src={embedURL}
+    ></iframe>
+  );
 }

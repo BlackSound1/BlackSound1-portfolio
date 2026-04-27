@@ -44,7 +44,7 @@ export default function ColorPickerSection(): ReactElement {
                 </label>
               </span>
               <input
-                className="h-full w-full rounded-md p-0"
+                className="h-full w-full rounded-md p-0 hover:cursor-pointer"
                 type="color"
                 aria-label="Choose highlight color"
                 value={accent}

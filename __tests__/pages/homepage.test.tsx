@@ -20,6 +20,7 @@ describe("Home", () => {
   //     expect(paragraph).toBeInTheDocument();
   //   });
   it("tests nothing", () => {
-    expect(true);
+    expect(true).toBeTruthy();
   });
+
 });

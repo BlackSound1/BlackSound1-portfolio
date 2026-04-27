@@ -1,0 +1,44 @@
+name: Sanity Check
+
+on:
+    pull_request:
+        branches:
+            - "main"
+        paths:
+            - '**/*.ts' # Any TS files
+            - '**/*.tsx' # Any TSX files
+            - '**/*.mjs' # Any MJS files
+            - "tsconfig.json"
+            - '.github/workflows/sanity-check.yml' # This workflow
+
+permissions:
+  contents: read
+
+jobs:
+    check:
+        name: Sanity Check
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout repo
+              uses: actions/checkout@v5
+            
+            - name: Set up Node
+              uses: actions/setup-node@v6
+              with:
+                node-version: 24.10.0
+            
+            - name: Set up PNPM
+              uses: pnpm/action-setup@v6
+              with:
+                version: 10.33.2
+                cache: true
+            
+            - name: Install deps
+              run: pnpm install
+
+            - name: lint app
+              run: pnpm lint
+            
+            - name: Test app
+              run: pnpm test

@@ -1,3 +1,5 @@
+[![Sanity Check](https://github.com/BlackSound1/BlackSound1-portfolio/actions/workflows/sanity-check.yml/badge.svg?branch=main)](https://github.com/BlackSound1/BlackSound1-portfolio/actions/workflows/sanity-check.yml)
+
 # BlackSound1's Portfolio Website
 
 ![screenshot](images/Screenshot.png)

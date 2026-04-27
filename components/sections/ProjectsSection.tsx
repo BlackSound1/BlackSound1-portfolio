@@ -19,8 +19,8 @@ export default function ProjectSection(): ReactElement {
           link="https://github.com/BlackSound1/textual-system-monitor"
           imagePath="/static/images/TSMScreenshot.png"
           alt="TSM"
-          technologies={["Python", "Textual", "Makefile", "Terminal", "TUI"]}
-          description="A beautiful system monitoring app created in Python, using Textual."
+          technologies={["Python", "Textual", "Makefile", "Terminal", "TUI", "CI/CD", "Pytest"]}
+          description="A beautiful system monitoring app created in Python, using Textual. Now hosted on PyPI!"
         />
         <ProjectCard
           name="Go B&B"
@@ -35,7 +35,7 @@ export default function ProjectSection(): ReactElement {
           link="https://github.com/BlackSound1/BlackSound1-portfolio"
           imagePath="/static/images/PortfolioScreenshot.png"
           alt="This site"
-          technologies={["TS", "NextJS", "HTML", "CSS", "Web", "Just", "NodeJS"]}
+          technologies={["TS", "NextJS", "HTML", "CSS", "Web", "Just", "NodeJS", "Jest", "CI/CD"]}
           description="A simple, WIP portfolio site. You're on it now!"
         />
         <ProjectCard

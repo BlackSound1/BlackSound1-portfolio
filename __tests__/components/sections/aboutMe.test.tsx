@@ -15,14 +15,14 @@ describe("AboutMeSection", () => {
 
     expect(links.length).toBe(2);
 
-    const gh = links.find(link => link.ariaLabel === "GitHub");
+    const gh = links.find((link) => link.ariaLabel === "GitHub");
     expect(gh).toBeInTheDocument();
     expect(gh).toHaveAttribute("href", "https://github.com/BlackSound1");
     expect(gh).toHaveAttribute("rel", "noopener noreferrer");
     expect(gh).toHaveAttribute("target", "_blank");
     expect(gh).toHaveTextContent("GitHub");
 
-    const li = links.find(link => link.ariaLabel === "LinkedIn");
+    const li = links.find((link) => link.ariaLabel === "LinkedIn");
     expect(li).toBeInTheDocument();
     expect(li).toHaveAttribute("href", "https://www.linkedin.com/in/ordon/");
     expect(li).toHaveAttribute("rel", "noopener noreferrer");

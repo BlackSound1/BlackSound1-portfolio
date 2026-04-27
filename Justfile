@@ -26,3 +26,9 @@ help:
 [group('Utilities')]
 version:
     @echo "$(cat VERSION.txt)"
+
+# Testing
+[group('Testing')]
+[arg('watch', long, short='w', value=':watch')]
+test watch='':
+    @pnpm test{{watch}}

@@ -35,7 +35,7 @@ describe("Headings", () => {
   });
 
   it("renders a non-heading", async () => {
-    render(<Heading text="test"/>)
+    render(<Heading text="test" />);
 
     const p = await screen.findByRole("paragraph");
 

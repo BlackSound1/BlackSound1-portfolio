@@ -1,6 +1,7 @@
-import NotFound from "@/app/not-found";
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
+
+import NotFound from "@/app/not-found";
 
 describe("Not Found", () => {
   it("should render the not found page", async () => {

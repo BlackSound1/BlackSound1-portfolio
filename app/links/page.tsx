@@ -8,13 +8,15 @@ import Heading from "@/components/ui/Heading";
 export default function Links() {
   posthog.capture("$pageview", { page: "links" });
   return (
-    <section id="links-section" className="space-y-5">
-      <p className="max-w-prose text-lg leading-relaxed">This page has a bunch of cool links I found.</p>
+    <section id="links-section" data-testid="links-section" className="space-y-5">
+      <p className="max-w-prose text-lg leading-relaxed" aria-label="paragraph-intro">
+        This page has a bunch of cool links I found.
+      </p>
       <SocialLinksSection />
 
       <Heading level={2} text="Computer Science" />
 
-      <section className="flex flex-col gap-4">
+      <section className="flex flex-col gap-4" data-testid="links-compsci">
         <ExternalLink url="https://quantum.country/" description="Quantum Country" />
         <ExternalLink url="https://samwho.dev/" description="Sam Who" />
         <ExternalLink
@@ -33,7 +35,7 @@ export default function Links() {
 
       <Heading level={2} text="Programming" />
 
-      <section className="flex flex-col gap-4">
+      <section className="flex flex-col gap-4" data-testid="links-programming">
         <ExternalLink url="https://gigamonkeys.com/book/" description="Practical Common LISP" />
         <ExternalLink
           url="https://allendowney.github.io/ModSimPy/index.html"
@@ -47,7 +49,7 @@ export default function Links() {
 
       <Heading level={2} text="Other Personal Sites I Think are Cool" />
 
-      <section className="flex flex-col gap-4">
+      <section className="flex flex-col gap-4" data-testid="links-other">
         <ExternalLink
           url="https://jasoncameron.dev/"
           description="Jason Cameron (my main inspiration for this site!)"
@@ -63,7 +65,7 @@ export default function Links() {
 
       <Heading level={2} text="Miscellaneous" />
 
-      <section className="flex flex-col gap-4">
+      <section className="flex flex-col gap-4" data-testid="links-misc">
         <ExternalLink url="https://joy.recurse.com/?page=1" description="The Joy of Computing" />
         <ExternalLink url="https://letsgetcreative.today/" description="Let's Get Creative" />
       </section>

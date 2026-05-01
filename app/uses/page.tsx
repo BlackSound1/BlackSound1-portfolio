@@ -9,7 +9,7 @@ import Heading from "@/components/ui/Heading";
 export default function Uses() {
   posthog.capture("$pageview", { page: "uses" });
   return (
-    <section id="uses-section" className="space-y-5">
+    <section id="uses-section" data-testid="uses-section" className="space-y-5">
       <p className="max-w-prose text-lg leading-relaxed">
         This page details all the important tools and technologies I use
       </p>

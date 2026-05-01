@@ -13,23 +13,36 @@ export default function Heading({ level, text }: HeadingProps) {
   switch (level) {
     case 1:
       return (
-        <h1 className="mb-5 text-3xl font-bold md:text-4xl font-mono hover:text-accent transition-colors duration-200">
+        <h1
+          className="mb-5 text-3xl font-bold md:text-4xl font-mono hover:text-accent transition-colors duration-200"
+          aria-label={text}
+        >
           {text}
         </h1>
       );
     case 2:
       return (
-        <h2 className="text-left gap-3 text-2xl font-semibold md:text-3xl font-mono hover:text-accent transition-colors duration-200">
+        <h2
+          className="text-left gap-3 text-2xl font-semibold md:text-3xl font-mono hover:text-accent transition-colors duration-200"
+          aria-label={text}
+        >
           {text}
         </h2>
       );
     case 3:
       return (
-        <h3 className="text-left gap-3 text-xl font-semibold md:text-2xl font-mono hover:text-accent transition-colors duration-200">
+        <h3
+          className="text-left gap-3 text-xl font-semibold md:text-2xl font-mono hover:text-accent transition-colors duration-200"
+          aria-label={text}
+        >
           {text}
         </h3>
       );
     default:
-      return <p style={{ color: "red", fontWeight: "bold" }}>{text}</p>;
+      return (
+        <p style={{ color: "red", fontWeight: "bold" }} aria-label={text}>
+          {text}
+        </p>
+      );
   }
 }

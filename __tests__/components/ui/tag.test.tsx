@@ -18,6 +18,6 @@ describe("Tag", () => {
 
     expect(tag).toHaveClass("tag");
 
-    expect(tag).toHaveTextContent("test");
+    expect(tag.textContent).toBe("test");
   });
 });

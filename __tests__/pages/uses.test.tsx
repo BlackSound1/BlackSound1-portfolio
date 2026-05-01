@@ -13,7 +13,7 @@ describe("Uses", () => {
 
     // Test the paragraph
     const p = await screen.findByRole("paragraph");
-    expect(p).toHaveTextContent("This page details all the important tools and technologies I use");
+    expect(p.textContent).toBe("This page details all the important tools and technologies I use");
 
     // Test the social links
     const links = await screen.findAllByRole("link");
@@ -24,14 +24,14 @@ describe("Uses", () => {
     expect(gh).toHaveAttribute("href", "https://github.com/BlackSound1");
     expect(gh).toHaveAttribute("rel", "noopener noreferrer");
     expect(gh).toHaveAttribute("target", "_blank");
-    expect(gh).toHaveTextContent("GitHub");
+    expect(gh?.textContent).toBe("GitHub");
 
     const li = links.find((link) => link.ariaLabel === "LinkedIn");
     expect(li).toBeInTheDocument();
     expect(li).toHaveAttribute("href", "https://www.linkedin.com/in/ordon/");
     expect(li).toHaveAttribute("rel", "noopener noreferrer");
     expect(li).toHaveAttribute("target", "_blank");
-    expect(li).toHaveTextContent("LinkedIn");
+    expect(li?.textContent).toBe("LinkedIn");
 
     // Test we have all the headings
     const headings = await screen.findAllByRole("heading");

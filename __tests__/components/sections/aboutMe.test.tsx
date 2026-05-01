@@ -20,13 +20,13 @@ describe("AboutMeSection", () => {
     expect(gh).toHaveAttribute("href", "https://github.com/BlackSound1");
     expect(gh).toHaveAttribute("rel", "noopener noreferrer");
     expect(gh).toHaveAttribute("target", "_blank");
-    expect(gh).toHaveTextContent("GitHub");
+    expect(gh?.textContent).toBe("GitHub");
 
     const li = links.find((link) => link.ariaLabel === "LinkedIn");
     expect(li).toBeInTheDocument();
     expect(li).toHaveAttribute("href", "https://www.linkedin.com/in/ordon/");
     expect(li).toHaveAttribute("rel", "noopener noreferrer");
     expect(li).toHaveAttribute("target", "_blank");
-    expect(li).toHaveTextContent("LinkedIn");
+    expect(li?.textContent).toBe("LinkedIn");
   });
 });

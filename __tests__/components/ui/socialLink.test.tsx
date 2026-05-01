@@ -15,7 +15,7 @@ describe("SocialLink", () => {
 
     expect(link).toHaveProperty("href");
 
-    expect(link).toHaveTextContent("test");
+    expect(link.textContent).toBe("test");
 
     expect(link).toHaveProperty("target");
     expect(link.ariaLabel).toBe("test");

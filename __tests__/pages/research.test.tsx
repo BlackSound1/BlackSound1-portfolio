@@ -25,7 +25,7 @@ describe("Research", () => {
     // Test that the mocked PDF Viewer was rendered
     const pdfViewer = screen.getByTestId("mock-pdf-viewer");
     expect(pdfViewer).toHaveAttribute("data-file", "/static/PDFs/ewaste-report.pdf");
-    expect(pdfViewer).toHaveTextContent("Mock PDF Viewer");
+    expect(pdfViewer.textContent).toBe("Mock PDF Viewer");
 
     // Test the paragraphs
     const paragraphs = await screen.findAllByRole("paragraph");
@@ -33,7 +33,7 @@ describe("Research", () => {
 
     const intro = paragraphs.find((p) => p.ariaLabel === "paragraph-intro");
     expect(intro).toBeInTheDocument();
-    expect(intro).toHaveTextContent("This page details my original academic research.");
+    expect(intro?.textContent).toBe("This page details my original academic research.");
 
     const description = paragraphs.find((p) => p.ariaLabel === "research-description");
     expect(description).toBeInTheDocument();
@@ -48,13 +48,13 @@ describe("Research", () => {
     expect(gh).toHaveAttribute("href", "https://github.com/BlackSound1");
     expect(gh).toHaveAttribute("rel", "noopener noreferrer");
     expect(gh).toHaveAttribute("target", "_blank");
-    expect(gh).toHaveTextContent("GitHub");
+    expect(gh?.textContent).toBe("GitHub");
 
     const li = links.find((link) => link.ariaLabel === "LinkedIn");
     expect(li).toBeInTheDocument();
     expect(li).toHaveAttribute("href", "https://www.linkedin.com/in/ordon/");
     expect(li).toHaveAttribute("rel", "noopener noreferrer");
     expect(li).toHaveAttribute("target", "_blank");
-    expect(li).toHaveTextContent("LinkedIn");
+    expect(li?.textContent).toBe("LinkedIn");
   });
 });

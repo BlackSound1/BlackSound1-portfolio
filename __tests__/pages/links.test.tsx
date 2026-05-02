@@ -3,22 +3,25 @@ import { render, screen } from "@testing-library/react";
 
 import Links from "@/app/links/page";
 
-describe("Links", () => {
-  it("should render the Links page", async () => {
+describe("Links page", () => {
+  beforeEach(() => {
     render(<Links />);
+  });
 
-    // Test section was rendered
+  it("should render the Links section", async () => {
     const section = await screen.findByTestId("links-section");
     expect(section).toBeInTheDocument();
+  });
 
-    // Test paragraphs
+  it("should render the correct paragraphs", async () => {
     const allParagraphs = await screen.findAllByRole("paragraph");
     expect(allParagraphs.length).toStrictEqual(1);
 
     const p = await screen.findByRole("paragraph");
     expect(p.textContent).toBe("This page has a bunch of cool links I found.");
+  });
 
-    // Test headings
+  it("should render all the headings", async () => {
     const allHeadings = await screen.findAllByRole("heading");
     expect(allHeadings.length).toBeGreaterThan(0);
 
@@ -40,8 +43,9 @@ describe("Links", () => {
     const headingMisc = allH2.find((h2) => h2.ariaLabel === "Miscellaneous");
     expect(headingMisc).toBeInTheDocument();
     expect(headingMisc?.textContent).toBe("Miscellaneous");
+  });
 
-    // Test subsections
+  it("should render all the subsections correctly", async () => {
     const sectionCompSci = await screen.findByTestId("links-compsci");
     expect(sectionCompSci).toBeInTheDocument();
 
@@ -53,7 +57,9 @@ describe("Links", () => {
 
     const sectionMisc = await screen.findByTestId("links-misc");
     expect(sectionMisc).toBeInTheDocument();
+  });
 
+  it("should render the links", async () => {
     // Test the social links
     const links = await screen.findAllByRole("link");
     expect(links.length).toBeGreaterThan(2);

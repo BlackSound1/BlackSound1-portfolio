@@ -15,19 +15,20 @@ jest.mock("@/components/ui/PDFViewer", () => ({
 }));
 
 describe("Research", () => {
-  it("should render the Research page", async () => {
-    render(<Research />);
+  beforeEach(() => render(<Research />));
 
-    // Test section was rendered
+  it("should render the Research section", async () => {
     const section = await screen.findByTestId("research-section");
     expect(section).toBeInTheDocument();
+  });
 
-    // Test that the mocked PDF Viewer was rendered
+  it("should test the mocked PDF_Viewer", async () => {
     const pdfViewer = screen.getByTestId("mock-pdf-viewer");
     expect(pdfViewer).toHaveAttribute("data-file", "/static/PDFs/ewaste-report.pdf");
     expect(pdfViewer.textContent).toBe("Mock PDF Viewer");
+  });
 
-    // Test the paragraphs
+  it("should render the paragraphs", async () => {
     const paragraphs = await screen.findAllByRole("paragraph");
     expect(paragraphs.length).toStrictEqual(2);
 
@@ -38,8 +39,9 @@ describe("Research", () => {
     const description = paragraphs.find((p) => p.ariaLabel === "research-description");
     expect(description).toBeInTheDocument();
     expect(description?.textContent.length).toBeGreaterThan(0);
+  });
 
-    // Test the social links
+  it("should render the social links", async () => {
     const links = await screen.findAllByRole("link");
     expect(links.length).toStrictEqual(2);
 

@@ -4,15 +4,15 @@ import { render, screen } from "@testing-library/react";
 import AboutMeSection from "@/components/sections/AboutMeSection";
 
 describe("AboutMeSection", () => {
-  it("renders the About Me section", async () => {
-    render(<AboutMeSection />);
+  beforeEach(() => render(<AboutMeSection />));
 
+  it("should render the About Me section", async () => {
     const section = await screen.findByTestId("about-me-section");
-
     expect(section).toBeInTheDocument();
+  });
 
+  it("should render the social links", async () => {
     const links = await screen.findAllByRole("link");
-
     expect(links.length).toBe(2);
 
     const gh = links.find((link) => link.ariaLabel === "GitHub");

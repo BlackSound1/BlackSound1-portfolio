@@ -4,17 +4,21 @@ import { render, screen } from "@testing-library/react";
 import NotFound from "@/app/not-found";
 
 describe("Not Found", () => {
-  it("should render the not found page", async () => {
-    render(<NotFound />);
+  beforeEach(() => render(<NotFound />));
 
+  it("should render the heading", async () => {
     const h2 = await screen.findByRole("heading", { level: 2 });
     expect(h2).toBeInTheDocument();
     expect(h2.textContent).toBe("[404]");
+  });
 
+  it("should render the paragraph", async () => {
     const p = await screen.findByRole("paragraph");
     expect(p).toBeInTheDocument();
     expect(p.textContent).toBe("This page does not exist!");
+  });
 
+  it("should render the social links", async () => {
     const allLinks = await screen.findAllByRole("link");
 
     const gh = allLinks.find((link) => link.ariaLabel === "GitHub");

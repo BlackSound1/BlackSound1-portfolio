@@ -4,9 +4,7 @@ import { render, screen } from "@testing-library/react";
 import Links from "@/app/links/page";
 
 describe("Links page", () => {
-  beforeEach(() => {
-    render(<Links />);
-  });
+  beforeEach(() => render(<Links />));
 
   it("should render the Links section", async () => {
     const section = await screen.findByTestId("links-section");

@@ -4,18 +4,19 @@ import { render, screen } from "@testing-library/react";
 import Uses from "@/app/uses/page";
 
 describe("Uses", () => {
-  it("should render the Uses page", async () => {
-    render(<Uses />);
+  beforeEach(() => render(<Uses />));
 
-    // Test section was rendered
+  it("should render the Uses section", async () => {
     const section = await screen.findByTestId("uses-section");
     expect(section).toBeInTheDocument();
+  });
 
-    // Test the paragraph
+  it("should test the paragraph", async () => {
     const p = await screen.findByRole("paragraph");
     expect(p.textContent).toBe("This page details all the important tools and technologies I use");
+  });
 
-    // Test the social links
+  it("should render the social links", async () => {
     const links = await screen.findAllByRole("link");
     expect(links.length).toStrictEqual(2);
 
@@ -32,8 +33,9 @@ describe("Uses", () => {
     expect(li).toHaveAttribute("rel", "noopener noreferrer");
     expect(li).toHaveAttribute("target", "_blank");
     expect(li?.textContent).toBe("LinkedIn");
+  });
 
-    // Test we have all the headings
+  it("should render the headings", async () => {
     const headings = await screen.findAllByRole("heading");
     expect(headings.length).toStrictEqual(6);
 
@@ -51,8 +53,9 @@ describe("Uses", () => {
 
     const hardware = all_h2.find((heading) => heading.ariaLabel === "Hardware");
     expect(hardware).toBeInTheDocument();
+  });
 
-    // Ensure our list cards are populated
+  it("should ensure the list cards are at least populated", async () => {
     const listProgramming = await screen.findAllByRole("listitem", { name: "list-item-Programming" });
     expect(listProgramming.length).toBeGreaterThan(0);
 

@@ -60,6 +60,12 @@ describe("tagColorMap", () => {
   it("should be non-empty", () => {
     expect(Object.keys(tagColorMap).length).toBeGreaterThan(0);
   });
+
+  it("should ensure no value is an empty Array", () => {
+    Object.values(tagColorMap).forEach((value) => {
+      expect(value.length).toBeGreaterThan(0);
+    });
+  });
 });
 
 describe("handleLogoExceptions", () => {
@@ -108,5 +114,15 @@ describe("getLogoSVG", () => {
   it("should return the Unknown SVG when not found", () => {
     const unknown = getLogoSVG("test");
     expect(unknown.props["aria-label"]).toBe("unknown svg");
+  });
+
+  it("should return a found svg if it's found", () => {
+    const github = getLogoSVG("github");
+    expect(github.props["aria-label"]).toBe("github svg");
+  });
+
+  it("should not have the wrong aria-label", () => {
+    const unknown = getLogoSVG("test");
+    expect(unknown.props["aria-label"]).not.toBe("github svg");
   });
 });

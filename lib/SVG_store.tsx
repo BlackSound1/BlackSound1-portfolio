@@ -27,6 +27,7 @@ export const SVG_GitHub = () => (
     strokeLinecap="round"
     strokeLinejoin="round"
     className="icon icon-tabler icons-tabler-outline social-icon"
+    aria-label="github svg"
   >
     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
     <path

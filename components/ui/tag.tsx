@@ -13,7 +13,7 @@ interface TagProps {
  * @param theme The theme to choose a color from.
  * @returns A randomly-chosen color based on the current theme and variant.
  */
-const _fetchRandomColor = (theme: string): string => {
+export const _fetchRandomColor = (theme: string): string => {
   const colorChoices = tagColorMap[theme] ?? tagColorMap["default-default"];
   return colorChoices[Math.floor(Math.random() * colorChoices.length)];
 };

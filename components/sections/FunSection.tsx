@@ -12,7 +12,7 @@ import ColorPickerSection from "./ColorPickerSection";
  */
 export default function FunSection(): ReactElement {
   return (
-    <section id="fun-section" className="px-4 md:px-0">
+    <section id="fun-section" data-testid="fun-section" className="px-4 md:px-0">
       <div className="mb-8">
         <Heading level={2} text="Fun Stuff" />
       </div>

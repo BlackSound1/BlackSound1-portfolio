@@ -43,6 +43,8 @@ export default function ProjectCard({
       title={name + ": " + description}
       className="block h-full project-card"
       onClick={() => posthog.capture("project-clicked", { project: name })}
+      aria-label={name}
+      data-testid="project link"
     >
       <Card
         className="bg-mantle hover:border-accent focus-visible:border-accent group h-full flex flex-col overflow-hidden rounded-xl border shadow-lg transition-all duration-200 hover:shadow-xl focus:outline-none"

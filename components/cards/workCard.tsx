@@ -33,6 +33,7 @@ export default function WorkCard({ company, title, time, technologies, descripti
       target="_blank"
       rel="noopener noreferrer"
       onClick={() => posthog.capture("work-clicked", { company: company })}
+      aria-label={company}
     >
       <Card
         className="mb-4 bg-mantle hover:border-accent focus-visible:border-accent group block overflow-hidden rounded-xl border shadow-lg transition-all duration-200 hover:shadow-xl focus:outline-none"

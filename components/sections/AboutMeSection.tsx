@@ -9,7 +9,7 @@ import SocialLinksSection from "./SocialLinksSection";
 export default function AboutMeSection(): ReactElement {
   return (
     <section id="about-me-section" data-testid="about-me-section" className="space-y-5">
-      <p className="max-w-prose text-lg leading-relaxed">
+      <p className="max-w-prose text-lg leading-relaxed" data-testid="about me paragraph">
         I am a developer from Montréal who wants to use technology to improve the world. I have been coding in Python
         for 17 years and have full-stack experience with multiple languages and frameworks. Before getting into tech, I
         worked in the entertainment industry. I also made some of my own music.

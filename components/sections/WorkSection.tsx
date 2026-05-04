@@ -9,7 +9,7 @@ import Heading from "@/components/ui/Heading";
  */
 export default function WorkSection(): ReactElement {
   return (
-    <section id="work-section" className="px-4 md:px-0">
+    <section id="work-section" data-testid="work-section" className="px-4 md:px-0">
       <div className="mb-8">
         <Heading level={2} text="Work Experience" />
       </div>

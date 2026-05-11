@@ -43,7 +43,7 @@ export default function ThemeDropdown(): ReactElement {
   }, [theme]);
 
   return (
-    <div className="mt-1 flex justify-left">
+    <div className="mt-1 flex justify-left" data-testid="theme dropdown">
       <div className="relative inline-block text-left" ref={dropdownRef} onBlur={handleBlur}>
         <button
           type="button"
@@ -57,7 +57,7 @@ export default function ThemeDropdown(): ReactElement {
         {isOpen && (
           <div
             className="origin-top-right absolute min-z-full z-10 w-auto left-0 mt-2 shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
-            data-testid="open"
+            data-testid="theme open"
           >
             <div>
               {allThemes.map((theme) => (

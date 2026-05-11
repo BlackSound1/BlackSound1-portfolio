@@ -36,7 +36,7 @@ export default function VariantDropdown(): ReactElement {
   }, [theme]);
 
   return (
-    <div className="mt-1 flex justify-left">
+    <div className="mt-1 flex justify-left" data-testid="variant dropdown" >
       <div
         className="relative inline-block text-left"
         // Associates this div with the ref object.
@@ -55,7 +55,10 @@ export default function VariantDropdown(): ReactElement {
         </button>
 
         {isOpen && (
-          <div className="origin-top-right absolute w-auto min-z-full z-10 left-0 mt-2 shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
+          <div
+            className="origin-top-right absolute w-auto min-z-full z-10 left-0 mt-2 shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
+            data-testid="variant open"
+          >
             <div>
               {THEME_VARIANTS[themeOnly].map((variant) => (
                 <button

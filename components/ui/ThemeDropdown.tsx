@@ -43,12 +43,13 @@ export default function ThemeDropdown(): ReactElement {
   }, [theme]);
 
   return (
-    <div className="mt-1 flex justify-left" data-testid="theme dropdown">
+    <div className="mt-1 flex justify-left">
       <div className="relative inline-block text-left" ref={dropdownRef} onBlur={handleBlur}>
         <button
           type="button"
           className="dropdown-button inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-black hover:bg-gray-50"
           onClick={toggleDropdown}
+          data-testid="theme dropdown"
         >
           {capitalize(themeOnly)}
           {isOpen ? <FaCaretDown className="ml-2 mt-0.5" /> : <FaCaretRight className="ml-2 mt-0.5" />}

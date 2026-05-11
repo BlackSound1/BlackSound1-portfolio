@@ -15,7 +15,13 @@ interface ExternalLinkProps {
 export default function ExternalLink({ url, description }: ExternalLinkProps) {
   return (
     <span className="external-link w-fit">
-      <a href={url} target="_blank" rel="noopener noreferrer" className="flex flex-col-1 gap-2">
+      <a
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex flex-col-1 gap-2"
+        aria-label={`link-${url}`}
+      >
         {SVG_Link()} {description}
       </a>
     </span>

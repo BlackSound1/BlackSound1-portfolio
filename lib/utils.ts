@@ -3,6 +3,11 @@ import { twMerge } from "tailwind-merge";
 
 import { recordOfSVGs, SVG_Unknown } from "./SVG_store";
 
+/**
+ * Merges any number of class strings into a single class string
+ * @param inputs Any number of classes to merge into 1 string
+ * @returns The merged string of classes
+ */
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }

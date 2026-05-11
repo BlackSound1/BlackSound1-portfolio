@@ -1,5 +1,3 @@
-import React from "react";
-
 import { cn } from "@/lib/utils";
 
 interface StatusIndicatorProps {
@@ -11,7 +9,7 @@ interface StatusIndicatorProps {
   labelClassName?: string;
 }
 
-const getStateColors = (state: StatusIndicatorProps["state"]) => {
+export const _getStateColors = (state: StatusIndicatorProps["state"]) => {
   switch (state) {
     case "active":
       return { dot: "bg-green-500", ping: "bg-green-300" };
@@ -25,7 +23,7 @@ const getStateColors = (state: StatusIndicatorProps["state"]) => {
   }
 };
 
-const getSizeClasses = (size: StatusIndicatorProps["size"]) => {
+export const _getSizeClasses = (size: StatusIndicatorProps["size"]) => {
   switch (size) {
     case "sm":
       return { dot: "h-2 w-2", ping: "h-2 w-2" };
@@ -37,19 +35,19 @@ const getSizeClasses = (size: StatusIndicatorProps["size"]) => {
   }
 };
 
-const StatusIndicator: React.FC<StatusIndicatorProps> = ({
+export default function StatusIndicator({
   state = "idle",
   label,
   className,
   size = "md",
   labelClassName,
-}) => {
+}: StatusIndicatorProps) {
   const shouldAnimate = state === "active" || state === "fixing" || state === "down";
-  const colors = getStateColors(state);
-  const sizeClasses = getSizeClasses(size);
+  const colors = _getStateColors(state);
+  const sizeClasses = _getSizeClasses(size);
 
   return (
-    <div className={cn("flex items-center gap-2", className)}>
+    <div className={cn("flex items-center gap-2", className)} data-testid="status indicator">
       <div className="relative flex items-center">
         {shouldAnimate && (
           <span
@@ -61,6 +59,4 @@ const StatusIndicator: React.FC<StatusIndicatorProps> = ({
       {label && <p className={cn("text-sm text-slate-700 dark:text-slate-300", labelClassName)}>{label}</p>}
     </div>
   );
-};
-
-export default StatusIndicator;
+}

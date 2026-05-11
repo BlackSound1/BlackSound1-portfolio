@@ -15,7 +15,7 @@ describe("ExternalLink", () => {
 
     expect(link).toHaveProperty("href");
 
-    expect(link).toHaveTextContent("test");
+    expect(link.textContent.trim()).toBe("test");
 
     const svgIcon = link.querySelector("svg");
     expect(svgIcon).toBeInTheDocument();

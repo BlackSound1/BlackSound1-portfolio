@@ -9,7 +9,7 @@ import Heading from "@/components/ui/Heading";
  */
 export default function ProjectSection(): ReactElement {
   return (
-    <section id="projects-section" className="px-4 md:px-0">
+    <section id="projects-section" data-testid="projects-section" className="px-4 md:px-0">
       <div className="mb-8">
         <Heading level={2} text="Some Projects" />
       </div>

@@ -3,16 +3,16 @@
   "semi": true,
   "proseWrap": "always",
   "printWidth": 120,
+  "plugins": ["@trivago/prettier-plugin-sort-imports"],
   "importOrder": [
     "<BUILTIN_MODULES>",
     "<THIRD_PARTY_MODULES>",
-    "^@/(components|context|lib|stores)/(.*)$",
+    "^@/(app|components|context|lib|stores)/(.*)$",
     "^[./]"
   ],
   "importOrderSeparation": true,
   "importOrderSortSpecifiers": true,
   "importOrderCaseInsensitive": true,
-  "plugins": ["@trivago/prettier-plugin-sort-imports"],
   "overrides": [
     {
       "files": ".prettierrc",

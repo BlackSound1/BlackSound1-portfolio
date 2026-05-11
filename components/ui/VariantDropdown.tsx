@@ -49,13 +49,17 @@ export default function VariantDropdown(): ReactElement {
           type="button"
           className="dropdown-button inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-black hover:bg-gray-50"
           onClick={toggleDropdown}
+          data-testid="variant dropdown"
         >
           {capitalize(variantOnly)}
           {isOpen ? <FaCaretDown className="ml-2 mt-0.5" /> : <FaCaretRight className="ml-2 mt-0.5" />}
         </button>
 
         {isOpen && (
-          <div className="origin-top-right absolute w-auto min-z-full z-10 left-0 mt-2 shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
+          <div
+            className="origin-top-right absolute w-auto min-z-full z-10 left-0 mt-2 shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
+            data-testid="variant open"
+          >
             <div>
               {THEME_VARIANTS[themeOnly].map((variant) => (
                 <button

@@ -43,10 +43,18 @@ export default function ProjectCard({
       title={name + ": " + description}
       className="block h-full project-card"
       onClick={() => posthog.capture("project-clicked", { project: name })}
+      aria-label={name}
+      data-testid="project link"
     >
-      <Card className="bg-mantle hover:border-accent focus-visible:border-accent group h-full flex flex-col overflow-hidden rounded-xl border shadow-lg transition-all duration-200 hover:shadow-xl focus:outline-none">
+      <Card
+        className="bg-mantle hover:border-accent focus-visible:border-accent group h-full flex flex-col overflow-hidden rounded-xl border shadow-lg transition-all duration-200 hover:shadow-xl focus:outline-none"
+        data-testid="project card"
+      >
         <CardHeader>
-          <CardTitle className="text-text group-hover:text-accent text-xl font-semibold transition-colors duration-200">
+          <CardTitle
+            className="text-text group-hover:text-accent text-xl font-semibold transition-colors duration-200"
+            data-testid="project card title"
+          >
             {name}
           </CardTitle>
         </CardHeader>
@@ -60,17 +68,20 @@ export default function ProjectCard({
                 height={450}
                 className="max-h-full w-auto object-contain"
                 priority
+                data-testid="project card image"
               />
             </div>
           )}
           <CardDescription>
             <div className="flex flex-wrap gap-2 overflow-hidden text-xs">
-              {getLogoSVG("tag")}
+              <div data-testid="project card svg">{getLogoSVG("tag")}</div>
               {technologies.map((name) => {
                 return <Tag key={name} lang={name} />;
               })}
             </div>
-            <p className="mt-3 font-semibold">{description}</p>
+            <p className="mt-3 font-semibold" data-testid="project card description">
+              {description}
+            </p>
           </CardDescription>
         </CardContent>
       </Card>

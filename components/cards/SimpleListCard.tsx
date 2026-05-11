@@ -24,7 +24,7 @@ export default function SimpleListCard({ list, title }: SimpleListCardProps) {
         <ul>
           {list.map((item) => {
             return (
-              <li className="flex items-center gap-1.5" key={item}>
+              <li className="flex items-center gap-1.5" aria-label={`list-item-${title}`} key={item}>
                 {getLogoSVG(handleLogoExceptions(item))} {item}
               </li>
             );

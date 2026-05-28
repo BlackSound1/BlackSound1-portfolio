@@ -8,7 +8,9 @@
     "start": "npx serve@latest out",
     "lint": "eslint",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "e2e": "playwright test",
+    "e2e:report": "playwright show-report"
   },
   "dependencies": {
     "@embedpdf/react-pdf-viewer": "^2.14.1",

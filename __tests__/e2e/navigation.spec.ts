@@ -27,7 +27,7 @@ test.describe("Work links", () => {
     });
 });
 
-test.describe.only("Project links", () => {
+test.describe("Project links", () => {
 
     test.beforeEach(async ({ page }) => {
         await page.goto("http://localhost:3000");

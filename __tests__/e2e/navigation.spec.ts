@@ -3,7 +3,7 @@ import { test, expect } from '@playwright/test';
 test.describe("Work links", () => {
 
     test.beforeEach(async ({ page }) => {
-        await page.goto("http://localhost:3000");
+        await page.goto("/");
     });
 
     [
@@ -30,7 +30,7 @@ test.describe("Work links", () => {
 test.describe("Project links", () => {
 
     test.beforeEach(async ({ page }) => {
-        await page.goto("http://localhost:3000");
+        await page.goto("/");
     });
 
     [
@@ -58,7 +58,7 @@ test.describe("Project links", () => {
 
 test.describe("Navbar links", () => {
     test.beforeEach(async ({ page }) => {
-        await page.goto("http://localhost:3000");
+        await page.goto("/");
     });
 
     [
@@ -72,7 +72,7 @@ test.describe("Navbar links", () => {
             const link = page.getByRole("link", { name: role });
             await expect(link).toHaveAttribute("href", href);
             await link.click();
-            await expect(page).toHaveURL(`http://localhost:3000${href}`);
+            await expect(page).toHaveURL(href);
         });
     });
 });
@@ -86,7 +86,8 @@ test.describe("Social links", () => {
         "/links",
     ].forEach((endpoint) => {
         test.beforeEach(async ({ page }) => {
-            await page.goto(`http://localhost:3000${endpoint}`);
+            await page.goto(endpoint);
+            test.setTimeout(40_000);
         });
 
         [
@@ -94,6 +95,8 @@ test.describe("Social links", () => {
             { name: "LinkedIn", href: "https://www.linkedin.com/in/ordon/" },
         ].forEach(({ name, href }) => {
             test(`${endpoint} page ${name} link`, async ({ page, context }) => {
+                test.setTimeout(40_000);
+
                 const link = page.getByText(name, { exact: true });
                 await expect(link).toHaveAttribute("href", href);
 

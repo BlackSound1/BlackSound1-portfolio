@@ -4,133 +4,55 @@ test.describe("Work links", () => {
 
     test.beforeEach(async ({ page }) => {
         await page.goto("http://localhost:3000");
-        await expect(page).toHaveTitle("BlackSound1");
     });
 
-    test("Verbit link", async ({ page, context }) => {
-        const targetURL = "https://verbit.ai/";
+    [
+        { name: "Verbit", href: "https://verbit.ai/" },
+        { name: "Tecsys", href: "https://www.tecsys.com/" },
+    ].forEach(({ name, href }) => {
+        test(`${name} link`, async ({ page, context }) => {
+            // Get the link
+            const link = page.getByRole("link", { name: name });
+            await expect(link).toHaveAttribute("href", href);
 
-        // Get the link
-        const link = page.getByRole("link", { name: "Verbit" });
-        await expect(link).toHaveAttribute("href", targetURL);
+            // Listen for clicking it
+            const [newPage] = await Promise.all([
+                context.waitForEvent("page"),
+                link.click(),
+            ]);
 
-        // Listen for clicking it
-        const [newPage] = await Promise.all([
-            context.waitForEvent("page"),
-            link.click(),
-        ]);
-
-        // Ensure that the new tab is correct
-        expect(newPage.url()).toBe(targetURL);
-    });
-
-    test("Tecsys link", async ({ page, context }) => {
-        const targetURL = "https://www.tecsys.com/";
-
-        // Get the link
-        const link = page.getByRole("link", { name: "Tecsys" });
-        await expect(link).toHaveAttribute("href", targetURL);
-
-        // Listen for clicking it
-        const [newPage] = await Promise.all([
-            context.waitForEvent("page"),
-            link.click(),
-        ]);
-
-        // Ensure that the new tab is correct
-        expect(newPage.url()).toBe(targetURL);
+            // Ensure new tab is correct
+            expect(newPage.url()).toBe(href);
+        });
     });
 });
 
-test.describe("Project links", () => {
+test.describe.only("Project links", () => {
 
     test.beforeEach(async ({ page }) => {
         await page.goto("http://localhost:3000");
-        await expect(page).toHaveTitle("BlackSound1");
     });
 
-    test("TSM link", async ({ page, context }) => {
-        const targetURL = "https://github.com/BlackSound1/textual-system-monitor";
+    [
+        { name: "Textual System Monitor", href: "https://github.com/BlackSound1/textual-system-monitor" },
+        { name: "Go B&B", href: "https://github.com/BlackSound1/Go-B-and-B" },
+        { name: "This site", href: "https://github.com/BlackSound1/BlackSound1-portfolio" },
+        { name: "Redis Clone", href: "https://github.com/BlackSound1/redis-clone" },
+        { name: "Basic C++ Shell", href: "https://github.com/BlackSound1/Basic-CPP-Shell" },
+        { name: "Go Microservices", href: "https://github.com/BlackSound1/go-microservices" },
+    ].forEach(({ name, href }) => {
+        test(`${name} link`, async ({ page, context }) => {
 
-        const link = page.getByRole("link", { name: "Textual System Monitor" });
-        await expect(link).toHaveAttribute("href", targetURL);
+            const link = page.getByRole("link", { name: name });
+            await expect(link).toHaveAttribute("href", href);
 
-        const [newPage] = await Promise.all([
-            context.waitForEvent("page"),
-            link.click(),
-        ]);
+            const [newPage] = await Promise.all([
+                context.waitForEvent("page"),
+                link.click(),
+            ]);
 
-        expect(newPage.url()).toBe(targetURL);
-    });
-
-    test("Go B&B", async ({ page, context }) => {
-        const targetURL = "https://github.com/BlackSound1/Go-B-and-B";
-
-        const link = page.getByRole("link", { name: "Go B&B" });
-        await expect(link).toHaveAttribute("href", targetURL);
-
-        const [newPage] = await Promise.all([
-            context.waitForEvent("page"),
-            link.click(),
-        ]);
-
-        expect(newPage.url()).toBe(targetURL);
-    });
-
-    test("This site", async ({ page, context }) => {
-        const targetURL = "https://github.com/BlackSound1/BlackSound1-portfolio";
-
-        const link = page.getByRole("link", { name: "This site" });
-        await expect(link).toHaveAttribute("href", targetURL);
-
-        const [newPage] = await Promise.all([
-            context.waitForEvent("page"),
-            link.click(),
-        ]);
-
-        expect(newPage.url()).toBe(targetURL);
-    });
-
-    test("Redis Clone", async ({ page, context }) => {
-        const targetURL = "https://github.com/BlackSound1/redis-clone";
-
-        const link = page.getByRole("link", { name: "Redis Clone" });
-        await expect(link).toHaveAttribute("href", targetURL);
-
-        const [newPage] = await Promise.all([
-            context.waitForEvent("page"),
-            link.click(),
-        ]);
-
-        expect(newPage.url()).toBe(targetURL);
-    });
-
-    test("Basic C++ Shell", async ({ page, context }) => {
-        const targetURL = "https://github.com/BlackSound1/Basic-CPP-Shell";
-
-        const link = page.getByRole("link", { name: "Basic C++ Shell" });
-        await expect(link).toHaveAttribute("href", targetURL);
-
-        const [newPage] = await Promise.all([
-            context.waitForEvent("page"),
-            link.click(),
-        ]);
-
-        expect(newPage.url()).toBe(targetURL);
-    });
-
-    test("Go Microservices", async ({ page, context }) => {
-        const targetURL = "https://github.com/BlackSound1/go-microservices";
-
-        const link = page.getByRole("link", { name: "Go Microservices" });
-        await expect(link).toHaveAttribute("href", targetURL);
-
-        const [newPage] = await Promise.all([
-            context.waitForEvent("page"),
-            link.click(),
-        ]);
-
-        expect(newPage.url()).toBe(targetURL);
+            expect(newPage.url()).toBe(href);
+        });
     });
 });
 

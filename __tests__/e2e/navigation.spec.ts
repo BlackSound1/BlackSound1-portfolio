@@ -76,3 +76,36 @@ test.describe("Navbar links", () => {
         });
     });
 });
+
+test.describe("Social links", () => {
+    
+    [
+        "/",
+        "/research",
+        "/uses",
+        "/links",
+    ].forEach((endpoint) => {
+        test.beforeEach(async ({ page }) => {
+            await page.goto(`http://localhost:3000${endpoint}`);
+        });
+
+        [
+            { name: "GitHub", href: "https://github.com/BlackSound1" },
+            { name: "LinkedIn", href: "https://www.linkedin.com/in/ordon/" },
+        ].forEach(({ name, href }) => {
+            test(`${endpoint} page ${name} link`, async ({ page, context }) => {
+                const link = page.getByText(name, { exact: true });
+                await expect(link).toHaveAttribute("href", href);
+
+                const [newPage] = await Promise.all([
+                    context.waitForEvent("page"),
+                    link.click(),
+                ]);
+
+                expect(newPage.url().includes(href));
+            });
+        });
+    });
+});
+
+

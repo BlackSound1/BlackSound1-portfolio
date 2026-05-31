@@ -69,8 +69,8 @@ test.describe("Navbar links", () => {
         {role: "BlackSound1", href: "/"},
     ].forEach(({ role, href }) => {
         test(`Navigate to ${role} page`, async ({ page }) => {
-            const link = page.getByRole("link", { name: `${role}` });
-            await expect(link).toHaveAttribute("href", `${href}`);
+            const link = page.getByRole("link", { name: role });
+            await expect(link).toHaveAttribute("href", href);
             await link.click();
             await expect(page).toHaveURL(`http://localhost:3000${href}`);
         });

@@ -35,7 +35,7 @@ export default function CommitTracker(): ReactElement {
         setCommit(data[0]["sha"].slice(0, 7));
       })
       .catch(() => {
-        setCommit("Rate limited!");
+        setCommit("Cannot fetch!");
       });
   };
 

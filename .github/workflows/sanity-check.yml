@@ -50,5 +50,11 @@ jobs:
       - name: lint app
         run: pnpm lint
 
-      - name: Test app
+      - name: Test app (Unit)
         run: pnpm test
+
+      - name: Install Playwright browsers
+        run: pnpm exec playwright install --with-deps
+
+      - name: Test app (e2e)
+        run: pnpm e2e

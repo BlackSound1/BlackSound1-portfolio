@@ -10,9 +10,12 @@ export default function Uses() {
   posthog.capture("$pageview", { page: "uses" });
   return (
     <section id="uses-section" data-testid="uses-section" className="space-y-5">
+      <Heading level={1} text="Uses" />
+
       <p className="max-w-prose text-lg leading-relaxed">
         This page details all the important tools and technologies I use
       </p>
+
       <SocialLinksSection />
 
       <Heading level={2} text="Computers" />

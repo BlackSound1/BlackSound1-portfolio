@@ -40,9 +40,6 @@ export default function RootLayout({
               <main className="flex-1 px-0 pb-8 md:px-5">
                 <div className="mx-auto max-w-6xl space-y-12 px-0 md:space-y-16 md:px-4">
                   <Header />
-                  <Link href="/">
-                    <Heading level={1} text="BlackSound1" />
-                  </Link>
                   {children}
                   <Footer />
                   <SpeedInsights />

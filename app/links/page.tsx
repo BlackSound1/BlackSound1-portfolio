@@ -9,6 +9,8 @@ export default function Links() {
   posthog.capture("$pageview", { page: "links" });
   return (
     <section id="links-section" data-testid="links-section" className="space-y-5">
+      <Heading level={1} text="Links" />
+
       <p className="max-w-prose text-lg leading-relaxed" aria-label="paragraph-intro">
         This page has a bunch of cool links I found.
       </p>

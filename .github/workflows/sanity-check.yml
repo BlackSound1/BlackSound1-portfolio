@@ -28,7 +28,7 @@ jobs:
   check:
     name: Sanity Check
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 5
 
     steps:
       - name: Checkout repo
@@ -53,9 +53,3 @@ jobs:
 
       - name: Test app (Unit)
         run: pnpm test
-
-      - name: Install Playwright browsers
-        run: pnpm exec playwright install --with-deps
-
-      - name: Test app (e2e)
-        run: pnpm e2e

@@ -1,0 +1,37 @@
+name: E2E Tests
+
+on:
+  workflow_dispatch: # Manual trigger only
+
+permissions:
+  contents: read
+
+jobs:
+  e2e:
+    name: E2E Tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v5
+
+      - name: Set up Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24.10.0
+
+      - name: Set up PNPM
+        uses: pnpm/action-setup@v6
+        with:
+          version: 10.33.2
+          cache: true
+
+      - name: Install deps
+        run: pnpm install
+
+      - name: Install Playwright browsers
+        run: pnpm exec playwright install --with-deps
+
+      - name: Test app (e2e)
+        run: pnpm e2e

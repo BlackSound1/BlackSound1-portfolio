@@ -19,7 +19,7 @@ export default function ProjectSection(): ReactElement {
           link="https://github.com/BlackSound1/textual-system-monitor"
           imagePath="/static/images/TSMScreenshot.png"
           alt="TSM"
-          technologies={["Python", "Textual", "Makefile", "Terminal", "TUI", "CI/CD", "Pytest"]}
+          technologies={["Python", "Makefile", "Terminal", "CI/CD", "Pytest"]}
           description="A beautiful system monitoring app created in Python, using Textual. Now hosted on PyPI!"
         />
         <ProjectCard
@@ -27,7 +27,7 @@ export default function ProjectSection(): ReactElement {
           link="https://github.com/BlackSound1/Go-B-and-B"
           imagePath="/static/images/GoBandBHomePage.png"
           alt="Go B&B"
-          technologies={["Web", "Go", "Docker", "REST", "Kubernetes", "JS"]}
+          technologies={["Go", "Docker", "REST", "Kubernetes", "JS"]}
           description="A web app for a fictional Bed and Breakfast, written in Go."
         />
         <ProjectCard
@@ -35,7 +35,7 @@ export default function ProjectSection(): ReactElement {
           link="https://github.com/BlackSound1/BlackSound1-portfolio"
           imagePath="/static/images/PortfolioScreenshot.png"
           alt="This site"
-          technologies={["TS", "NextJS", "HTML", "CSS", "Web", "Just", "NodeJS", "Jest", "CI/CD", "Playwright"]}
+          technologies={["TS", "NextJS", "HTML", "CSS", "NodeJS", "Jest", "CI/CD", "Playwright"]}
           description="A simple, WIP portfolio site. You're on it now!"
         />
         <ProjectCard

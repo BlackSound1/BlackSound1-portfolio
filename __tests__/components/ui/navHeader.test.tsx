@@ -11,7 +11,7 @@ describe("NavHeader", () => {
 
     expect(allLinks.length).toBe(4);
 
-    const home = screen.getByText("~/_");
+    const home = screen.getByText("Home");
     const research = screen.getByText("Research");
     const uses = screen.getByText("Uses");
     const links = screen.getByText("Links");

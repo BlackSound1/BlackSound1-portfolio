@@ -37,7 +37,7 @@ describe("Uses", () => {
 
   it("should render the headings", async () => {
     const headings = await screen.findAllByRole("heading");
-    expect(headings.length).toStrictEqual(6);
+    expect(headings.length).toStrictEqual(7);
 
     const all_h2 = await screen.findAllByRole("heading", { level: 2 });
     expect(all_h2.length).toStrictEqual(3);

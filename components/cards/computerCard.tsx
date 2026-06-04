@@ -39,25 +39,23 @@ export default function ComputerCard({ name, cpu, ram, storage, graphics, os }: 
         </CardTitle>
       </CardHeader>
       <CardContent>
-        <CardDescription>
-          <ul>
-            <li className="flex items-center gap-1.5">
-              <SVG_CPU /> {cpu}
-            </li>
-            <li className="flex items-center gap-1.5">
-              <SVG_RAM /> {ram} GB RAM
-            </li>
-            <li className="flex items-center gap-1.5">
-              <SVG_Storage /> {storage} Storage
-            </li>
-            <li className="flex items-center gap-1.5">
-              <SVG_GPU /> {graphics} Graphics
-            </li>
-            <li className="flex items-center gap-1.5">
-              <OsIcon system={os} /> {os}
-            </li>
-          </ul>
-        </CardDescription>
+        <ul>
+          <li className="flex items-center gap-1.5">
+            <SVG_CPU /> {cpu}
+          </li>
+          <li className="flex items-center gap-1.5">
+            <SVG_RAM /> {ram} GB RAM
+          </li>
+          <li className="flex items-center gap-1.5">
+            <SVG_Storage /> {storage} Storage
+          </li>
+          <li className="flex items-center gap-1.5">
+            <SVG_GPU /> {graphics} Graphics
+          </li>
+          <li className="flex items-center gap-1.5">
+            <OsIcon system={os} /> {os}
+          </li>
+        </ul>
       </CardContent>
     </Card>
   );

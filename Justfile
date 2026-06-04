@@ -27,8 +27,19 @@ help:
 version:
     @echo "$(cat VERSION.txt)"
 
-# Testing
+# Unit tests
 [group('Testing')]
 [arg('watch', long, short='w', value=':watch')]
-test watch='':
-    @pnpm test{{watch}}
+jest watch='':
+    @pnpm run test{{watch}}
+
+# End-to-end tests
+[group("Testing")]
+[arg('report', long, short='r', value=':report')]
+e2e report='':
+    @pnpm run e2e{{report}}
+
+# All forms of test, making sure not to short-circuit if an earlier kind of test fails
+[group("Testing")]
+test:
+    @pnpm run test ; pnpm run e2e

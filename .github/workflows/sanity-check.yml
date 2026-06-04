@@ -28,6 +28,7 @@ jobs:
   check:
     name: Sanity Check
     runs-on: ubuntu-latest
+    timeout-minutes: 5
 
     steps:
       - name: Checkout repo
@@ -50,5 +51,5 @@ jobs:
       - name: lint app
         run: pnpm lint
 
-      - name: Test app
+      - name: Test app (Unit)
         run: pnpm test

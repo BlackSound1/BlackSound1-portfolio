@@ -1,10 +1,8 @@
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import Link from "next/link";
 
 import Footer from "@/components/cards/Footer";
-import Heading from "@/components/ui/Heading";
 import Header from "@/components/ui/NavHeader";
 import { AccentProvider } from "@/context/AccentContext";
 import { ThemeProvider } from "@/context/ThemeContext";
@@ -40,9 +38,6 @@ export default function RootLayout({
               <main className="flex-1 px-0 pb-8 md:px-5">
                 <div className="mx-auto max-w-6xl space-y-12 px-0 md:space-y-16 md:px-4">
                   <Header />
-                  <Link href="/">
-                    <Heading level={1} text="BlackSound1" />
-                  </Link>
                   {children}
                   <Footer />
                   <SpeedInsights />

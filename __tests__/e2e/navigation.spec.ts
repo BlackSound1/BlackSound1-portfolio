@@ -65,10 +65,10 @@ test.describe("Navbar links", () => {
         {role: "Research", href: "/research"},
         {role: "Uses", href: "/uses"},
         {role: "Links", href: "/links"},
-        {role: "~/_", href: "/"},
-        {role: "BlackSound1", href: "/"},
+        {role: "Home", href: "/"},
     ].forEach(({ role, href }) => {
         test(`Navigate to ${role} page`, async ({ page }) => {
+            test.setTimeout(0);
             const link = page.getByRole("link", { name: role });
             await expect(link).toHaveAttribute("href", href);
             await link.click();

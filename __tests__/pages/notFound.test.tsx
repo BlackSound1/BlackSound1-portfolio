@@ -7,9 +7,9 @@ describe("Not Found", () => {
   beforeEach(() => render(<NotFound />));
 
   it("should render the heading", async () => {
-    const h2 = await screen.findByRole("heading", { level: 2 });
-    expect(h2).toBeInTheDocument();
-    expect(h2.textContent).toBe("[404]");
+    const h1 = await screen.findByRole("heading", { level: 1 });
+    expect(h1).toBeInTheDocument();
+    expect(h1.textContent).toBe("[404]");
   });
 
   it("should render the paragraph", async () => {

@@ -1,4 +1,4 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { SVG_CPU, SVG_GPU, SVG_RAM, SVG_Storage } from "@/lib/SVG_store";
 import { getLogoSVG } from "@/lib/utils";
 

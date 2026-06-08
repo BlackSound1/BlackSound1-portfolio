@@ -10,6 +10,11 @@ interface LinkCardProps {
   links: Link[];
 }
 
+/**
+ * A LinkCard component for rendering Cards around lists of links on the `/links` page.
+ * @param links The list of {`url`, `description`} links to render.
+ * @returns A LinkCard component.
+ */
 export default function LinkCard({ links }: LinkCardProps) {
   return (
     <Card className="mb-4 bg-mantle hover:border-accent focus-visible:border-accent group block overflow-hidden rounded-xl border shadow-lg transition-all duration-200 hover:shadow-xl focus:outline-none">

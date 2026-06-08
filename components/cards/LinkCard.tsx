@@ -12,11 +12,15 @@ interface LinkCardProps {
 
 export default function LinkCard({ links }: LinkCardProps) {
   return (
-    <Card>
+    <Card className="mb-4 bg-mantle hover:border-accent focus-visible:border-accent group block overflow-hidden rounded-xl border shadow-lg transition-all duration-200 hover:shadow-xl focus:outline-none">
       <CardContent>
-        <ul>
+        <ul className="flex flex-col gap-4">
           {links.map((link) => {
-            return <ExternalLink description={link.description} url={link.url} key={link.url} />;
+            return (
+              <li className="flex" aria-label={`external-link-${link.description}`} key={link.url}>
+                <ExternalLink description={link.description} url={link.url} />
+              </li>
+            );
           })}
         </ul>
       </CardContent>

@@ -25,7 +25,7 @@ export default function CommitTracker(): ReactElement {
       headers: headers,
     };
 
-    if (process.env["ENV"] === "prod") {
+    if (process.env.NEXT_PUBLIC_ENV === "prod") {
       const URL = "https://api.github.com/repos/BlackSound1/BlackSound1-portfolio/commits?sha=main";
 
       await fetch(URL, options)

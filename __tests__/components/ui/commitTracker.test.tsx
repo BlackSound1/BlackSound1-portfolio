@@ -5,16 +5,15 @@ import CommitTracker from "@/components/ui/CommitTracker";
 
 describe("CommitTracker", () => {
   // Make sure I can reset the `env` variable to whatever it was originally
-  const originalEnv = process.env["ENV"];
+  const originalEnv = process.env.NEXT_PUBLIC_ENV;
 
   afterEach(() => {
-    process.env["ENV"] = originalEnv;
+    process.env.NEXT_PUBLIC_ENV = originalEnv;
   });
 
   it("renders a commit tracker", async () => {
-    process.env["ENV"] = "prod";
-
-    expect(process.env["ENV"]).toBe("prod");
+    process.env.NEXT_PUBLIC_ENV = "prod";
+    expect(process.env.NEXT_PUBLIC_ENV).toBe("prod");
 
     // Create a mock version of the global fetch function
     // used in `trackCommit`. Can't just mock the whole

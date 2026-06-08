@@ -13,14 +13,18 @@ export default function ViewCounter(): ReactElement {
    * Query Abacus to get the page view count.
    */
   const trackHit = async () => {
-    const URL = "https://abacus.jasoncameron.dev/hit/blacksound1-portfolio.vercel.app/visits";
-    await fetch(URL)
-      .then((resp) => {
-        return resp.json();
-      })
-      .then((data) => {
-        setCount(data.value);
-      });
+    if (process.env.NEXT_PUBLIC_ENV === "prod") {
+      const URL = "https://abacus.jasoncameron.dev/hit/blacksound1-portfolio.vercel.app/visits";
+      await fetch(URL)
+        .then((resp) => {
+          return resp.json();
+        })
+        .then((data) => {
+          setCount(data.value);
+        });
+    } else {
+      setCount("dev mode");
+    }
   };
 
   useEffect(() => {

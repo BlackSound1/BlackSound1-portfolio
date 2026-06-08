@@ -25,18 +25,22 @@ export default function CommitTracker(): ReactElement {
       headers: headers,
     };
 
-    const URL = "https://api.github.com/repos/BlackSound1/BlackSound1-portfolio/commits?sha=main";
+    if (process.env["ENV"] === "prod") {
+      const URL = "https://api.github.com/repos/BlackSound1/BlackSound1-portfolio/commits?sha=main";
 
-    await fetch(URL, options)
-      .then((resp) => {
-        return resp.json();
-      })
-      .then((data) => {
-        setCommit(data[0]["sha"].slice(0, 7));
-      })
-      .catch(() => {
-        setCommit("Cannot fetch!");
-      });
+      await fetch(URL, options)
+        .then((resp) => {
+          return resp.json();
+        })
+        .then((data) => {
+          setCommit(data[0]["sha"].slice(0, 7));
+        })
+        .catch(() => {
+          setCommit("Cannot fetch!");
+        });
+    } else {
+      setCommit("dev mode");
+    }
   };
 
   useEffect(() => {

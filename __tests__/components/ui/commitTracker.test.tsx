@@ -4,7 +4,17 @@ import { render, screen, waitFor } from "@testing-library/react";
 import CommitTracker from "@/components/ui/CommitTracker";
 
 describe("CommitTracker", () => {
+  // Make sure I can reset the `env` variable to whatever it was originally
+  const originalEnv = process.env.NEXT_PUBLIC_ENV;
+
+  afterEach(() => {
+    process.env.NEXT_PUBLIC_ENV = originalEnv;
+  });
+
   it("renders a commit tracker", async () => {
+    process.env.NEXT_PUBLIC_ENV = "prod";
+    expect(process.env.NEXT_PUBLIC_ENV).toBe("prod");
+
     // Create a mock version of the global fetch function
     // used in `trackCommit`. Can't just mock the whole
     // function because it's inside the component and

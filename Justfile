@@ -29,9 +29,10 @@ version:
 
 # Unit tests
 [group('Testing')]
-[arg('watch', long, short='w', value=':watch')]
-jest watch='':
-    @pnpm run test{{watch}}
+[arg('watch', long, short='w', value='--watch')]
+[arg('coverage', long='cov', short='c', value='--coverage')]
+jest watch='' coverage='':
+    @pnpm run jest {{watch}} {{coverage}}
 
 # End-to-end tests
 [group("Testing")]

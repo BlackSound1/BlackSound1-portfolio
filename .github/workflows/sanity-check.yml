@@ -52,4 +52,4 @@ jobs:
         run: pnpm lint
 
       - name: Test app (Unit)
-        run: pnpm test
+        run: pnpm jest

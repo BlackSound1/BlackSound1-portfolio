@@ -1,14 +1,13 @@
 {
   "name": "portfolio",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "npx serve@latest out",
     "lint": "eslint",
-    "test": "jest",
-    "test:watch": "jest --watch",
+    "jest": "jest",
     "e2e": "playwright test",
     "e2e:report": "playwright show-report"
   },

@@ -29,6 +29,7 @@ describe("ViewCounter", () => {
 
     expect(global.fetch).toHaveBeenCalledWith(
       "https://abacus.jasoncameron.dev/hit/blacksound1-portfolio.vercel.app/visits",
+      expect.any(Object), // The AbortController
     );
 
     expect(global.fetch).toHaveBeenCalledTimes(1);

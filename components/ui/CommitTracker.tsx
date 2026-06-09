@@ -11,40 +11,47 @@ import { getLogoSVG } from "@/lib/utils";
 export default function CommitTracker(): ReactElement {
   const [commit, setCommit] = useState("Fetching...");
 
-  /**
-   * Query GitHub for the most recent `main` commit
-   */
-  const trackCommit = async () => {
-    const headers = new Headers();
-    headers.set("Accept", "application/vnd.github+json");
-    headers.set("X-GitHub-Api-Version", "2022-11-28");
-    headers.set("Authorization", process.env.GH_KEY!);
+  useEffect(() => {
+    const abortController = new AbortController();
 
-    const options = {
-      method: "GET",
-      headers: headers,
+    /**
+     * Query GitHub for the most recent `main` commit
+     */
+    const trackCommit = async () => {
+      try {
+        if (process.env.NEXT_PUBLIC_ENV === "prod") {
+          const URL = "https://api.github.com/repos/BlackSound1/BlackSound1-portfolio/commits?sha=main";
+
+          const headers = new Headers();
+          headers.set("Accept", "application/vnd.github+json");
+          headers.set("X-GitHub-Api-Version", "2022-11-28");
+          headers.set("Authorization", process.env.GH_KEY!);
+
+          const options = {
+            method: "GET",
+            headers: headers,
+            signal: abortController.signal,
+          };
+
+          const resp = await fetch(URL, options);
+          const data = await resp.json();
+          setCommit(data[0]["sha"].slice(0, 7));
+        } else {
+          setCommit("dev mode");
+        }
+      } catch (error) {
+        // Ignore abort errors
+        if (error instanceof Error && error.name === "AbortError") {
+          return;
+        }
+        console.error("Failed to fetch commit: ", error);
+        setCommit("Cannot fetch!");
+      }
     };
 
-    if (process.env.NEXT_PUBLIC_ENV === "prod") {
-      const URL = "https://api.github.com/repos/BlackSound1/BlackSound1-portfolio/commits?sha=main";
-
-      await fetch(URL, options)
-        .then((resp) => {
-          return resp.json();
-        })
-        .then((data) => {
-          setCommit(data[0]["sha"].slice(0, 7));
-        })
-        .catch(() => {
-          setCommit("Cannot fetch!");
-        });
-    } else {
-      setCommit("dev mode");
-    }
-  };
-
-  useEffect(() => {
     trackCommit();
+
+    return () => abortController.abort();
   }, []);
 
   return (

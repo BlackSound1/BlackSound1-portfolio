@@ -13,9 +13,6 @@ export default function AboutMeSection(): ReactElement {
         I am a developer from Montréal who wants to use technology to improve the world. I have been coding in Python
         for 17 years and have full-stack experience with multiple languages and frameworks. Before getting into tech, I
         worked in the entertainment industry. I also made some of my own music.
-        <br />
-        <br />
-        This site is a <span className="text-accent">work in progress</span>. No vibe coding!
       </p>
       <SocialLinksSection />
     </section>

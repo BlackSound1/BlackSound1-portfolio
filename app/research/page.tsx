@@ -16,6 +16,8 @@ export default function Research() {
 
       <SocialLinksSection />
 
+      <Heading level={2} text='"How Can Canada Contribute to More Sustainable E-Waste Management Globally?"' />
+
       <p aria-label="research-description">
         This is the culmination of the research I did Concordia University&apos;s Sustainability Perspectives
         graduate-level microprogram. It focuses on electronic waste: what it is; where it comes from; where it goes; and

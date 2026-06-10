@@ -16,8 +16,6 @@ export default function Home() {
 
       <AboutMeSection />
 
-      <Break />
-
       <WorkSection />
 
       <Break />

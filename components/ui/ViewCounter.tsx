@@ -22,8 +22,10 @@ export default function ViewCounter(): ReactElement {
           const resp = await fetch(URL, { signal: abortController.signal });
           const data = await resp.json();
           setCount(data.value);
+        } else if (process.env.NEXT_PUBLIC_ENV === "staging") {
+          setCount("[STAGING MODE]");
         } else {
-          setCount("dev mode");
+          setCount("[DEV MODE]");
         }
       } catch (error) {
         // Ignore abort errors

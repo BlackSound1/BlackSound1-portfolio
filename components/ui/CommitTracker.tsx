@@ -37,7 +37,7 @@ export default function CommitTracker(): ReactElement {
           const data = await resp.json();
           setCommit(data[0]["sha"].slice(0, 7));
         } else {
-          setCommit("dev mode");
+          setCommit("[DEV MODE]");
         }
       } catch (error) {
         // Ignore abort errors

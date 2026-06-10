@@ -23,7 +23,7 @@ export default function ViewCounter(): ReactElement {
           const data = await resp.json();
           setCount(data.value);
         } else {
-          setCount("dev mode");
+          setCount("[DEV MODE]");
         }
       } catch (error) {
         // Ignore abort errors

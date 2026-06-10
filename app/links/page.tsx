@@ -14,7 +14,10 @@ export default function Links() {
       <p className="max-w-prose text-lg leading-relaxed" aria-label="paragraph-intro">
         This page has a bunch of cool links I found.
       </p>
+
       <SocialLinksSection />
+
+      <Break />
 
       <Heading level={2} text="Computer Science" />
 

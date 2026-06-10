@@ -1,6 +1,7 @@
 import posthog from "posthog-js";
 
 import SocialLinksSection from "@/components/sections/SocialLinksSection";
+import Break from "@/components/ui/break";
 import Heading from "@/components/ui/Heading";
 import PDF_Viewer from "@/components/ui/PDFViewer";
 
@@ -15,6 +16,8 @@ export default function Research() {
       </p>
 
       <SocialLinksSection />
+
+      <Break />
 
       <p aria-label="research-description">
         This is the culmination of the research I did Concordia University&apos;s Sustainability Perspectives

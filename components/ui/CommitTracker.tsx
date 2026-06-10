@@ -36,6 +36,8 @@ export default function CommitTracker(): ReactElement {
           const resp = await fetch(URL, options);
           const data = await resp.json();
           setCommit(data[0]["sha"].slice(0, 7));
+        } else if (process.env.NEXT_PUBLIC_ENV === "staging") {
+          setCommit("[STAGING MODE]");
         } else {
           setCommit("[DEV MODE]");
         }

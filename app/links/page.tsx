@@ -17,8 +17,6 @@ export default function Links() {
 
       <SocialLinksSection />
 
-      <Break />
-
       <Heading level={2} text="Computer Science" />
 
       <section className="flex flex-col gap-4" data-testid="links-compsci">

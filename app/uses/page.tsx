@@ -18,8 +18,6 @@ export default function Uses() {
 
       <SocialLinksSection />
 
-      <Break />
-
       <Heading level={2} text="Computers" />
 
       <Heading level={3} text="Main Computer" />

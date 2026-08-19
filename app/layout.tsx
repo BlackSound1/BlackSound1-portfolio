@@ -1,6 +1,7 @@
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Script from "next/script";
 
 import Footer from "@/components/cards/Footer";
 import Header from "@/components/ui/NavHeader";
@@ -46,6 +47,7 @@ export default function RootLayout({
             </div>
           </ThemeProvider>
         </AccentProvider>
+        <Script src="https://keepandroidopen.org/banner.js?size=minimal&animation=off" strategy="afterInteractive" />
       </body>
     </html>
   );

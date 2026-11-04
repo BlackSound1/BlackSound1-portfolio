@@ -79,6 +79,11 @@ export default function Links() {
           links={[
             { url: "https://joy.recurse.com/?page=1", description: "The Joy of Computing" },
             { url: "https://letsgetcreative.today/", description: "Let's Get Creative" },
+            {
+              url: "https://aphyr.com/data/posts/411/the-future-of-everything-is-lies.pdf",
+              description: "The Future of Everything is Lies (PDF)",
+            },
+            { url: "https://thebullshitmachines.com/", description: "The Bullshit Machines" },
           ]}
         />
       </section>

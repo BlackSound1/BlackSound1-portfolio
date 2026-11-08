@@ -42,6 +42,7 @@ interface ThemeProviderProps {
  */
 export function ThemeProvider({ children }: ThemeProviderProps) {
   const [theme, setTheme] = useState<string>("default-default");
+  const [isThemeRestored, setIsThemeRestored] = useState(false);
   const userInitiatedRef = useRef<boolean>(false);
 
   // When using setTheme throughout the app, actually use this instead
@@ -56,26 +57,27 @@ export function ThemeProvider({ children }: ThemeProviderProps) {
 
   // Restore saved state once on mount (client-only)
   useEffect(() => {
-    if (typeof window === "undefined") {
-      return;
-    }
-    const storedTheme = sessionStorage.getItem("theme");
-    if (storedTheme) {
-      const id = setTimeout(() => {
+    const id = window.setTimeout(() => {
+      const storedTheme = sessionStorage.getItem("theme");
+      if (storedTheme) {
         setTheme(storedTheme);
-      }, 0);
-      return () => clearTimeout(id);
-    }
+      }
+      setIsThemeRestored(true);
+    }, 0);
+    return () => window.clearTimeout(id);
   }, []);
 
   // Update session storage when theme changes
   useEffect(() => {
+    if (!isThemeRestored) {
+      return;
+    }
     sessionStorage.setItem("theme", theme);
-  }, [theme]);
+  }, [isThemeRestored, theme]);
 
   // Add/ update data attr on root for theme
   useEffect(() => {
-    if (typeof window === "undefined") {
+    if (!isThemeRestored) {
       return;
     }
 
@@ -91,7 +93,7 @@ export function ThemeProvider({ children }: ThemeProviderProps) {
 
     // Reset flag after capturing
     userInitiatedRef.current = false;
-  }, [theme]);
+  }, [isThemeRestored, theme]);
 
   // Only recompute when deps change
   const value = useMemo(() => ({ theme, setTheme: setThemeUser }), [theme, setThemeUser]);

@@ -43,4 +43,4 @@ e2e report='':
 # All forms of test, making sure not to short-circuit if an earlier kind of test fails
 [group("Testing")]
 test:
-    @pnpm run test ; pnpm run e2e
+    @pnpm run jest ; pnpm run e2e

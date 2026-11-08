@@ -1,11 +1,35 @@
 import "@testing-library/jest-dom";
 import { fireEvent, render, screen, waitFor } from "@testing-library/react";
+import { StrictMode } from "react";
 
 import ThemeDropdown from "@/components/ui/ThemeDropdown";
 import VariantDropdown from "@/components/ui/VariantDropdown";
 import { ThemeProvider } from "@/context/ThemeContext";
 
 describe("Theme and Variant Dropdowns", () => {
+  beforeEach(() => {
+    sessionStorage.clear();
+  });
+
+  it("restores the saved theme without overwriting it in Strict Mode", async () => {
+    sessionStorage.setItem("theme", "catpuccin-mocha");
+
+    render(
+      <StrictMode>
+        <ThemeProvider>
+          <ThemeDropdown />
+          <VariantDropdown />
+        </ThemeProvider>
+      </StrictMode>,
+    );
+
+    await waitFor(() => {
+      expect(screen.getByTestId("theme dropdown")).toHaveTextContent("Catpuccin");
+      expect(screen.getByTestId("variant dropdown")).toHaveTextContent("Mocha");
+      expect(sessionStorage.getItem("theme")).toBe("catpuccin-mocha");
+    });
+  });
+
   describe("Theme Dropdown", () => {
     beforeEach(() =>
       render(

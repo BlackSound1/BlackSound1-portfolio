@@ -4,6 +4,8 @@
 
 Content-Signal: search=yes, ai-train=no
 
+Sitemap: https://blacksound1-portfolio.vercel.app/sitemap.xml
+
 User-agent: *
 Allow: /
 

@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 
+// Required for Next.js `output: "export"` compatibility
 export const dynamic = "force-static";
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://blacksound1-portfolio.vercel.app";

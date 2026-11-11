@@ -25,7 +25,7 @@ help:
 # Version
 [group('Utilities')]
 version:
-    @echo "$(cat VERSION.txt)"
+    @echo "$(node -p "require('./package.json').version")"
 
 # Unit tests
 [group('Testing')]
